@@ -1,6 +1,17 @@
 # Deploy danmull.in (Cloudflare Pages)
 
+## 0. Auth note
+
+If `gh` says you are not logged in:
+
+```bash
+gh auth login --hostname github.com --git-protocol https --web
+```
+
+Then continue from step 1.
+
 ## 1. Push this repo to GitHub
+
 
 From this folder (after `gh auth login` if needed):
 
