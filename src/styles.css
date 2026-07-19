@@ -105,6 +105,12 @@ img {
   line-height: 1;
 }
 
+.logo-word {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
 .logo-name {
   color: var(--text);
 }
