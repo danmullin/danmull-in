@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Synth — Dan Mullin</title>
   <meta name="description" content="Synth is an AI-native programming language by Dan Mullin — annotations, demos, and a compiler built for agent-friendly intent.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="/">Dan Mullin<span>.in</span></a>
+    <a class="logo" href="/">
+      <span class="logo-mark" aria-hidden="true">⬡</span>
+      <span class="logo-name">Dan Mullin</span><span class="logo-tld">.in</span>
+    </a>
     <nav class="nav" aria-label="Primary">
       <a href="/#work">Work</a>
       <a href="/synth.html" aria-current="page">Synth</a>
@@ -23,12 +23,14 @@
 
   <main>
     <header class="page-hero">
+      <p class="hero-eyebrow">AI-native language</p>
       <h1>Synth</h1>
       <p>An AI-native language: human-readable source with annotations an agent can actually use — specs, intent, and demos that earn their keep.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://github.com/synth-pl/synth" rel="noopener noreferrer">Open the repo</a>
         <a class="btn btn-ghost" href="https://github.com/synth-pl/synth/tree/main/demo" rel="noopener noreferrer">Browse demos</a>
       </div>
+      <div class="install-chip" title="Public repo">github.com/synth-pl/synth</div>
     </header>
 
     <section class="section prose">
@@ -55,7 +57,7 @@
           <p>Compiler, demos, VS Code extension path, and living practices.</p>
         </a>
         <a class="work-link" href="https://github.com/synth-pl/synth/tree/main/examples" rel="noopener noreferrer">
-          <span class="eyebrow">Examples</span>
+          <span class="eyebrow cyan">Examples</span>
           <h3>Small programs</h3>
           <p>Focused samples that show the language’s habits without a feature kitchen sink.</p>
         </a>
