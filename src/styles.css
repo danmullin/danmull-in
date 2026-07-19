@@ -159,6 +159,8 @@ img {
   position: relative;
   z-index: 2;
   max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero-eyebrow {
@@ -184,7 +186,7 @@ img {
 }
 
 .hero .tag {
-  margin: 1.15rem 0 0;
+  margin: 1.15rem auto 0;
   max-width: 28rem;
   font-size: 16px;
   line-height: 1.75;
@@ -194,6 +196,7 @@ img {
 .cta-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
   margin-top: 1.6rem;
 }
@@ -244,11 +247,13 @@ img {
   padding: clamp(3.5rem, 8vh, 5rem) clamp(1rem, 4vw, 2rem);
   max-width: 1040px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .section-head {
-  margin-bottom: 1.6rem;
+  margin: 0 auto 1.6rem;
   max-width: 36rem;
+  text-align: center;
 }
 
 .section-head h2 {
@@ -263,12 +268,12 @@ img {
   display: block;
   width: 4.5rem;
   height: 2px;
-  margin-top: 0.65rem;
+  margin: 0.65rem auto 0;
   background: linear-gradient(90deg, var(--pink), var(--purple), transparent);
 }
 
 .section-head p {
-  margin: 0.85rem 0 0;
+  margin: 0.85rem auto 0;
   color: var(--text-muted);
   font-size: 16px;
 }
@@ -276,6 +281,7 @@ img {
 .work-list {
   display: grid;
   gap: 1rem;
+  text-align: center;
 }
 
 .work-link {
@@ -286,6 +292,7 @@ img {
   background: var(--bg-card);
   text-decoration: none;
   color: inherit;
+  text-align: center;
   transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
@@ -335,7 +342,7 @@ img {
 }
 
 .work-link p {
-  margin: 0.5rem 0 0;
+  margin: 0.5rem auto 0;
   color: var(--text-muted);
   max-width: 40rem;
   font-size: 15px;
@@ -345,6 +352,7 @@ img {
 .notes {
   display: grid;
   gap: 1rem;
+  text-align: center;
 }
 
 @media (min-width: 720px) {
@@ -356,17 +364,18 @@ img {
 .note {
   padding: 1.15rem 1.2rem;
   border: 1px solid var(--border-card);
-  border-left: 3px solid var(--pink);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-top: 3px solid var(--pink);
+  border-radius: var(--radius);
   background: rgba(18, 3, 48, 0.65);
+  text-align: center;
 }
 
 .note:nth-child(2) {
-  border-left-color: var(--cyan);
+  border-top-color: var(--cyan);
 }
 
 .note:nth-child(3) {
-  border-left-color: var(--purple);
+  border-top-color: var(--purple);
 }
 
 .note h3 {
@@ -377,7 +386,7 @@ img {
 }
 
 .note p {
-  margin: 0.55rem 0 0;
+  margin: 0.55rem auto 0;
   color: var(--text-muted);
   font-size: 14px;
   line-height: 1.7;
@@ -390,11 +399,12 @@ img {
   max-width: none;
   padding-left: clamp(1rem, 4vw, 2rem);
   padding-right: clamp(1rem, 4vw, 2rem);
+  text-align: center;
 }
 
 .about .section-head,
 .about > p {
-  max-width: 1040px;
+  max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -418,6 +428,7 @@ img {
   padding: clamp(3.5rem, 10vh, 5.5rem) clamp(1rem, 4vw, 2rem) 1.25rem;
   max-width: 1040px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .page-hero h1 {
@@ -428,7 +439,7 @@ img {
 }
 
 .page-hero p {
-  margin: 1rem 0 0;
+  margin: 1rem auto 0;
   max-width: 36rem;
   color: var(--text-muted);
   font-size: 16px;
@@ -436,6 +447,9 @@ img {
 
 .prose {
   max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .prose p {
@@ -455,7 +469,7 @@ img {
   display: block;
   width: 3rem;
   height: 2px;
-  margin-top: 0.45rem;
+  margin: 0.45rem auto 0;
   background: linear-gradient(90deg, var(--pink), transparent);
 }
 
@@ -468,6 +482,7 @@ img {
 .install-chip {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   margin-top: 0.75rem;
   padding: 0.55rem 0.85rem;
@@ -485,7 +500,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem 1.5rem;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   max-width: 1040px;
   margin: 0 auto;
 }
