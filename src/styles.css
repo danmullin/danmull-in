@@ -92,22 +92,30 @@ img {
   align-items: center;
   gap: 0.45rem;
   font-size: 16px;
+  line-height: 1;
   letter-spacing: 0.04em;
   text-decoration: none;
   color: var(--text);
 }
 
 .logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 1em;
+  height: 1em;
   font-family: "Segoe UI Symbol", "Segoe UI", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1;
   color: var(--pink);
   filter: drop-shadow(0 0 6px rgba(255, 45, 120, 0.7));
-  font-size: 18px;
-  line-height: 1;
 }
 
 .logo-word {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
+  line-height: 1;
   white-space: nowrap;
 }
 
