@@ -4,11 +4,8 @@
 
 ## Before you start
 
-Tell Mist (or note here):
-
-- **Registrar:** _________________ (Namecheap, Porkbun, GoDaddy, Google/Squarespace, etc.)
-- **Email on this domain?** Yes / No  
-  If yes, we must keep existing **MX** (and usually TXT for SPF/DKIM) when DNS moves.
+- **Registrar:** GoDaddy (confirmed 2026-07-19)
+- **Email on this domain?** Ask before moving NS — keep MX/TXT if yes.
 
 ## Path A — Point nameservers to Cloudflare (recommended)
 
