@@ -347,6 +347,7 @@ img {
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
+  padding-bottom: 0.55em;
   animation: lobby-brand-in 0.7s ease-out both;
 }
 
@@ -375,9 +376,9 @@ img {
 .lobby-period {
   grid-column: 2;
   grid-row: 1;
-  width: 0.2em;
-  height: 0.2em;
-  margin: 0 0.02em 0.14em;
+  width: 0.18em;
+  height: 0.18em;
+  margin: 0 0.01em 0.11em;
   border-radius: 50%;
   background: var(--cyan);
   box-shadow: 0 0 12px rgba(0, 212, 255, 0.45);
@@ -413,6 +414,8 @@ img {
 }
 
 .lobby-brand.is-morphing .lobby-period {
+  grid-column: 1 / -1;
+  justify-self: center;
   animation: lobby-period-rule 1.05s cubic-bezier(0.33, 0.9, 0.3, 1) forwards;
 }
 
@@ -427,11 +430,14 @@ img {
 }
 
 .lobby-brand.is-morphed .lobby-period {
-  width: 10.5rem;
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 72%;
+  max-width: 11rem;
   height: 2px;
   margin: 0;
   border-radius: 1px;
-  transform: translateY(1.05em);
+  transform: translateY(0.38em);
   box-shadow: 0 0 14px rgba(0, 212, 255, 0.35);
 }
 
@@ -451,32 +457,33 @@ img {
 
 @keyframes lobby-period-rule {
   0% {
-    width: 0.2em;
-    height: 0.2em;
-    margin: 0 0.02em 0.14em;
+    width: 0.18em;
+    height: 0.18em;
+    margin: 0 0.01em 0.11em;
     border-radius: 50%;
-    transform: translateY(0) scaleX(1);
+    transform: translateY(0);
   }
-  38% {
-    width: 0.2em;
-    height: 0.2em;
-    margin: 0 0.02em 0.14em;
+  32% {
+    width: 0.18em;
+    height: 0.18em;
+    margin: 0;
     border-radius: 50%;
-    transform: translateY(0.78em) scaleX(1);
+    transform: translateY(0.28em);
   }
-  55% {
-    width: 0.2em;
+  48% {
+    width: 0.18em;
     height: 2px;
     margin: 0;
     border-radius: 1px;
-    transform: translateY(1.05em) scaleX(1);
+    transform: translateY(0.38em);
   }
   100% {
-    width: 10.5rem;
+    width: 72%;
+    max-width: 11rem;
     height: 2px;
     margin: 0;
     border-radius: 1px;
-    transform: translateY(1.05em) scaleX(1);
+    transform: translateY(0.38em);
     box-shadow: 0 0 14px rgba(0, 212, 255, 0.35);
   }
 }
