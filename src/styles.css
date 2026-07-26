@@ -421,7 +421,7 @@ img {
     border-color 0.18s ease,
     box-shadow 0.18s ease,
     background 0.18s ease;
-  animation: door-enter 0.55s ease-out both;
+  animation: door-enter 0.55s ease-out forwards;
   animation-delay: calc(0.2s + var(--door-i) * 0.07s);
 }
 

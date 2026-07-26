@@ -1,3 +1,3 @@
-/*    /index.html  200
-/synth /synth.html  200
-/games  /games.html  200
+# Cloudflare Pages: do not SPA-fallback /* → index.html.
+# Pretty URLs (/synth, /games) are served from synth.html / games.html automatically.
+# Old rewrites (/synth → /synth.html) looped with Pages’ .html → extensionless redirects.
