@@ -9,26 +9,33 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
   })
 })
 
-function setPeriodNudge(brand) {
+function setBrandMetrics(brand) {
   const swap = brand.querySelector('.lobby-brand-swap')
   const period = brand.querySelector('.lobby-period')
-  if (!swap || !period) return
+  const to = brand.querySelector('.lobby-to')
+  if (!swap || !period || !to) return
+
   const swapRect = swap.getBoundingClientRect()
   const periodRect = period.getBoundingClientRect()
   const dx =
     swapRect.left + swapRect.width / 2 - (periodRect.left + periodRect.width / 2)
   period.style.setProperty('--nudge-x', `${dx}px`)
+
+  // Measure final name width (to is opacity 0 but still laid out)
+  const nameWidth = to.getBoundingClientRect().width
+  const ruleWidth = Math.max(72, Math.min(nameWidth * 0.72, 200))
+  period.style.setProperty('--rule-width', `${ruleWidth.toFixed(1)}px`)
 }
 
 const brand = document.querySelector('.lobby-brand')
 if (brand) {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  setPeriodNudge(brand)
+  setBrandMetrics(brand)
   if (reduce) {
     brand.classList.add('is-morphed')
   } else {
     window.setTimeout(() => {
-      setPeriodNudge(brand)
+      setBrandMetrics(brand)
       brand.classList.add('is-morphing')
       window.setTimeout(() => {
         brand.classList.add('is-morphed')

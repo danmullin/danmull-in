@@ -443,8 +443,7 @@ img {
 }
 
 .lobby-brand.is-morphed .lobby-period {
-  width: 72%;
-  max-width: 11rem;
+  width: var(--rule-width, 10.5rem);
   height: 2px;
   margin: 0;
   border-radius: 1px;
@@ -515,8 +514,7 @@ img {
   }
   /* Expand into the rule under the name */
   100% {
-    width: 72%;
-    max-width: 11rem;
+    width: var(--rule-width, 10.5rem);
     height: 2px;
     margin: 0;
     border-radius: 1px;
