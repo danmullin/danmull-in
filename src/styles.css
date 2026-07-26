@@ -24,8 +24,10 @@
   --glow-pink: 0 0 28px rgba(255, 45, 120, 0.35);
   --glow-purple: 0 0 22px rgba(176, 96, 255, 0.28);
   --radius: 10px;
-  --font: "04b03", "Segoe UI", system-ui, sans-serif;
-  --font-mono: "Courier New", ui-monospace, monospace;
+  /* UI: Segoe stack for readability. Pixel face kept loaded for optional accents. */
+  --font: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-pixel: "04b03", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Cascadia Mono", "Consolas", "Courier New", ui-monospace, monospace;
 }
 
 *,
@@ -44,17 +46,17 @@ body {
   color: var(--text);
   font-family: var(--font);
   font-size: 16px;
-  line-height: 1.7;
-  letter-spacing: 0.02em;
+  line-height: 1.6;
+  letter-spacing: 0;
+  font-weight: 400;
   background:
     radial-gradient(ellipse 70% 55% at 18% -5%, rgba(255, 45, 120, 0.14), transparent 55%),
     radial-gradient(ellipse 55% 45% at 92% 8%, rgba(176, 96, 255, 0.14), transparent 50%),
     radial-gradient(ellipse 60% 40% at 70% 90%, rgba(0, 212, 255, 0.06), transparent 55%),
     var(--bg);
   background-attachment: fixed;
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: unset;
-  font-smooth: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -91,9 +93,10 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 600;
   line-height: 1;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.01em;
   text-decoration: none;
   color: var(--text);
 }
@@ -136,8 +139,9 @@ img {
 .nav a {
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 0.06em;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   transition: color 0.12s ease;
 }
@@ -180,10 +184,10 @@ img {
 .hero-eyebrow {
   margin: 0 0 0.85rem;
   font-size: 12px;
-  letter-spacing: 0.18em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--pink);
-  font-weight: 400;
 }
 
 .hero h1 {
@@ -222,8 +226,9 @@ img {
   padding: 0.7rem 1.15rem;
   border-radius: 8px;
   font-family: var(--font);
-  font-size: 14px;
-  letter-spacing: 0.06em;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
   border: 1px solid transparent;
@@ -330,9 +335,10 @@ img {
 
 .lobby-brand {
   margin: 0;
-  font-size: clamp(40px, 10vw, 72px);
+  font-size: clamp(40px, 9vw, 68px);
+  font-weight: 700;
   line-height: 1.05;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.03em;
   animation: lobby-brand-in 0.7s ease-out both;
 }
 
@@ -348,8 +354,8 @@ img {
 .lobby-line {
   margin: 1rem auto 0;
   max-width: 28rem;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.55;
   color: var(--text-muted);
   animation: lobby-brand-in 0.7s ease-out 0.12s both;
 }
@@ -471,14 +477,15 @@ img {
 }
 
 .door-name {
-  font-size: 20px;
-  letter-spacing: 0.05em;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--text);
 }
 
 .door-tease {
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 13.5px;
+  line-height: 1.45;
   color: var(--text-muted);
 }
 
@@ -486,7 +493,7 @@ img {
   margin: clamp(1.75rem, 4vh, 2.5rem) auto 0;
   max-width: 28rem;
   font-size: 14px;
-  line-height: 1.65;
+  line-height: 1.55;
   color: var(--text-dim);
   scroll-margin-top: 4.5rem;
   animation: lobby-brand-in 0.7s ease-out 0.55s both;
@@ -523,7 +530,8 @@ img {
 .section-head h2 {
   margin: 0;
   font-size: clamp(24px, 4vw, 32px);
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text);
 }
 
@@ -575,7 +583,8 @@ img {
   border: 1px solid rgba(255, 45, 120, 0.35);
   background: rgba(255, 45, 120, 0.1);
   font-size: 11px;
-  letter-spacing: 0.14em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--pink);
 }
@@ -601,7 +610,8 @@ img {
 .work-link h3 {
   margin: 0;
   font-size: 22px;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text);
 }
 
@@ -627,8 +637,9 @@ img {
 .page-hero h1 {
   margin: 0;
   font-size: clamp(32px, 8vw, 56px);
+  font-weight: 700;
   line-height: 1.1;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.03em;
 }
 
 .page-hero p {
@@ -653,7 +664,8 @@ img {
 .prose h2 {
   margin: 2rem 0 0.55rem;
   font-size: 22px;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text);
 }
 
@@ -689,7 +701,7 @@ img {
   padding: 2rem clamp(1rem, 4vw, 2rem) 2.5rem;
   color: var(--text-dim);
   font-size: 13px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem 1.5rem;
