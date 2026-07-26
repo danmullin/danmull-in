@@ -48,6 +48,8 @@ Suggested GitHub owner: your personal account (not `synth-pl` unless you prefer 
 2. Add `danmull.in` and `www.danmull.in` (redirect www → apex if offered).
 3. Follow [DNS.md](./DNS.md) so Cloudflare can verify and issue HTTPS.
 
+Mail is optional — see **Email later** in [DNS.md](./DNS.md) (Cloudflare Email Routing → Gmail) when you want `@danmull.in`.
+
 ## Build note
 
 Multi-page inputs: `index.html`, `synth.html`, `games.html` (see `vite.config.js`).

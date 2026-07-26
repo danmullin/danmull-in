@@ -5,7 +5,17 @@
 ## Before you start
 
 - **Registrar:** GoDaddy (confirmed 2026-07-19)
-- **Email on this domain?** Ask before moving NS — keep MX/TXT if yes.
+- **Email:** not needed for the site. Deferred 2026-07-25 — see **Email later** below.
+
+## Email later (when you want `@danmull.in`)
+
+Site hosting does not need mail. When you want a branded inbox address:
+
+1. Cloudflare Dashboard → **Email** → **Email Routing** → enable for `danmull.in`.
+2. Add a destination (e.g. Gmail) and a rule like `you@danmull.in` → that inbox.
+3. Cloudflare adds the MX / SPF records for you — don’t invent them by hand.
+
+That’s enough to **receive**. Skip Google Workspace / paid mail until you need to **send** as `@danmull.in` from a real mailbox. Optional later: SPF/DKIM/DMARC if the address is public and you care about spoofing.
 
 ## Path A — Point nameservers to Cloudflare (recommended)
 
