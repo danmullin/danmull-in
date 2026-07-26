@@ -7,14 +7,13 @@
   <meta name="description" content="Dan Mullin — tools, games, and systems you can play with. Maker of Synth and game craft.">
   <link rel="stylesheet" href="/src/styles.css">
 </head>
-<body>
+<body class="lobby-page">
   <header class="site-header">
     <a class="logo" href="/">
       <span class="logo-mark" aria-hidden="true">⬡</span>
       <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
     </a>
     <nav class="nav" aria-label="Primary">
-      <a href="#work">Work</a>
       <a href="/synth.html">Synth</a>
       <a href="/games.html">Games</a>
       <a href="#about">About</a>
@@ -22,80 +21,42 @@
   </header>
 
   <main>
-    <section class="hero" aria-label="Introduction">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-scan" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <p class="hero-eyebrow">Languages · games · tools</p>
-        <h1>Dan <span class="grad">Mullin</span></h1>
-        <p class="tag">I love making things — games, tools, and even my own programming language.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="/synth.html">See Synth</a>
-          <a class="btn btn-ghost" href="https://github.com/synth-pl/synth" rel="noopener noreferrer">GitHub</a>
+    <section class="lobby" aria-label="Lobby">
+      <div class="lobby-bg" aria-hidden="true"></div>
+      <div class="lobby-glow" aria-hidden="true"></div>
+      <div class="lobby-inner">
+        <h1 class="lobby-brand">
+          <span class="lobby-brand-name">danmull</span><span class="lobby-brand-tld">.in</span>
+        </h1>
+        <p class="lobby-line">Languages · games · tools — pick a door.</p>
+
+        <div class="door-grid" role="navigation" aria-label="Destinations">
+          <a class="door" href="/synth.html" style="--door-i: 0">
+            <span class="door-name">Synth</span>
+            <span class="door-tease">AI-native language with a real compiler</span>
+          </a>
+          <a class="door" href="/games.html" style="--door-i: 1">
+            <span class="door-name">Games</span>
+            <span class="door-tease">Harborwick, Ledger Bay, feel-first play</span>
+          </a>
+          <a class="door" href="https://danmullin.github.io/sunwake/" rel="noopener noreferrer" style="--door-i: 2">
+            <span class="door-name">Sunwake</span>
+            <span class="door-tease">Music visualizer — listen and watch</span>
+          </a>
+          <a class="door" href="/games.html#tooling" style="--door-i: 3">
+            <span class="door-name">Tooling</span>
+            <span class="door-tease">Sheets, exports, Godot-minded pipelines</span>
+          </a>
+          <a class="door" href="https://github.com/danmullin" rel="noopener noreferrer" style="--door-i: 4">
+            <span class="door-name">GitHub</span>
+            <span class="door-tease">Repos, forks, and work in the open</span>
+          </a>
         </div>
-      </div>
-    </section>
 
-    <section class="section" id="work">
-      <div class="section-head">
-        <h2>Featured work</h2>
-        <p>Things you can inspect, fork, or play — not a polished corporate case deck.</p>
+        <p class="lobby-about" id="about">
+          Dan Mullin — I make languages, games, and the tools around both.
+        </p>
       </div>
-      <div class="work-list">
-        <a class="work-link" href="/synth.html">
-          <span class="eyebrow">Language</span>
-          <h3>Synth</h3>
-          <p>An AI-native programming language with annotations, demos, and a real compiler — built for agent-friendly intent and human-readable source.</p>
-        </a>
-        <a class="work-link" href="/games.html">
-          <span class="eyebrow cyan">Games</span>
-          <h3>Games &amp; playables</h3>
-          <p>Cozy systems, feel-first prototypes, and tools that sit next to the player loop — Harborwick, Ledger Bay, and more.</p>
-        </a>
-        <a class="work-link" href="https://github.com/synth-pl/synth" rel="noopener noreferrer">
-          <span class="eyebrow amber">Tooling</span>
-          <h3>Sheet &amp; export craft</h3>
-          <p>Sprite/timeline tooling and Godot-minded pipelines — the boring machinery that makes art move.</p>
-        </a>
-      </div>
-    </section>
-
-    <section class="section" id="notes">
-      <div class="section-head">
-        <h2>How I think</h2>
-        <p>Career depth in taste and systems — not anonymous client logos.</p>
-      </div>
-      <div class="notes">
-        <article class="note">
-          <h3>Languages for agents</h3>
-          <p>If a model is going to write code with you, the source should carry intent, specs, and seams the agent can read — not just types for humans.</p>
-        </article>
-        <article class="note">
-          <h3>Feel over feature lists</h3>
-          <p>A game lands when weight, timing, and feedback agree. I’d rather ship one honest loop than a menu of unfinished systems.</p>
-        </article>
-        <article class="note">
-          <h3>Tools you leave open</h3>
-          <p>Years of shipping company sites taught me clarity under constraints. The work I keep is the tooling I’d actually use at 2am.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section about" id="about">
-      <div class="section-head">
-        <h2>About</h2>
-      </div>
-      <p>
-        I’m Dan Mullin — a developer with a long career building for the web, mostly inside other people’s products.
-        That means fewer public case studies and more quiet craft: systems that held up, and taste shaped by shipping.
-      </p>
-      <p>
-        What I love making on my own time is closer to the metal of joy: programming languages, game feel, and the tools around both.
-        Synth is the flagship. Games are the gravity well. If something here resonates, you’re welcome to poke the repos.
-      </p>
-      <p>
-        Find me on the open web at <strong>danmull.in</strong> — this site.
-      </p>
     </section>
   </main>
 
