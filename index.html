@@ -8,17 +8,6 @@
   <link rel="stylesheet" href="/src/styles.css">
 </head>
 <body class="lobby-page">
-  <header class="site-header">
-    <a class="logo" href="/">
-      <span class="logo-mark" aria-hidden="true">⬡</span>
-      <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
-    </a>
-    <nav class="nav" aria-label="Primary">
-      <a href="/synth">Synth</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
-
   <main>
     <section class="lobby" aria-label="Lobby">
       <div class="lobby-bg" aria-hidden="true"></div>
@@ -27,7 +16,7 @@
         <h1 class="lobby-brand">
           <span class="lobby-brand-name">danmull</span><span class="lobby-brand-tld">.in</span>
         </h1>
-        <p class="lobby-line">Languages · editors · tools — pick a door.</p>
+        <p class="lobby-line">Languages · editors · tools</p>
 
         <div class="door-grid" role="navigation" aria-label="Destinations">
           <a class="door" href="/synth" style="--door-i: 0">
@@ -53,19 +42,15 @@
         </div>
 
         <p class="lobby-about" id="about">
-          Dan Mullin — I make languages, editors, and the tools around both.
+          Dan Mullin — languages, editors, and the tools around both.
         </p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer site-footer-lobby">
     <span>© <span id="y"></span> Dan Mullin</span>
-    <span>
-      <a href="https://github.com/synth-pl/synth" rel="noopener noreferrer">Synth on GitHub</a>
-      ·
-      <a href="/synth">Synth</a>
-    </span>
+    <a href="/synth">Synth</a>
   </footer>
   <script type="module" src="/src/main.js"></script>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
