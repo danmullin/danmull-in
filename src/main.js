@@ -94,3 +94,100 @@ if (lobby && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     { passive: true },
   )
 }
+
+const yearEl = document.getElementById('y')
+if (yearEl) yearEl.textContent = String(new Date().getFullYear())
+
+const contactModal = document.getElementById('contact-modal')
+const contactForm = document.getElementById('contact-form')
+const contactStatus = document.getElementById('contact-status')
+const contactSubmit = document.getElementById('contact-submit')
+const CONTACT_ENDPOINT = 'https://formsubmit.co/ajax/danmullin@gmail.com'
+
+function setContactStatus(message, isError = false) {
+  if (!contactStatus) return
+  contactStatus.hidden = !message
+  contactStatus.textContent = message || ''
+  contactStatus.classList.toggle('is-error', Boolean(isError))
+}
+
+function openContact() {
+  if (!contactModal) return
+  setContactStatus('')
+  if (typeof contactModal.showModal === 'function') {
+    contactModal.showModal()
+  } else {
+    contactModal.setAttribute('open', '')
+  }
+  const first = contactForm?.querySelector('input[name="email"]')
+  first?.focus()
+}
+
+function closeContact() {
+  if (!contactModal) return
+  if (typeof contactModal.close === 'function') {
+    contactModal.close()
+  } else {
+    contactModal.removeAttribute('open')
+  }
+}
+
+document.querySelectorAll('[data-open-contact]').forEach((el) => {
+  el.addEventListener('click', openContact)
+})
+
+document.querySelectorAll('[data-close-contact]').forEach((el) => {
+  el.addEventListener('click', closeContact)
+})
+
+contactModal?.addEventListener('click', (e) => {
+  if (e.target === contactModal) closeContact()
+})
+
+contactForm?.addEventListener('submit', async (e) => {
+  e.preventDefault()
+  if (!contactForm || !contactSubmit) return
+
+  const data = new FormData(contactForm)
+  if (String(data.get('_honey') || '').trim()) {
+    setContactStatus('Thanks — message sent.')
+    contactForm.reset()
+    return
+  }
+
+  const payload = {
+    name: String(data.get('name') || '').trim(),
+    email: String(data.get('email') || '').trim(),
+    message: String(data.get('message') || '').trim(),
+    _subject: 'danmull.in contact',
+    _captcha: 'false',
+    _template: 'table',
+  }
+
+  contactSubmit.disabled = true
+  setContactStatus('Sending…')
+
+  try {
+    const res = await fetch(CONTACT_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(payload),
+    })
+    const body = await res.json().catch(() => ({}))
+    if (!res.ok) {
+      throw new Error(body.message || 'Send failed')
+    }
+    setContactStatus('Sent — thanks.')
+    contactForm.reset()
+  } catch (err) {
+    setContactStatus(
+      err instanceof Error ? err.message : 'Could not send. Try again in a moment.',
+      true,
+    )
+  } finally {
+    contactSubmit.disabled = false
+  }
+})

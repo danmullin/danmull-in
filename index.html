@@ -46,6 +46,10 @@
             <span class="door-name">GitHub</span>
             <span class="door-tease">Repos, forks, and work in the open</span>
           </a>
+          <button type="button" class="door" data-open-contact style="--door-i: 5">
+            <span class="door-name">Contact</span>
+            <span class="door-tease">Say hello — a short note is enough</span>
+          </button>
         </div>
 
         <p class="lobby-about" id="about">
@@ -54,6 +58,33 @@
       </div>
     </section>
   </main>
+
+  <dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-title">
+    <form class="contact-form" id="contact-form">
+      <header class="contact-head">
+        <h2 id="contact-title">Contact</h2>
+        <button type="button" class="contact-close" data-close-contact aria-label="Close">×</button>
+      </header>
+      <p class="contact-lead">A short note is enough.</p>
+      <label class="contact-field">
+        <span>Name</span>
+        <input type="text" name="name" autocomplete="name" maxlength="120">
+      </label>
+      <label class="contact-field">
+        <span>Email</span>
+        <input type="email" name="email" autocomplete="email" required maxlength="200">
+      </label>
+      <label class="contact-field">
+        <span>Message</span>
+        <textarea name="message" rows="4" required maxlength="4000"></textarea>
+      </label>
+      <input type="text" name="_honey" class="contact-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="contact-status" id="contact-status" role="status" aria-live="polite" hidden></p>
+      <div class="contact-actions">
+        <button type="submit" class="btn btn-primary" id="contact-submit">Send</button>
+      </div>
+    </form>
+  </dialog>
 
   <footer class="site-footer site-footer-lobby">
     <span>© <span id="y"></span> Dan Mullin</span>

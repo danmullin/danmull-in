@@ -48,7 +48,9 @@ Suggested GitHub owner: your personal account (not `synth-pl` unless you prefer 
 2. Add `danmull.in` and `www.danmull.in` (redirect www → apex if offered).
 3. Follow [DNS.md](./DNS.md) so Cloudflare can verify and issue HTTPS.
 
-Mail is optional — see **Email later** in [DNS.md](./DNS.md) (Cloudflare Email Routing → Gmail) when you want `@danmull.in`.
+Mail is optional for `@danmull.in` — see **Email later** in [DNS.md](./DNS.md).
+
+The lobby **Contact** door posts to FormSubmit → `danmullin@gmail.com` (no Cloudflare Email Routing required). First live submit needs a one-time FormSubmit confirmation email.
 
 ## Build note
 
