@@ -295,40 +295,55 @@ img {
   overflow: hidden;
 }
 
-.lobby-bg {
+.lobby-atmosphere {
   position: absolute;
   inset: 0;
   z-index: 0;
+  pointer-events: none;
+  transform: translate3d(var(--parallax-x, 0px), var(--parallax-y, 0px), 0);
+  will-change: transform;
+}
+
+.lobby-bg {
+  position: absolute;
+  inset: -8%;
   background:
     radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255, 45, 120, 0.18), transparent 55%),
     radial-gradient(ellipse 45% 40% at 85% 70%, rgba(176, 96, 255, 0.14), transparent 50%),
     radial-gradient(ellipse 40% 35% at 10% 80%, rgba(0, 212, 255, 0.08), transparent 55%);
-  pointer-events: none;
+  transform: translate3d(
+    calc(var(--parallax-x, 0px) * -0.35),
+    calc(var(--parallax-y, 0px) * -0.35),
+    0
+  );
 }
 
 .lobby-glow {
   position: absolute;
   left: 50%;
   top: 28%;
-  z-index: 0;
   width: min(42rem, 90vw);
   height: 14rem;
-  transform: translateX(-50%);
+  margin-left: calc(min(42rem, 90vw) / -2);
   background: radial-gradient(ellipse at center, rgba(255, 45, 120, 0.22), transparent 70%);
   filter: blur(28px);
-  pointer-events: none;
   animation: lobby-pulse 5.5s ease-in-out infinite;
+  transform: translate3d(
+    calc(var(--parallax-x, 0px) * 0.55),
+    calc(var(--parallax-y, 0px) * 0.55),
+    0
+  );
 }
 
 @keyframes lobby-pulse {
   0%,
   100% {
     opacity: 0.55;
-    transform: translateX(-50%) scale(1);
+    scale: 1;
   }
   50% {
     opacity: 1;
-    transform: translateX(-50%) scale(1.08);
+    scale: 1.08;
   }
 }
 
@@ -435,6 +450,21 @@ img {
   border-radius: 1px;
   transform: translate(var(--nudge-x, 0px), 0.38em);
   box-shadow: 0 0 14px rgba(0, 212, 255, 0.35);
+  animation: lobby-rule-afterglow 2.2s ease-in-out 0.05s 2;
+}
+
+@keyframes lobby-rule-afterglow {
+  0%,
+  100% {
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
+    filter: brightness(1);
+  }
+  45% {
+    box-shadow:
+      0 0 22px rgba(0, 212, 255, 0.65),
+      0 0 40px rgba(255, 45, 120, 0.22);
+    filter: brightness(1.35);
+  }
 }
 
 @keyframes lobby-from-out {
@@ -644,6 +674,12 @@ img {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .lobby-atmosphere,
+  .lobby-bg,
+  .lobby-glow {
+    transform: none !important;
+  }
+
   .lobby-glow,
   .lobby-brand,
   .lobby-line,
@@ -655,7 +691,8 @@ img {
   .lobby-brand.is-morphing .lobby-from-left,
   .lobby-brand.is-morphing .lobby-from-right,
   .lobby-brand.is-morphing .lobby-to,
-  .lobby-brand.is-morphing .lobby-period {
+  .lobby-brand.is-morphing .lobby-period,
+  .lobby-brand.is-morphed .lobby-period {
     animation: none;
   }
 

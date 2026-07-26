@@ -37,3 +37,53 @@ if (brand) {
     }, 900)
   }
 }
+
+const lobby = document.querySelector('.lobby')
+if (lobby && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let targetX = 0
+  let targetY = 0
+  let currentX = 0
+  let currentY = 0
+  let raf = 0
+
+  const maxShift = 18
+
+  const tick = () => {
+    currentX += (targetX - currentX) * 0.08
+    currentY += (targetY - currentY) * 0.08
+    lobby.style.setProperty('--parallax-x', `${currentX.toFixed(2)}px`)
+    lobby.style.setProperty('--parallax-y', `${currentY.toFixed(2)}px`)
+    if (Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
+      raf = requestAnimationFrame(tick)
+    } else {
+      raf = 0
+    }
+  }
+
+  const requestTick = () => {
+    if (!raf) raf = requestAnimationFrame(tick)
+  }
+
+  lobby.addEventListener(
+    'pointermove',
+    (e) => {
+      const r = lobby.getBoundingClientRect()
+      const nx = ((e.clientX - r.left) / r.width) * 2 - 1
+      const ny = ((e.clientY - r.top) / r.height) * 2 - 1
+      targetX = nx * maxShift
+      targetY = ny * maxShift
+      requestTick()
+    },
+    { passive: true },
+  )
+
+  lobby.addEventListener(
+    'pointerleave',
+    () => {
+      targetX = 0
+      targetY = 0
+      requestTick()
+    },
+    { passive: true },
+  )
+}
