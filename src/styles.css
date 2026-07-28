@@ -858,16 +858,6 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
   color: var(--cyan);
 }
 
-.lobby-about {
-  margin: clamp(1.5rem, 4vh, 2.25rem) auto 0;
-  max-width: 26rem;
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--text-dim);
-  scroll-margin-top: 2rem;
-  animation: lobby-brand-in 0.7s ease-out 0.55s both;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .lobby-atmosphere,
   .lobby-bg,
@@ -878,8 +868,7 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
   .lobby-glow,
   .lobby-brand,
   .lobby-line,
-  .door,
-  .lobby-about {
+  .door {
     animation: none;
   }
 
