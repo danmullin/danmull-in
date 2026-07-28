@@ -15,7 +15,7 @@
   <meta name="description" content="Dan Mullin — I craft tools and software, make games, and give data a little light.">
   <link rel="stylesheet" href="/src/styles.css">
 </head>
-<body class="lobby-page">
+<body class="lobby-page lobby-page--covers-only">
   <main>
     <section class="lobby" aria-label="Lobby">
       <div class="lobby-atmosphere" aria-hidden="true">
@@ -23,71 +23,76 @@
         <div class="lobby-glow"></div>
       </div>
       <div class="lobby-inner">
-        <h1 class="lobby-brand" aria-label="Dan Mullin">
-          <span class="lobby-brand-swap">
-            <span class="lobby-from-left" aria-hidden="true">danmull</span>
-            <span class="lobby-period" aria-hidden="true"></span>
-            <span class="lobby-from-right" aria-hidden="true">in</span>
-            <span class="lobby-to" aria-hidden="true">Dan Mullin</span>
-          </span>
-        </h1>
-        <p class="lobby-line">Software · games · signal</p>
+        <!-- Hero kept for later — remove lobby-page--covers-only on <body> to restore -->
+        <div class="lobby-hero">
+          <h1 class="lobby-brand" aria-label="Dan Mullin">
+            <span class="lobby-brand-swap">
+              <span class="lobby-from-left" aria-hidden="true">danmull</span>
+              <span class="lobby-period" aria-hidden="true"></span>
+              <span class="lobby-from-right" aria-hidden="true">in</span>
+              <span class="lobby-to" aria-hidden="true">Dan Mullin</span>
+            </span>
+          </h1>
+          <p class="lobby-line">Software · games · signal</p>
+          <p class="lobby-about" id="about">
+            Dan Mullin — I craft tools and software, make games, and give data a little light.
+          </p>
+        </div>
 
-        <div class="door-grid" role="navigation" aria-label="Destinations">
-          <a class="door" href="/synth" style="--door-i: 0" aria-label="Synth — AI-native language with a real compiler">
-            <img class="door-art" src="/doors/synth.jpg" width="512" height="512" alt="" decoding="async" fetchpriority="high">
-            <span class="door-meta">
-              <span class="door-name">Synth</span>
-              <span class="door-tease">AI-native language with a real compiler</span>
-            </span>
-          </a>
-          <a class="door" href="https://danmullin.github.io/penultimate/" rel="noopener noreferrer" style="--door-i: 1" aria-label="Penultimate — SVG vector editor">
-            <img class="door-art" src="/doors/penultimate.jpg" width="512" height="512" alt="" decoding="async" fetchpriority="high">
-            <span class="door-meta">
-              <span class="door-name">Penultimate</span>
-              <span class="door-tease">SVG vector editor — handles worth dragging</span>
-            </span>
-          </a>
-          <a class="door" href="https://danmullin.github.io/tileforge/" rel="noopener noreferrer" style="--door-i: 2" aria-label="Tileforge — map authoring and tile studio">
-            <img class="door-art" src="/doors/tileforge.jpg" width="512" height="512" alt="" decoding="async" fetchpriority="high">
-            <span class="door-meta">
-              <span class="door-name">Tileforge</span>
-              <span class="door-tease">Map authoring and tile studio</span>
-            </span>
-          </a>
-          <a class="door" href="https://danmullin.github.io/onion-lab/" rel="noopener noreferrer" style="--door-i: 3" aria-label="Onion Lab — spritesheet animation studio">
-            <img class="door-art" src="/doors/onion-lab.jpg" width="512" height="512" alt="" loading="lazy" decoding="async">
-            <span class="door-meta">
-              <span class="door-name">Onion Lab</span>
-              <span class="door-tease">Spritesheet animation studio</span>
-            </span>
-          </a>
-          <a class="door" href="https://danmullin.github.io/sunwake/" rel="noopener noreferrer" style="--door-i: 4" aria-label="Sunwake — music visualizer">
-            <img class="door-art" src="/doors/sunwake.jpg" width="512" height="512" alt="" loading="lazy" decoding="async">
-            <span class="door-meta">
-              <span class="door-name">Sunwake</span>
-              <span class="door-tease">Music visualizer — listen and watch</span>
-            </span>
-          </a>
-          <a class="door" href="https://github.com/danmullin" rel="noopener noreferrer" style="--door-i: 5" aria-label="GitHub — repos and work in the open">
-            <img class="door-art" src="/doors/github.jpg" width="512" height="512" alt="" loading="lazy" decoding="async">
+        <div class="door-shelf" role="navigation" aria-label="Destinations">
+          <a class="door door--lead" href="https://github.com/danmullin" rel="noopener noreferrer" style="--door-i: 0" aria-label="GitHub — repos and work in the open">
+            <img class="door-art" src="/doors/github.jpg" width="512" height="512" alt="" decoding="async" fetchpriority="high">
             <span class="door-meta">
               <span class="door-name">GitHub</span>
               <span class="door-tease">Repos, forks, and work in the open</span>
             </span>
           </a>
-          <button type="button" class="door" data-open-contact style="--door-i: 6" aria-label="Contact — say hello">
-            <img class="door-art" src="/doors/contact.jpg" width="512" height="512" alt="" loading="lazy" decoding="async">
-            <span class="door-meta">
-              <span class="door-name">Contact</span>
-              <span class="door-tease">Say hello — a short note is enough</span>
-            </span>
-          </button>
-        </div>
 
-        <p class="lobby-about" id="about">
-          Dan Mullin — I craft tools and software, make games, and give data a little light.
-        </p>
+          <div class="door-grid">
+            <a class="door" href="/synth" style="--door-i: 1" aria-label="Synth — AI-native language with a real compiler">
+              <img class="door-art" src="/doors/synth.jpg" width="512" height="512" alt="" decoding="async" fetchpriority="high">
+              <span class="door-meta">
+                <span class="door-name">Synth</span>
+                <span class="door-tease">AI-native language with a real compiler</span>
+              </span>
+            </a>
+            <a class="door" href="https://danmullin.github.io/penultimate/" rel="noopener noreferrer" style="--door-i: 2" aria-label="Penultimate — SVG vector editor">
+              <img class="door-art" src="/doors/penultimate.jpg" width="512" height="512" alt="" decoding="async">
+              <span class="door-meta">
+                <span class="door-name">Penultimate</span>
+                <span class="door-tease">SVG vector editor — handles worth dragging</span>
+              </span>
+            </a>
+            <a class="door" href="https://danmullin.github.io/tileforge/" rel="noopener noreferrer" style="--door-i: 3" aria-label="Tileforge — map authoring and tile studio">
+              <img class="door-art" src="/doors/tileforge.jpg" width="512" height="512" alt="" decoding="async">
+              <span class="door-meta">
+                <span class="door-name">Tileforge</span>
+                <span class="door-tease">Map authoring and tile studio</span>
+              </span>
+            </a>
+            <a class="door" href="https://danmullin.github.io/onion-lab/" rel="noopener noreferrer" style="--door-i: 4" aria-label="Onion Lab — spritesheet animation studio">
+              <img class="door-art" src="/doors/onion-lab.jpg" width="512" height="512" alt="" loading="lazy" decoding="async">
+              <span class="door-meta">
+                <span class="door-name">Onion Lab</span>
+                <span class="door-tease">Spritesheet animation studio</span>
+              </span>
+            </a>
+            <a class="door" href="https://danmullin.github.io/sunwake/" rel="noopener noreferrer" style="--door-i: 5" aria-label="Sunwake — music visualizer">
+              <img class="door-art" src="/doors/sunwake.jpg" width="512" height="512" alt="" loading="lazy" decoding="async">
+              <span class="door-meta">
+                <span class="door-name">Sunwake</span>
+                <span class="door-tease">Music visualizer — listen and watch</span>
+              </span>
+            </a>
+            <button type="button" class="door" data-open-contact style="--door-i: 6" aria-label="Contact — say hello">
+              <img class="door-art" src="/doors/contact.jpg" width="512" height="512" alt="" loading="lazy" decoding="async">
+              <span class="door-meta">
+                <span class="door-name">Contact</span>
+                <span class="door-tease">Say hello — a short note is enough</span>
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   </main>

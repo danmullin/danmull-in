@@ -28,7 +28,8 @@ function setBrandMetrics(brand) {
 }
 
 const brand = document.querySelector('.lobby-brand')
-if (brand) {
+const coversOnly = document.body.classList.contains('lobby-page--covers-only')
+if (brand && !coversOnly) {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   setBrandMetrics(brand)
   if (reduce) {
