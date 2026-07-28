@@ -358,7 +358,7 @@ img {
 
 .lobby-brand {
   margin: 0;
-  font-size: clamp(28px, 6vw, 42px);
+  font-size: clamp(34px, 7vw, 56px);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -385,6 +385,7 @@ img {
   grid-column: 1;
   grid-row: 1;
   color: #ffffff;
+  text-shadow: 0 0 22px rgba(255, 255, 255, 0.18);
   justify-self: end;
 }
 
@@ -413,7 +414,18 @@ img {
 .lobby-to {
   grid-column: 1 / -1;
   grid-row: 1;
-  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    #ffe66a 0%,
+    #ff7ac8 42%,
+    #c56bff 72%,
+    #00d4ff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 16px rgba(255, 45, 120, 0.28));
   opacity: 0;
   pointer-events: none;
   transform: translateY(4px);
@@ -524,12 +536,53 @@ img {
 }
 
 .lobby-line {
-  margin: 0.65rem auto 0;
-  max-width: 28rem;
-  font-size: 15px;
-  line-height: 1.5;
-  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 0.85rem auto 0;
+  max-width: 40rem;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(226, 213, 255, 0.88);
+  text-shadow: 0 0 18px rgba(176, 96, 255, 0.22);
   animation: lobby-brand-in 0.7s ease-out 0.12s both;
+}
+
+.lobby-line::before,
+.lobby-line::after {
+  content: "";
+  display: block;
+  width: clamp(1.75rem, 6vw, 3rem);
+  height: 1px;
+  flex: 0 0 auto;
+  border-radius: 1px;
+}
+
+.lobby-line::before {
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.85));
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.35);
+}
+
+.lobby-line::after {
+  background: linear-gradient(90deg, rgba(255, 45, 120, 0.9), transparent);
+  box-shadow: 0 0 8px rgba(255, 45, 120, 0.3);
+}
+
+@media (max-width: 520px) {
+  .lobby-line {
+    flex-wrap: wrap;
+    gap: 0.45rem 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .lobby-line::before,
+  .lobby-line::after {
+    width: 1.25rem;
+  }
 }
 
 @keyframes lobby-brand-in {
