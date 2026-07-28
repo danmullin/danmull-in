@@ -547,19 +547,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(1rem, 3vh, 1.5rem);
-  margin-top: 0;
-}
-
-.door--lead {
-  width: min(100%, 280px);
-  flex: 0 0 auto;
-}
-
-@media (min-width: 560px) {
-  .door--lead {
-    width: min(100%, 300px);
-  }
+  gap: clamp(0.85rem, 2.5vh, 1.25rem);
+  width: 100%;
+  margin-top: clamp(1.75rem, 5vh, 2.75rem);
 }
 
 .door-grid {
@@ -567,7 +557,6 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 0.85rem;
   width: 100%;
-  margin-top: 0;
   text-align: left;
 }
 
@@ -578,63 +567,108 @@ img {
   }
 }
 
-/* Covers-only lobby: hero stays in DOM, switched off here */
-.lobby-page--covers-only .lobby-hero {
-  display: none;
-}
-
-.lobby-page--covers-only .lobby-inner {
-  max-width: 920px;
-}
-
-.lobby-page--covers-only .door-shelf {
-  margin-top: 0;
-}
-
 .door {
   --door-i: 0;
   position: relative;
   display: block;
-  padding: 0;
   margin: 0;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 10px;
-  background: #0a0218;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  background: rgba(18, 3, 48, 0.72);
   text-decoration: none;
   color: inherit;
   font: inherit;
   text-align: left;
   cursor: pointer;
-  overflow: hidden;
-  aspect-ratio: 1;
   appearance: none;
   -webkit-appearance: none;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
   opacity: 0;
   transition:
-    transform 0.22s ease,
-    border-color 0.22s ease,
-    box-shadow 0.22s ease;
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
   animation: door-enter 0.55s ease-out forwards;
   animation-delay: calc(0.2s + var(--door-i) * 0.07s);
+}
+
+.door--art {
+  padding: 0;
+  overflow: hidden;
+  background: #0a0218;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.door--text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.1rem 1.2rem;
+}
+
+.door--contact {
+  width: min(100%, 22rem);
+  flex: 0 0 auto;
 }
 
 .door-art {
   display: block;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1;
+  height: auto;
   object-fit: cover;
   object-position: center;
   transition: transform 0.35s ease;
 }
 
 .door-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  pointer-events: none;
+}
+
+/* Stickers (default): caption under the art */
+html[data-lobby-theme="stickers"] .door--art .door-meta,
+html:not([data-lobby-theme]) .door--art .door-meta {
+  padding: 0.75rem 0.9rem 0.85rem;
+  background: rgba(12, 2, 28, 0.92);
+}
+
+html[data-lobby-theme="stickers"] .door--art .door-name,
+html:not([data-lobby-theme]) .door--art .door-name {
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-shadow: none;
+}
+
+html[data-lobby-theme="stickers"] .door--art .door-tease,
+html:not([data-lobby-theme]) .door--art .door-tease {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-muted);
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+/* Albums: vinyl overlay captions on the cover */
+html[data-lobby-theme="albums"] .door--art {
+  aspect-ratio: 1;
+}
+
+html[data-lobby-theme="albums"] .door--art .door-art {
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+html[data-lobby-theme="albums"] .door--art .door-meta {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  display: flex;
-  flex-direction: column;
   gap: 0.15rem;
   padding: 2.4rem 0.85rem 0.75rem;
   background: linear-gradient(
@@ -643,7 +677,24 @@ img {
     rgba(8, 2, 20, 0.55) 55%,
     transparent 100%
   );
-  pointer-events: none;
+}
+
+html[data-lobby-theme="albums"] .door--art .door-name {
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
+}
+
+html[data-lobby-theme="albums"] .door--art .door-tease {
+  font-size: 12px;
+  line-height: 1.35;
+  color: rgba(230, 220, 255, 0.82);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @keyframes door-enter {
@@ -661,20 +712,21 @@ img {
 .door:focus-visible {
   border-color: rgba(255, 45, 120, 0.55);
   box-shadow: var(--glow-pink);
-  transform: translateY(-5px) scale(1.015);
+  background: rgba(24, 4, 58, 0.9);
+  transform: translateY(-4px);
   color: inherit;
   outline: none;
 }
 
-.door:hover .door-art,
-.door:focus-visible .door-art {
-  transform: scale(1.04);
+.door--art:hover,
+.door--art:focus-visible {
+  background: #0a0218;
+  transform: translateY(-5px) scale(1.015);
 }
 
-.door--lead:hover,
-.door--lead:focus-visible {
-  border-color: rgba(0, 212, 255, 0.5);
-  box-shadow: 0 0 32px rgba(0, 212, 255, 0.3);
+.door--art:hover .door-art,
+.door--art:focus-visible .door-art {
+  transform: scale(1.04);
 }
 
 .door-grid .door:nth-child(1):hover,
@@ -713,22 +765,44 @@ img {
   box-shadow: var(--glow-pink);
 }
 
-.door-name {
-  font-size: 15px;
-  font-weight: 650;
-  letter-spacing: 0.02em;
-  color: #fff;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
+.door--text .door-name {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-shadow: none;
 }
 
-.door-tease {
-  font-size: 12px;
-  line-height: 1.35;
-  color: rgba(230, 220, 255, 0.82);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.door--text .door-tease {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--text-muted);
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.theme-toggle {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: inherit;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--pink);
+  outline: none;
+}
+
+.theme-toggle[aria-pressed="true"] {
+  color: var(--cyan);
 }
 
 .lobby-about {
@@ -766,6 +840,11 @@ img {
 
   .door:hover,
   .door:focus-visible {
+    transform: none;
+  }
+
+  .door--art:hover,
+  .door--art:focus-visible {
     transform: none;
   }
 

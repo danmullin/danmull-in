@@ -28,8 +28,7 @@ function setBrandMetrics(brand) {
 }
 
 const brand = document.querySelector('.lobby-brand')
-const coversOnly = document.body.classList.contains('lobby-page--covers-only')
-if (brand && !coversOnly) {
+if (brand) {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   setBrandMetrics(brand)
   if (reduce) {
@@ -45,6 +44,61 @@ if (brand && !coversOnly) {
     }, 900)
   }
 }
+
+const THEME_KEY = 'danmull.in-lobby-theme'
+
+function currentLobbyTheme() {
+  const theme = document.documentElement.getAttribute('data-lobby-theme')
+  return theme === 'albums' ? 'albums' : 'stickers'
+}
+
+function applyLobbyTheme(theme, { persist = true } = {}) {
+  const next = theme === 'albums' ? 'albums' : 'stickers'
+  document.documentElement.setAttribute('data-lobby-theme', next)
+
+  document.querySelectorAll('.door-art').forEach((img) => {
+    const src =
+      next === 'albums'
+        ? img.getAttribute('data-art-album')
+        : img.getAttribute('data-art-sticker')
+    if (src && img.getAttribute('src') !== src) {
+      img.setAttribute('src', src)
+    }
+  })
+
+  const toggle = document.getElementById('lobby-theme-toggle')
+  if (toggle) {
+    const albums = next === 'albums'
+    toggle.setAttribute('aria-pressed', albums ? 'true' : 'false')
+    toggle.textContent = albums ? 'Stickers' : 'Album covers'
+    toggle.title = albums
+      ? 'Switch to neon sticker doors'
+      : 'Switch to album-cover doors'
+  }
+
+  if (persist) {
+    try {
+      localStorage.setItem(THEME_KEY, next)
+    } catch (_) {
+      /* ignore */
+    }
+  }
+}
+
+applyLobbyTheme(currentLobbyTheme(), { persist: false })
+
+document.getElementById('lobby-theme-toggle')?.addEventListener('click', () => {
+  const next = currentLobbyTheme() === 'albums' ? 'stickers' : 'albums'
+  applyLobbyTheme(next)
+  try {
+    const url = new URL(window.location.href)
+    if (next === 'stickers') url.searchParams.delete('theme')
+    else url.searchParams.set('theme', next)
+    window.history.replaceState({}, '', url)
+  } catch (_) {
+    /* ignore */
+  }
+})
 
 const lobby = document.querySelector('.lobby')
 if (lobby && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
