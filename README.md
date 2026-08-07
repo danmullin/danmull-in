@@ -9,14 +9,8 @@ npm install
 npm run dev
 ```
 
-Build for Cloudflare Pages:
-
 ```bash
 npm run build
 ```
 
-Output: `dist/`.
-
-## Deploy
-
-See [DEPLOY.md](./DEPLOY.md) (GitHub + Cloudflare Pages) and [DNS.md](./DNS.md) (point `danmull.in`).
+Output: `dist/`. Hosted on Cloudflare Pages from this repo.
