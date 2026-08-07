@@ -1,0 +1,11 @@
+﻿User-agent: *
+Allow: /
+
+# Prefer the real site over soft probes
+Disallow: /wp-admin
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+Disallow: /.env
+Disallow: /admin
+
+Sitemap: https://danmull.in/sitemap.xml
