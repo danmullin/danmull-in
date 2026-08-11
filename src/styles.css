@@ -564,14 +564,16 @@ img {
 
 @media (max-width: 520px) {
   .lobby-line {
-    flex-wrap: wrap;
-    gap: 0.45rem 0.75rem;
-    letter-spacing: 0.05em;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 0.35rem;
+    font-size: 9px;
+    letter-spacing: 0.04em;
   }
 
   .lobby-line::before,
   .lobby-line::after {
-    width: 1.25rem;
+    width: 0.75rem;
   }
 }
 
