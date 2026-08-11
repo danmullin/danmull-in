@@ -414,18 +414,8 @@ img {
 .lobby-to {
   grid-column: 1 / -1;
   grid-row: 1;
-  background: linear-gradient(
-    180deg,
-    #ffe66a 0%,
-    #ff7ac8 42%,
-    #c56bff 72%,
-    #00d4ff 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 16px rgba(255, 45, 120, 0.28));
+  color: #ffffff;
+  text-shadow: 0 0 22px rgba(255, 255, 255, 0.18);
   opacity: 0;
   pointer-events: none;
   transform: translateY(4px);
