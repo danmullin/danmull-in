@@ -92,6 +92,31 @@ function registerWebMcpTools() {
 
 registerWebMcpTools()
 
+function loadAnalytics() {
+  if (window.__danmullGtag) return
+  window.__danmullGtag = true
+  window.dataLayer = window.dataLayer || []
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments)
+  }
+  window.gtag('js', new Date())
+  window.gtag('config', 'G-GC14PWTVPZ')
+  const script = document.createElement('script')
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-GC14PWTVPZ'
+  script.async = true
+  document.head.appendChild(script)
+}
+
+function armAnalytics() {
+  const start = () => loadAnalytics()
+  ;['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach((type) => {
+    window.addEventListener(type, start, { once: true, passive: true })
+  })
+}
+
+if (document.readyState === 'complete') armAnalytics()
+else window.addEventListener('load', armAnalytics, { once: true })
+
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener('click', (e) => {
     const id = a.getAttribute('href')
@@ -123,20 +148,10 @@ function setBrandMetrics(brand) {
 
 const brand = document.querySelector('.lobby-brand')
 if (brand) {
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  setBrandMetrics(brand)
-  if (reduce) {
-    brand.classList.add('is-morphed')
-  } else {
-    window.setTimeout(() => {
-      setBrandMetrics(brand)
-      brand.classList.add('is-morphing')
-      window.setTimeout(() => {
-        brand.classList.add('is-morphed')
-        brand.classList.remove('is-morphing')
-      }, 1200)
-    }, 900)
-  }
+  const layout = () => setBrandMetrics(brand)
+  layout()
+  brand.classList.add('is-morphed')
+  window.addEventListener('resize', layout, { passive: true })
 }
 
 const THEME_KEY = 'danmull.in-lobby-theme'
@@ -155,9 +170,14 @@ function applyLobbyTheme(theme, { persist = true } = {}) {
       next === 'albums'
         ? img.getAttribute('data-art-album')
         : img.getAttribute('data-art-sticker')
+    const srcset =
+      next === 'albums'
+        ? img.getAttribute('data-art-album-srcset')
+        : img.getAttribute('data-art-sticker-srcset')
     if (src && img.getAttribute('src') !== src) {
       img.setAttribute('src', src)
     }
+    if (srcset) img.setAttribute('srcset', srcset)
   })
 
   const toggle = document.getElementById('lobby-theme-toggle')
