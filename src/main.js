@@ -137,7 +137,9 @@ function currentLobbyTheme() {
 
 function applyLobbyTheme(theme, { persist = true, swapArt = true } = {}) {
   const next = theme === 'albums' ? 'albums' : 'stickers'
-  document.documentElement.setAttribute('data-lobby-theme', next)
+  if (document.documentElement.getAttribute('data-lobby-theme') !== next) {
+    document.documentElement.setAttribute('data-lobby-theme', next)
+  }
 
   if (swapArt) {
     document.querySelectorAll('.door-art').forEach((img) => {
