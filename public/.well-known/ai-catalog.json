@@ -37,6 +37,17 @@
         "list Dan Mullin projects",
         "where is Synth documented"
       ]
+    },
+    {
+      "identifier": "urn:air:danmull.in:server:mcp",
+      "displayName": "danmull.in MCP",
+      "type": "application/mcp-server-card+json",
+      "url": "https://danmull.in/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "list Dan Mullin projects over MCP",
+        "read the danmull.in homepage as markdown",
+        "connect to the danmull.in MCP server"
+      ]
     }
   ]
 }

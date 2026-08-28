@@ -1,5 +1,5 @@
 const HOME_LINK =
-  '</.well-known/api-catalog>; rel="api-catalog", </llms.txt>; rel="describedby"; type="text/plain", </llms.txt>; rel="service-doc"; type="text/plain"'
+  '</.well-known/api-catalog>; rel="api-catalog", </.well-known/mcp/server-card.json>; rel="service-desc", </llms.txt>; rel="describedby"; type="text/plain", </llms.txt>; rel="service-doc"; type="text/plain"'
 
 function quality(accept, type) {
   const escaped = type.replace('/', '\\/')

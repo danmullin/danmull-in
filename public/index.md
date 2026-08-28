@@ -7,7 +7,7 @@ description: Dan Mullin — I craft tools and software, make games, and give dat
 
 Crafting tools · Making games · Giving data light
 
-Personal lobby for projects. There is no public HTTP API on this origin.
+Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on this origin.
 
 ## Destinations
 

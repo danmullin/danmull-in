@@ -5,7 +5,7 @@ description: Navigate danmull.in — Dan Mullin's personal lobby for tools, game
 
 # Browse danmull.in
 
-danmull.in is a static personal site on Cloudflare Pages. There is **no public HTTP API** and no OAuth, MCP, or checkout on this origin.
+danmull.in is a static personal site on Cloudflare Pages plus a **public read-only MCP** at `/mcp`. There is no OAuth and no checkout on this origin.
 
 ## Canonical pages
 
@@ -29,7 +29,10 @@ danmull.in is a static personal site on Cloudflare Pages. There is **no public H
 
 - `/llms.txt` — short agent overview
 - `/llms-full.txt` — expanded page text
-- `/.well-known/api-catalog` — RFC 9727 linkset (points at llms.txt; no APIs)
+- `/.well-known/api-catalog` — RFC 9727 linkset for `/mcp`
+- `/.well-known/mcp/server-card.json` — MCP discovery
+- `/mcp` — Streamable HTTP JSON-RPC (`list_projects`, `get_page`)
+- `/auth.md` — no credentials; do not register
 - `/.well-known/ai-catalog.json` — ARD capability manifest
 - `/.well-known/agent-skills/index.json` — this skill index
 

@@ -2,7 +2,7 @@
 
 > Personal site for Dan Mullin — tools, games, and systems you can play with.
 
-danmull.in is a lobby for projects: an AI-native programming language, SVG and map tools, a music visualizer, and games in progress. There is no public HTTP API on this origin.
+danmull.in is a lobby for projects: an AI-native programming language, SVG and map tools, a music visualizer, and games in progress. A public read-only MCP lives at `/mcp`. There is no OAuth or checkout on this origin.
 
 This file is the expanded agent copy. Prefer `/llms.txt` when you only need the map.
 
@@ -53,4 +53,5 @@ Pipelines that turn sprites into something a game engine can digest — timeline
 - [Sitemap](https://danmull.in/sitemap.xml)
 - [API catalog](https://danmull.in/.well-known/api-catalog)
 - [ARD catalog](https://danmull.in/.well-known/ai-catalog.json)
+- [MCP](https://danmull.in/.well-known/mcp/server-card.json)
 - [Agent skills](https://danmull.in/.well-known/agent-skills/index.json)
