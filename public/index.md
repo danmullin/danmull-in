@@ -27,3 +27,4 @@ Contact is on the homepage (no public inbox API). Prefer a short note.
 - [llms-full.txt](/llms-full.txt)
 - [API catalog](/.well-known/api-catalog)
 - [Agent skills](/.well-known/agent-skills/index.json)
+- [Web Bot Auth directory](/.well-known/http-message-signatures-directory)

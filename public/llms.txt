@@ -29,3 +29,4 @@ danmull.in is a lobby for projects: an AI-native programming language, SVG and m
 - [auth.md](https://danmull.in/auth.md): no credentials required
 - [ARD catalog](https://danmull.in/.well-known/ai-catalog.json)
 - [Agent skills](https://danmull.in/.well-known/agent-skills/index.json)
+- [Web Bot Auth directory](https://danmull.in/.well-known/http-message-signatures-directory): JWKS for HTTP Message Signatures

@@ -55,3 +55,4 @@ Pipelines that turn sprites into something a game engine can digest — timeline
 - [ARD catalog](https://danmull.in/.well-known/ai-catalog.json)
 - [MCP](https://danmull.in/.well-known/mcp/server-card.json)
 - [Agent skills](https://danmull.in/.well-known/agent-skills/index.json)
+- [Web Bot Auth directory](https://danmull.in/.well-known/http-message-signatures-directory)

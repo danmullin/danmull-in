@@ -6,3 +6,9 @@ Thumbs.db
 *.log
 .env
 .env.*
+
+# Web Bot Auth private material — never publish
+*.pem
+*.private.jwk.json
+web-bot-auth-private.jwk.json
+
