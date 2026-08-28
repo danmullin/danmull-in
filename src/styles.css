@@ -314,7 +314,6 @@ img {
   height: 14rem;
   margin-left: calc(min(42rem, 90vw) / -2);
   background: radial-gradient(ellipse at center, rgba(255, 45, 120, 0.22), transparent 70%);
-  filter: blur(28px);
   animation: lobby-pulse 5.5s ease-in-out infinite;
   transform: translate3d(
     calc(var(--parallax-x, 0px) * 0.55),

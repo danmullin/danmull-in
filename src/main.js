@@ -161,24 +161,24 @@ function currentLobbyTheme() {
   return theme === 'albums' ? 'albums' : 'stickers'
 }
 
-function applyLobbyTheme(theme, { persist = true } = {}) {
+function applyLobbyTheme(theme, { persist = true, swapArt = true } = {}) {
   const next = theme === 'albums' ? 'albums' : 'stickers'
   document.documentElement.setAttribute('data-lobby-theme', next)
 
-  document.querySelectorAll('.door-art').forEach((img) => {
-    const src =
-      next === 'albums'
-        ? img.getAttribute('data-art-album')
-        : img.getAttribute('data-art-sticker')
-    const srcset =
-      next === 'albums'
-        ? img.getAttribute('data-art-album-srcset')
-        : img.getAttribute('data-art-sticker-srcset')
-    if (src && img.getAttribute('src') !== src) {
-      img.setAttribute('src', src)
-    }
-    if (srcset) img.setAttribute('srcset', srcset)
-  })
+  if (swapArt) {
+    document.querySelectorAll('.door-art').forEach((img) => {
+      const src =
+        next === 'albums'
+          ? img.getAttribute('data-art-album')
+          : img.getAttribute('data-art-sticker')
+      const srcset =
+        next === 'albums'
+          ? img.getAttribute('data-art-album-srcset')
+          : img.getAttribute('data-art-sticker-srcset')
+      if (src) img.setAttribute('src', src)
+      if (srcset) img.setAttribute('srcset', srcset)
+    })
+  }
 
   const toggle = document.getElementById('lobby-theme-toggle')
   if (toggle) {
@@ -199,7 +199,10 @@ function applyLobbyTheme(theme, { persist = true } = {}) {
   }
 }
 
-applyLobbyTheme(currentLobbyTheme(), { persist: false })
+applyLobbyTheme(currentLobbyTheme(), {
+  persist: false,
+  swapArt: currentLobbyTheme() === 'albums',
+})
 
 document.getElementById('lobby-theme-toggle')?.addEventListener('click', () => {
   const next = currentLobbyTheme() === 'albums' ? 'stickers' : 'albums'
