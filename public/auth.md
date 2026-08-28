@@ -1,33 +1,50 @@
 # auth.md
 
-danmull.in is a **public static site**. Agents do not register, and they do not need credentials to read pages, discovery files, or the MCP endpoint.
+This file is for AI agents. **danmull.in is a public static site.** There is no agent registration, no login, and no access tokens to collect.
 
-## Audience
+Resource server: `https://danmull.in`
+Authorization server issuer: `https://danmull.in` (same origin; it does not issue tokens)
 
-Any browser, crawler, or AI agent fetching public resources on `https://danmull.in`.
+## 1. Discover
 
-## Registration
+If a request ever returns `401`, look for:
 
-None. There is no agent registration, provisioning, or onboarding endpoint on this origin.
+```
+WWW-Authenticate: Bearer resource_metadata="https://danmull.in/.well-known/oauth-protected-resource"
+```
 
-Do not POST to `/agent/auth` or similar paths; they are not implemented.
+Otherwise fetch [Protected Resource Metadata](https://danmull.in/.well-known/oauth-protected-resource) directly.
 
-## Methods
+Read `resource`, `authorization_servers`, `scopes_supported` (empty), and `bearer_methods_supported`.
 
-Unauthenticated HTTPS GET (and `Accept: text/markdown` content negotiation) for published pages and well-known files.
+Then fetch [Authorization Server Metadata](https://danmull.in/.well-known/oauth-authorization-server). The `issuer` matches `authorization_servers[0]`. The `agent_auth` block points back here (`skill`) and names `register_uri`. Those registration URLs return `422 anonymous_not_enabled`.
 
-Unauthenticated HTTPS POST JSON-RPC to [`/mcp`](https://danmull.in/mcp) for the public Model Context Protocol server.
+## 2. Pick a method
 
-## Credentials
+None. `identity_types_supported` lists `anonymous` only so the discovery document is complete. Registration is not enabled.
 
-Do not send `Authorization` headers. They are ignored. This origin does not issue tokens.
+If you only need to read the site, stop here. Use HTTPS GET, `Accept: text/markdown`, or POST JSON-RPC to [`/mcp`](https://danmull.in/mcp). Do not send `Authorization` headers.
 
-OAuth 2.0 Authorization Server Metadata is published at
-[`/.well-known/oauth-authorization-server`](https://danmull.in/.well-known/oauth-authorization-server)
-so agents can discover that fact. `/oauth/authorize` and `/oauth/token` return HTTP 501.
+## 3. Register
+
+Do not POST to `/agent/auth`. The handler answers:
+
+```json
+{
+  "error": "anonymous_not_enabled",
+  "error_uri": "https://danmull.in/auth.md"
+}
+```
+
+`/oauth/authorize` and `/oauth/token` return HTTP 501.
+
+## 4. Credentials
+
+There are none. Public pages, discovery files, and MCP tools are unauthenticated.
 
 ## Related
 
+- Protected resource: `/.well-known/oauth-protected-resource`
 - OAuth discovery: `/.well-known/oauth-authorization-server`
 - MCP server card: `/.well-known/mcp/server-card.json`
 - API catalog: `/.well-known/api-catalog`
