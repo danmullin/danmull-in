@@ -20,10 +20,15 @@ Unauthenticated HTTPS POST JSON-RPC to [`/mcp`](https://danmull.in/mcp) for the 
 
 ## Credentials
 
-Do not send `Authorization` headers. They are ignored. There is no OAuth authorization server, no bearer tokens, and no API keys for this origin.
+Do not send `Authorization` headers. They are ignored. This origin does not issue tokens.
+
+OAuth 2.0 Authorization Server Metadata is published at
+[`/.well-known/oauth-authorization-server`](https://danmull.in/.well-known/oauth-authorization-server)
+so agents can discover that fact. `/oauth/authorize` and `/oauth/token` return HTTP 501.
 
 ## Related
 
+- OAuth discovery: `/.well-known/oauth-authorization-server`
 - MCP server card: `/.well-known/mcp/server-card.json`
 - API catalog: `/.well-known/api-catalog`
 - Site overview: `/llms.txt`
