@@ -1,0 +1,26 @@
+# Dan Mullin
+
+> Personal site for Dan Mullin — tools, games, and systems you can play with.
+
+danmull.in is a lobby for projects: an AI-native programming language, SVG and map tools, a music visualizer, and games in progress. There is no public HTTP API on this origin; this file is the machine-readable overview.
+
+## Pages
+
+- [Home](https://danmull.in/): Project lobby
+- [Synth](https://danmull.in/synth): AI-native language with a real compiler
+- [Games](https://danmull.in/games): Harborwick, Ledger Bay, and playables
+
+## Projects
+
+- [Synth](https://synth-pl.github.io/synth/): Language home — demos, docs, playground
+- [Synth source](https://github.com/synth-pl/synth): Compiler, demos, VS Code extension path
+- [Penultimate](https://danmullin.github.io/penultimate/): SVG vector editor
+- [Tileforge](https://danmullin.github.io/tileforge/): Map authoring and tile studio
+- [Onion Lab](https://danmullin.github.io/onion-lab/): Spritesheet animation studio
+- [Sunwake](https://danmullin.github.io/sunwake/): Music visualizer
+- [GitHub](https://github.com/danmullin): Repos and work in the open
+
+## Optional
+
+- [Sitemap](https://danmull.in/sitemap.xml)
+- [API catalog](https://danmull.in/.well-known/api-catalog): RFC 9727 linkset (no public APIs on this origin)

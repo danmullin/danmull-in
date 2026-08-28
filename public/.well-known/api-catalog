@@ -1,0 +1,19 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://danmull.in/",
+      "service-doc": [
+        {
+          "href": "https://danmull.in/llms.txt",
+          "type": "text/plain"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://danmull.in/llms.txt",
+          "type": "text/plain"
+        }
+      ]
+    }
+  ]
+}
