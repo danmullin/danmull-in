@@ -15,7 +15,7 @@ WWW-Authenticate: Bearer resource_metadata="https://danmull.in/.well-known/oauth
 
 Otherwise fetch [Protected Resource Metadata](https://danmull.in/.well-known/oauth-protected-resource) directly.
 
-Read `resource`, `authorization_servers`, `scopes_supported` (empty), and `bearer_methods_supported`.
+Read `resource`, `authorization_servers`, `scopes_supported` (`public` only; unused because no tokens are issued), and `bearer_methods_supported`.
 
 Then fetch [Authorization Server Metadata](https://danmull.in/.well-known/oauth-authorization-server). The `issuer` matches `authorization_servers[0]`. The `agent_auth` block points back here (`skill`) and names `register_uri`. Those registration URLs return `422 anonymous_not_enabled`.
 
