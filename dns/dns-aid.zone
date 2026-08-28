@@ -1,0 +1,9 @@
+; DNS-AID for danmull.in
+; draft-mozleywilliams-dnsop-dnsaid + RFC 9460 HTTPS/SVCB
+;
+; These records live in Cloudflare DNS, not in Pages. Publish with
+; scripts/publish-dns-aid.sh or add them in the dashboard (see README).
+; Do not advertise _a2a — this origin has no A2A agent.
+
+_index._agents.danmull.in.  3600 IN HTTPS 1 danmull.in. alpn="h2" port=443
+_mcp._agents.danmull.in.    3600 IN HTTPS 1 danmull.in. alpn="h2" port=443
