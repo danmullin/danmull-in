@@ -431,11 +431,16 @@ img {
 }
 
 .lobby-brand.is-morphed .lobby-period {
-  width: var(--rule-width, 10.5rem);
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: end;
+  width: 72%;
+  max-width: 200px;
+  min-width: 72px;
   height: 2px;
   margin: 0;
   border-radius: 1px;
-  transform: translate(var(--nudge-x, 0px), 0.38em);
+  transform: translateY(0.38em);
   box-shadow: 0 0 14px rgba(0, 212, 255, 0.35);
   animation: lobby-rule-afterglow 2.2s ease-in-out 0.05s 2;
 }

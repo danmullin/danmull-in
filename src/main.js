@@ -128,32 +128,6 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
   })
 })
 
-function setBrandMetrics(brand) {
-  const swap = brand.querySelector('.lobby-brand-swap')
-  const period = brand.querySelector('.lobby-period')
-  const to = brand.querySelector('.lobby-to')
-  if (!swap || !period || !to) return
-
-  const swapRect = swap.getBoundingClientRect()
-  const periodRect = period.getBoundingClientRect()
-  const dx =
-    swapRect.left + swapRect.width / 2 - (periodRect.left + periodRect.width / 2)
-  period.style.setProperty('--nudge-x', `${dx}px`)
-
-  // Measure final name width (to is opacity 0 but still laid out)
-  const nameWidth = to.getBoundingClientRect().width
-  const ruleWidth = Math.max(72, Math.min(nameWidth * 0.72, 200))
-  period.style.setProperty('--rule-width', `${ruleWidth.toFixed(1)}px`)
-}
-
-const brand = document.querySelector('.lobby-brand')
-if (brand) {
-  const layout = () => setBrandMetrics(brand)
-  layout()
-  brand.classList.add('is-morphed')
-  window.addEventListener('resize', layout, { passive: true })
-}
-
 const THEME_KEY = 'danmull.in-lobby-theme'
 
 function currentLobbyTheme() {
