@@ -36,3 +36,15 @@ With a token that can edit Zone DNS:
 CLOUDFLARE_API_TOKEN=... ./scripts/publish-dns-aid.sh
 ```
 
+## Web Bot Auth
+
+This origin publishes an HTTP Message Signatures directory ([draft-meunier-http-message-signatures-directory](https://datatracker.ietf.org/doc/draft-meunier-http-message-signatures-directory/)) at `/.well-known/http-message-signatures-directory`. Receiving sites can use that JWKS to verify requests this origin signs as a bot or agent.
+
+danmull.in is not a crawler. The directory is public key material only — the Ed25519 private key is not in this repo. To rotate keys before signing outbound requests:
+
+```bash
+node scripts/generate-web-bot-auth-key.mjs
+```
+
+That rewrites the public JWKS and writes a private JWK to `/tmp/web-bot-auth-private.jwk.json`. Store the private JWK as a secret if you start signing; never commit `d`.
+

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/hash-agent-skill.mjs && vite build",
+    "build": "node scripts/hash-agent-skill.mjs && node scripts/check-web-bot-auth-directory.mjs && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
