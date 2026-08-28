@@ -1,0 +1,23 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://danmull.in/mcp",
+      "service-desc": [
+        {
+          "href": "https://danmull.in/.well-known/mcp/server-card.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://danmull.in/llms.txt",
+          "type": "text/plain"
+        },
+        {
+          "href": "https://danmull.in/auth.md",
+          "type": "text/markdown"
+        }
+      ]
+    }
+  ]
+}

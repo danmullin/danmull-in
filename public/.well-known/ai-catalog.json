@@ -1,0 +1,53 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Dan Mullin",
+    "identifier": "did:web:danmull.in"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:danmull.in:catalog:api",
+      "displayName": "API catalog",
+      "type": "application/linkset+json",
+      "url": "https://danmull.in/.well-known/api-catalog",
+      "representativeQueries": [
+        "what APIs does danmull.in publish",
+        "where is the RFC 9727 api-catalog",
+        "does danmull.in have a public HTTP API"
+      ]
+    },
+    {
+      "identifier": "urn:air:danmull.in:skills:index",
+      "displayName": "Agent skills",
+      "type": "application/json",
+      "url": "https://danmull.in/.well-known/agent-skills/index.json",
+      "representativeQueries": [
+        "what agent skills does danmull.in publish",
+        "how should an agent browse danmull.in",
+        "where is the SKILL.md for this site"
+      ]
+    },
+    {
+      "identifier": "urn:air:danmull.in:doc:llms",
+      "displayName": "llms.txt site overview",
+      "type": "text/plain",
+      "url": "https://danmull.in/llms.txt",
+      "representativeQueries": [
+        "summarize danmull.in for an LLM",
+        "list Dan Mullin projects",
+        "where is Synth documented"
+      ]
+    },
+    {
+      "identifier": "urn:air:danmull.in:server:mcp",
+      "displayName": "danmull.in MCP",
+      "type": "application/mcp-server-card+json",
+      "url": "https://danmull.in/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "list Dan Mullin projects over MCP",
+        "read the danmull.in homepage as markdown",
+        "connect to the danmull.in MCP server"
+      ]
+    }
+  ]
+}

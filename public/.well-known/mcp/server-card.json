@@ -1,0 +1,19 @@
+{
+  "serverInfo": {
+    "name": "danmull.in",
+    "version": "1.0.0"
+  },
+  "description": "Public read-only MCP for Dan Mullin's personal site. List projects and read markdown pages. No authentication.",
+  "url": "https://danmull.in/mcp",
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "/mcp"
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true
+  },
+  "authentication": {
+    "required": false
+  }
+}

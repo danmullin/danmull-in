@@ -1,0 +1,31 @@
+# Dan Mullin
+
+> Personal site for Dan Mullin — tools, games, and systems you can play with.
+
+danmull.in is a lobby for projects: an AI-native programming language, SVG and map tools, a music visualizer, and games in progress. The public MCP at `/mcp` can list projects and read markdown pages. There is no OAuth or checkout on this origin.
+
+## Pages
+
+- [Home](https://danmull.in/): Project lobby
+- [Synth](https://danmull.in/synth): AI-native language with a real compiler
+- [Games](https://danmull.in/games): Harborwick, Ledger Bay, and playables
+
+## Projects
+
+- [Synth](https://synth-pl.github.io/synth/): Language home — demos, docs, playground
+- [Synth source](https://github.com/synth-pl/synth): Compiler, demos, VS Code extension path
+- [Penultimate](https://danmullin.github.io/penultimate/): SVG vector editor
+- [Tileforge](https://danmullin.github.io/tileforge/): Map authoring and tile studio
+- [Onion Lab](https://danmullin.github.io/onion-lab/): Spritesheet animation studio
+- [Sunwake](https://danmullin.github.io/sunwake/): Music visualizer
+- [GitHub](https://github.com/danmullin): Repos and work in the open
+
+## Optional
+
+- [Full agent copy](https://danmull.in/llms-full.txt)
+- [Sitemap](https://danmull.in/sitemap.xml)
+- [API catalog](https://danmull.in/.well-known/api-catalog): RFC 9727 linkset for the public MCP
+- [MCP server card](https://danmull.in/.well-known/mcp/server-card.json)
+- [auth.md](https://danmull.in/auth.md): no credentials required
+- [ARD catalog](https://danmull.in/.well-known/ai-catalog.json)
+- [Agent skills](https://danmull.in/.well-known/agent-skills/index.json)

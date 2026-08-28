@@ -1,0 +1,23 @@
+# Cloudflare Pages custom headers.
+# Link relations: RFC 8288 + RFC 9727 §3 (api-catalog).
+# Applied at the edge — not visible on `npm run dev`.
+
+/
+  Link: </.well-known/api-catalog>; rel="api-catalog", </.well-known/mcp/server-card.json>; rel="service-desc", </llms.txt>; rel="describedby"; type="text/plain", </llms.txt>; rel="service-doc"; type="text/plain"
+
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; profile="https://www.rfc-editor.org/info/rfc9727"
+
+/.well-known/ai-catalog.json
+  Content-Type: application/json
+  Access-Control-Allow-Origin: *
+
+/.well-known/agent-skills/index.json
+  Content-Type: application/json
+
+/.well-known/mcp/server-card.json
+  Content-Type: application/json
+  Access-Control-Allow-Origin: *
+
+/auth.md
+  Content-Type: text/markdown; charset=utf-8

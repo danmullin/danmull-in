@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "browse-danmull-in",
+      "type": "skill-md",
+      "description": "Navigate danmull.in — Dan Mullin's personal lobby for tools, games, and the Synth language. Use when an agent needs the project map, canonical URLs, or machine-readable discovery files.",
+      "url": "/.well-known/agent-skills/browse-danmull-in/SKILL.md",
+      "digest": "sha256:95a0fea70d8a651806bbe9277125740a10e8ec41f7cccbf1a6527245ef093c59"
+    }
+  ]
+}
