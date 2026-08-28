@@ -22,5 +22,8 @@ danmull.in is a lobby for projects: an AI-native programming language, SVG and m
 
 ## Optional
 
+- [Full agent copy](https://danmull.in/llms-full.txt)
 - [Sitemap](https://danmull.in/sitemap.xml)
 - [API catalog](https://danmull.in/.well-known/api-catalog): RFC 9727 linkset (no public APIs on this origin)
+- [ARD catalog](https://danmull.in/.well-known/ai-catalog.json)
+- [Agent skills](https://danmull.in/.well-known/agent-skills/index.json)

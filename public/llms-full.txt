@@ -1,0 +1,56 @@
+# Dan Mullin
+
+> Personal site for Dan Mullin — tools, games, and systems you can play with.
+
+danmull.in is a lobby for projects: an AI-native programming language, SVG and map tools, a music visualizer, and games in progress. There is no public HTTP API on this origin.
+
+This file is the expanded agent copy. Prefer `/llms.txt` when you only need the map.
+
+## Home
+
+Crafting tools · Making games · Giving data light.
+
+Destinations on the lobby:
+
+- Synth — AI-native language with a real compiler (`/synth`, site at https://synth-pl.github.io/synth/)
+- Penultimate — SVG vector editor (https://danmullin.github.io/penultimate/)
+- Tileforge — Map authoring and tile studio (https://danmullin.github.io/tileforge/)
+- Onion Lab — Spritesheet animation studio (https://danmullin.github.io/onion-lab/)
+- Sunwake — Music visualizer (https://danmullin.github.io/sunwake/)
+- GitHub — https://github.com/danmullin
+- Games — `/games`
+- Contact — homepage modal; no on-origin mail API
+
+## Synth
+
+An AI-native language: human-readable source with annotations an agent can actually use — specs, intent, and demos that earn their keep.
+
+Synth sits in the middle: code that people can read, and structure that language models can follow. Annotations carry intent and contracts; the compiler and tooling turn that into something you can run and check.
+
+Most “AI coding” piles prompts onto languages that never expected a co-pilot. Synth treats agent workflows as a first-class concern.
+
+- Landing: https://synth-pl.github.io/synth/
+- Source: https://github.com/synth-pl/synth
+
+## Games
+
+Feel-first playables and prototypes.
+
+### Harborwick (in progress)
+
+A cozy seaside city-builder in Godot — docks, weather, and the kind of loop you leave running. Public build pending.
+
+### Ledger Bay (in progress)
+
+Fantasy archipelago trade — chart the harbors, work the markets, chase rank. Port Royale–inspired systems with Ironbyte chrome.
+
+### Animation & sheet tools
+
+Pipelines that turn sprites into something a game engine can digest — timelines, exports, Godot-minded packs.
+
+## Optional
+
+- [Sitemap](https://danmull.in/sitemap.xml)
+- [API catalog](https://danmull.in/.well-known/api-catalog)
+- [ARD catalog](https://danmull.in/.well-known/ai-catalog.json)
+- [Agent skills](https://danmull.in/.well-known/agent-skills/index.json)

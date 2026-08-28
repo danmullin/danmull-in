@@ -1,3 +1,97 @@
+const PROJECTS = [
+  {
+    name: 'Synth',
+    href: 'https://synth-pl.github.io/synth/',
+    page: '/synth',
+    tease: 'AI-native language with a real compiler',
+  },
+  {
+    name: 'Penultimate',
+    href: 'https://danmullin.github.io/penultimate/',
+    tease: 'SVG vector editor',
+  },
+  {
+    name: 'Tileforge',
+    href: 'https://danmullin.github.io/tileforge/',
+    tease: 'Map authoring and tile studio',
+  },
+  {
+    name: 'Onion Lab',
+    href: 'https://danmullin.github.io/onion-lab/',
+    tease: 'Spritesheet animation studio',
+  },
+  {
+    name: 'Sunwake',
+    href: 'https://danmullin.github.io/sunwake/',
+    tease: 'Music visualizer',
+  },
+  {
+    name: 'Games',
+    href: '/games',
+    page: '/games',
+    tease: 'Harborwick, Ledger Bay, and playables',
+  },
+  {
+    name: 'GitHub',
+    href: 'https://github.com/danmullin',
+    tease: 'Repos and work in the open',
+  },
+]
+
+function registerWebMcpTools() {
+  const mc = navigator.modelContext
+  if (!mc) return
+
+  const tools = [
+    {
+      name: 'list_projects',
+      description:
+        'List Dan Mullin projects linked from danmull.in, with URLs and short descriptions.',
+      inputSchema: {
+        type: 'object',
+        properties: {},
+        additionalProperties: false,
+      },
+      execute: async () => ({ projects: PROJECTS }),
+    },
+    {
+      name: 'open_page',
+      description:
+        'Navigate this tab to a danmull.in page. Allowed names: home, synth, games.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          page: {
+            type: 'string',
+            enum: ['home', 'synth', 'games'],
+            description: 'Which on-origin page to open',
+          },
+        },
+        required: ['page'],
+        additionalProperties: false,
+      },
+      execute: async ({ page }) => {
+        const href = page === 'synth' ? '/synth' : page === 'games' ? '/games' : '/'
+        window.location.assign(href)
+        return { ok: true, href }
+      },
+    },
+  ]
+
+  try {
+    if (typeof mc.provideContext === 'function') {
+      mc.provideContext({ tools })
+    } else if (typeof mc.registerTool === 'function') {
+      const controller = new AbortController()
+      for (const tool of tools) mc.registerTool(tool, { signal: controller.signal })
+    }
+  } catch (_) {
+    /* WebMCP is optional; browsers without the API should still load the page. */
+  }
+}
+
+registerWebMcpTools()
+
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener('click', (e) => {
     const id = a.getAttribute('href')

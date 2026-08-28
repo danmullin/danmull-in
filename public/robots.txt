@@ -9,3 +9,4 @@ Disallow: /.env
 Disallow: /admin
 
 Sitemap: https://danmull.in/sitemap.xml
+Agentmap: https://danmull.in/.well-known/ai-catalog.json
