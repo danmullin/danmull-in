@@ -1,0 +1,7 @@
+{
+  "resource": "https://danmull.in/",
+  "resource_name": "danmull.in",
+  "authorization_servers": ["https://danmull.in"],
+  "scopes_supported": [],
+  "bearer_methods_supported": ["header"]
+}
