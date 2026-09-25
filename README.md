@@ -25,8 +25,9 @@ In [Cloudflare DNS](https://dash.cloudflare.com/) → **danmull.in** → **DNS**
 | --- | --- | --- | --- | --- |
 | HTTPS | `_index._agents` | 1 | `danmull.in` | `alpn="h2" port=443` |
 | HTTPS | `_mcp._agents` | 1 | `danmull.in` | `alpn="h2" port=443` |
+| HTTPS | `_a2a._agents` | 1 | `danmull.in` | `alpn="h2" port=443` |
 
-Do not add `_a2a._agents` — this origin has no A2A agent.
+`_a2a._agents` advertises the public read-only A2A agent at `/a2a`.
 
 Optional: **DNS** → **Settings** → enable **DNSSEC**, then add the DS record at the registrar if Cloudflare is not already the parent. There is currently no DS at `.in`, so validating resolvers will not treat the answers as authenticated until that chain exists.
 

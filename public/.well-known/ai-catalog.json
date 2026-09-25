@@ -48,6 +48,17 @@
         "read the danmull.in homepage as markdown",
         "connect to the danmull.in MCP server"
       ]
+    },
+    {
+      "identifier": "urn:air:danmull.in:a2a:card",
+      "displayName": "A2A agent card",
+      "type": "application/json",
+      "url": "https://danmull.in/.well-known/agent-card.json",
+      "representativeQueries": [
+        "what A2A agent does danmull.in publish",
+        "send a message to the danmull.in agent",
+        "where is the agent card"
+      ]
     }
   ]
 }

@@ -19,6 +19,10 @@
   Content-Type: application/json
   Access-Control-Allow-Origin: *
 
+/.well-known/agent-card.json
+  Content-Type: application/json
+  Access-Control-Allow-Origin: *
+
 /.well-known/oauth-authorization-server
   Content-Type: application/json
   Access-Control-Allow-Origin: *

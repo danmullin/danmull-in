@@ -17,6 +17,7 @@ Publish DNS-AID records (RFC 9460 HTTPS) for danmull.in.
 Creates/updates:
   _index._agents.danmull.in  HTTPS 1 danmull.in. alpn="h2" port=443
   _mcp._agents.danmull.in    HTTPS 1 danmull.in. alpn="h2" port=443
+  _a2a._agents.danmull.in    HTTPS 1 danmull.in. alpn="h2" port=443
 EOF
 }
 
@@ -101,6 +102,7 @@ print(f"ok {r[\"type\"]} {r[\"name\"]} {r.get(\"content\") or r.get(\"data\")}")
 
 upsert_https "_index._agents" "DNS-AID well-known index"
 upsert_https "_mcp._agents" "DNS-AID MCP entrypoint"
+upsert_https "_a2a._agents" "DNS-AID A2A entrypoint"
 
 if [[ "$ENABLE_DNSSEC" -eq 1 ]]; then
   cf PATCH "/zones/${ZONE_ID}/dnssec" --data '{"status":"active"}' | python3 -c '

@@ -23,7 +23,7 @@ Then fetch [Authorization Server Metadata](https://danmull.in/.well-known/oauth-
 
 None. `identity_types_supported` lists `anonymous` only so the discovery document is complete. Registration is not enabled.
 
-If you only need to read the site, stop here. Use HTTPS GET, `Accept: text/markdown`, or POST JSON-RPC to [`/mcp`](https://danmull.in/mcp). Do not send `Authorization` headers.
+If you only need to read the site, stop here. Use HTTPS GET, `Accept: text/markdown`, POST JSON-RPC to [`/mcp`](https://danmull.in/mcp), or POST A2A `SendMessage` to [`/a2a`](https://danmull.in/a2a). Do not send `Authorization` headers.
 
 ## 3. Register
 
@@ -40,12 +40,13 @@ Do not POST to `/agent/auth`. The handler answers:
 
 ## 4. Credentials
 
-There are none. Public pages, discovery files, and MCP tools are unauthenticated.
+There are none. Public pages, discovery files, MCP tools, and the A2A agent are unauthenticated.
 
 ## Related
 
 - Protected resource: `/.well-known/oauth-protected-resource`
 - OAuth discovery: `/.well-known/oauth-authorization-server`
 - MCP server card: `/.well-known/mcp/server-card.json`
+- A2A agent card: `/.well-known/agent-card.json`
 - API catalog: `/.well-known/api-catalog`
 - Site overview: `/llms.txt`

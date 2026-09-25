@@ -18,6 +18,21 @@
           "type": "text/markdown"
         }
       ]
+    },
+    {
+      "anchor": "https://danmull.in/a2a",
+      "service-desc": [
+        {
+          "href": "https://danmull.in/.well-known/agent-card.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://danmull.in/llms.txt",
+          "type": "text/plain"
+        }
+      ]
     }
   ]
 }

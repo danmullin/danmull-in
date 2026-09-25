@@ -1,0 +1,45 @@
+{
+  "name": "danmull.in",
+  "description": "Public read-only agent for Dan Mullin's site. Lists projects and reads the home, synth, and games pages. No login, no tasks, no checkout.",
+  "version": "1.0.0",
+  "documentationUrl": "https://danmull.in/llms.txt",
+  "iconUrl": "https://danmull.in/favicon.svg",
+  "provider": {
+    "organization": "Dan Mullin",
+    "url": "https://danmull.in"
+  },
+  "supportedInterfaces": [
+    {
+      "url": "https://danmull.in/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "extendedAgentCard": false
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["text/plain", "text/markdown"],
+  "skills": [
+    {
+      "id": "list-projects",
+      "name": "List projects",
+      "description": "List Dan Mullin projects linked from danmull.in, with URLs and short descriptions.",
+      "tags": ["projects", "catalog"],
+      "examples": ["projects", "list projects"],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["text/plain"]
+    },
+    {
+      "id": "read-page",
+      "name": "Read a page",
+      "description": "Return the markdown for the home, synth, or games page on danmull.in.",
+      "tags": ["pages", "markdown"],
+      "examples": ["read the synth page", "home", "games"],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["text/markdown"]
+    }
+  ]
+}
