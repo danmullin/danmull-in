@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/space-attack/">
+  <meta name="theme-color" content="#070b18">
+  <title>Space Attack • Orbital Defense</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header><a class="brand" href="./"><span class="brand-icon">✦</span> SPACE ATTACK</a><span class="tag">ORBITAL DEFENSE / 1982 → NOW</span><button id="pause" aria-label="Pause game" disabled>Ⅱ</button><button id="sound" aria-pressed="true">Sound on</button></header>
+    <section class="game-shell" aria-label="Space Attack arcade game">
+      <div class="arena">
+        <canvas id="game" width="900" height="650" tabindex="0" aria-label="Game arena. Move with arrow keys or A and D. Hold Space or the left mouse button to fire. P to pause."></canvas>
+        <div class="hud"><div><span>SCORE</span><strong id="score" aria-label="Score">000000</strong></div><div class="best"><span>BEST</span><strong id="best" aria-label="Best score">000000</strong></div></div>
+        <div id="overlay" class="overlay">
+          <p id="eyebrow" class="eyebrow">THE LAST LINE OF DEFENSE</p>
+          <h1 id="title">SPACE<br><span>ATTACK</span></h1>
+          <p id="description">Dodge diving ships. Track cloaked attackers.<br>Clear the armada before your fuel runs out.</p>
+          <button id="start" class="primary">LAUNCH MISSION <span>↗</span></button>
+          <p id="hint" class="hint">PRESS ENTER TO LAUNCH</p>
+        </div>
+        <div id="announcement" class="announcement" aria-live="polite"></div>
+        <div class="bottom-hud">
+          <div class="fuel-group"><span>FUEL</span><div id="fuel" role="progressbar" aria-label="Fuel remaining" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><span class="fuel-end">E</span><div class="fuel-track"><div id="fuel-fill"></div></div><span class="fuel-end">F</span></div><span id="fuel-value">100%</span></div>
+          <div class="reserve-group"><div><span>LIVES</span><div class="lives-readout"><div id="life-icons" aria-hidden="true"></div><strong id="health" aria-label="3 lives">3</strong></div></div><div class="wave"><span>ARMADA</span><strong id="wave">01</strong></div></div>
+        </div>
+      </div>
+      <footer><div><kbd>←</kbd><kbd>→</kbd> / <kbd>A</kbd><kbd>D</kbd> <span>MOVE</span></div><div><kbd>SPACE</kbd> / <kbd title="Left mouse button">LMB</kbd> <span>FIRE</span></div><div><kbd>P</kbd> <span>PAUSE</span></div><span class="status"><i></i> <span id="status">SYSTEMS READY</span></span></footer>
+    </section>
+    <div class="under"><span>01 / DEFEND YOUR ORBIT</span><p>Three lives. Limited fuel. Enemy ships can vanish while diving.</p><span>KEYBOARD ARCADE</span></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

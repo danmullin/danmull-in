@@ -7,6 +7,10 @@ description: Games and playables by Dan Mullin — Harborwick, Ledger Bay, and f
 
 I love playing games and making them — cozy systems, seaside moods, and prototypes where feel comes before feature lists.
 
+## [Space Attack](/space-attack/) (playable)
+
+Orbital defense, keyboard arcade. Move, fire, and clear the armada before the fuel runs out.
+
 ## Harborwick (in progress)
 
 A cozy seaside city-builder in Godot — docks, weather, and the kind of loop you leave running. Public build and links land here when they’re ready to share.
