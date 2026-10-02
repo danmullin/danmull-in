@@ -7,13 +7,14 @@ description: Dan Mullin crafts tools and software, makes games, and gives data a
 
 Crafting tools · Making games · Giving data light
 
-Dan Mullin. I craft tools and software, make games, and give data a little light. [Synth](/synth) is a language with a real compiler. [ILLEGAL OPCODE](https://illegalopcode.dev/) is the studio. [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/) is the orbital defense game. [Space Attack](/space-attack/) is playable. [Utilities](/utilities) convert images in the browser.
-
 Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on this origin.
 
 ## Destinations
 
 - [Synth](/synth) — AI-native language with a real compiler
+- [ILLEGAL OPCODE](https://illegalopcode.dev/) — the studio
+- [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/) — orbital defense
+- [Space Attack](/space-attack/) — playable
 - [Penultimate](https://danmullin.github.io/penultimate/) — SVG vector editor
 - [Tileforge](https://danmullin.github.io/tileforge/) — Map authoring and tile studio
 - [Onion Lab](https://danmullin.github.io/onion-lab/) — Spritesheet animation studio

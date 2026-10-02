@@ -51,6 +51,31 @@
   </script>
 </head>
 <body class="lobby-page">
+  <div class="peek">
+    <button type="button" class="peek-toggle" aria-expanded="false" aria-controls="peek-menu">Peek</button>
+    <nav id="peek-menu" class="peek-menu" hidden aria-label="Peek">
+      <a href="/synth">
+        <span class="peek-name">Synth</span>
+        <span class="peek-tease">A language with a real compiler</span>
+      </a>
+      <a href="https://illegalopcode.dev/" rel="noopener noreferrer">
+        <span class="peek-name">ILLEGAL OPCODE</span>
+        <span class="peek-tease">The studio</span>
+      </a>
+      <a href="https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/" rel="noopener noreferrer">
+        <span class="peek-name">Professor Vector</span>
+        <span class="peek-tease">Orbital defense</span>
+      </a>
+      <a href="/space-attack/">
+        <span class="peek-name">Space Attack</span>
+        <span class="peek-tease">Playable</span>
+      </a>
+      <a href="/utilities">
+        <span class="peek-name">Utilities</span>
+        <span class="peek-tease">Image converter</span>
+      </a>
+    </nav>
+  </div>
   <main>
     <section class="lobby" aria-label="Lobby">
       <div class="lobby-atmosphere" aria-hidden="true">
@@ -67,7 +92,6 @@
           </span>
         </h1>
         <p class="lobby-line">Crafting tools · Making games · Giving data light</p>
-        <p class="lobby-about">Dan Mullin. I craft tools and software, make games, and give data a little light. <a href="/synth">Synth</a> is a language with a real compiler. <a href="https://illegalopcode.dev/">ILLEGAL OPCODE</a> is the studio. <a href="https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/">Professor Vector</a> is the orbital defense game. <a href="/space-attack/">Space Attack</a> is playable. <a href="/utilities">Utilities</a> convert images in the browser.</p>
 
         <div class="door-shelf" role="navigation" aria-label="Destinations">
           <div class="door-grid">
@@ -176,6 +200,27 @@
         var srcset = img.getAttribute('data-art-album-srcset')
         if (src) img.setAttribute('src', src)
         if (srcset) img.setAttribute('srcset', srcset)
+      })
+    })()
+  </script>
+  <script>
+    (function () {
+      var root = document.querySelector('.peek')
+      var button = document.querySelector('.peek-toggle')
+      var menu = document.getElementById('peek-menu')
+      if (!root || !button || !menu) return
+      function setOpen(open) {
+        button.setAttribute('aria-expanded', open ? 'true' : 'false')
+        menu.hidden = !open
+      }
+      button.addEventListener('click', function () {
+        setOpen(menu.hidden)
+      })
+      document.addEventListener('click', function (event) {
+        if (!root.contains(event.target)) setOpen(false)
+      })
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') setOpen(false)
       })
     })()
   </script>

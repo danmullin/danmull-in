@@ -339,6 +339,12 @@ img {
   }
 }
 
+@media (max-width: 720px) {
+  .lobby {
+    padding-top: 4.75rem;
+  }
+}
+
 .lobby-inner {
   position: relative;
   z-index: 2;
@@ -572,26 +578,79 @@ img {
   }
 }
 
-.lobby-about {
-  margin: 0.85rem auto 0;
-  max-width: 38rem;
-  font-size: 15px;
-  font-weight: 450;
-  line-height: 1.55;
-  letter-spacing: 0.01em;
-  color: rgba(226, 213, 255, 0.78);
-  text-wrap: balance;
+.peek {
+  position: fixed;
+  top: 0.85rem;
+  right: clamp(0.85rem, 3vw, 1.5rem);
+  z-index: 30;
 }
 
-.lobby-about a {
-  color: rgba(0, 212, 255, 0.92);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
+.peek-toggle {
+  appearance: none;
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  border-radius: 999px;
+  background: rgba(18, 3, 48, 0.78);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
 }
 
-.lobby-about a:hover,
-.lobby-about a:focus-visible {
+.peek-toggle:hover,
+.peek-toggle[aria-expanded="true"] {
+  border-color: var(--pink);
+  box-shadow: var(--glow-pink);
+}
+
+.peek-menu {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  width: min(18rem, calc(100vw - 1.7rem));
+  margin: 0;
+  padding: 0.4rem;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  background: rgba(13, 2, 33, 0.96);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+}
+
+.peek-menu[hidden] {
+  display: none;
+}
+
+.peek-menu a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: left;
+  color: var(--text);
+}
+
+.peek-menu a:hover,
+.peek-menu a:focus-visible {
+  background: rgba(255, 45, 120, 0.14);
   color: #fff;
+}
+
+.peek-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.peek-tease {
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
 .door-shelf {
