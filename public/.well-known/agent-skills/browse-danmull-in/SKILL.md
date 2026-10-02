@@ -13,7 +13,7 @@ danmull.in is a static personal site on Cloudflare Pages plus a **public read-on
 | --- | --- |
 | `/` | Project lobby |
 | `/synth` | Synth language overview (links out to the compiler site) |
-| `/games` | Harborwick, Ledger Bay, and tooling notes |
+| `/games` | Professor Vector, Space Attack, and tooling notes |
 
 ## Projects (most live off-origin)
 

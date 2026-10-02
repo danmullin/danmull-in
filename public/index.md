@@ -7,7 +7,7 @@ description: Dan Mullin crafts tools and software, makes games, and gives data a
 
 Crafting tools · Making games · Giving data light
 
-Dan Mullin. I craft tools and software, make games, and give data a little light. [Synth](/synth) is a language with a real compiler. [ILLEGAL OPCODE](https://illegalopcode.dev/) is the studio. [Harborwick and Ledger Bay](/games) are in progress. [Space Attack](/space-attack/) is playable. [Utilities](/utilities) convert images in the browser.
+Dan Mullin. I craft tools and software, make games, and give data a little light. [Synth](/synth) is a language with a real compiler. [ILLEGAL OPCODE](https://illegalopcode.dev/) is the studio. [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/) is the orbital defense game. [Space Attack](/space-attack/) is playable. [Utilities](/utilities) convert images in the browser.
 
 Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on this origin.
 
@@ -19,7 +19,7 @@ Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on th
 - [Onion Lab](https://danmullin.github.io/onion-lab/) — Spritesheet animation studio
 - [Sunwake](https://danmullin.github.io/sunwake/) — Music visualizer
 - [GitHub](https://github.com/danmullin) — Repos and work in the open
-- [Games](/games) — Harborwick, Ledger Bay, and playables
+- [Games](/games) — Professor Vector and Space Attack
 - [Utilities](/utilities) — browser tools, starting with an image converter
 
 Contact is on the homepage (no public inbox API). Prefer a short note.

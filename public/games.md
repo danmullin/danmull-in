@@ -1,23 +1,19 @@
 ---
 title: Games — Dan Mullin
-description: Games and playables by Dan Mullin — Harborwick, Ledger Bay, and feel-first prototypes.
+description: Games by Dan Mullin. Professor Vector and Space Attack.
 ---
 
 # Games
 
-I love playing games and making them — cozy systems, seaside moods, and prototypes where feel comes before feature lists.
+I love playing games and making them. Feel comes before feature lists.
 
 ## [Space Attack](/space-attack/) (playable)
 
 Orbital defense, keyboard arcade. Move, fire, and clear the armada before the fuel runs out.
 
-## Harborwick (in progress)
+## [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/)
 
-A cozy seaside city-builder in Godot — docks, weather, and the kind of loop you leave running. Public build and links land here when they’re ready to share.
-
-## Ledger Bay (in progress)
-
-Fantasy archipelago trade — chart the harbors, work the markets, chase rank. Port Royale–inspired systems with Ironbyte chrome.
+Professor Vector's Fantastic Orbital Defense Emporium and Interstellar Projectile Laboratory.
 
 ## Animation & sheet tools
 

@@ -35,15 +35,15 @@ Most “AI coding” piles prompts onto languages that never expected a co-pilot
 
 ## Games
 
-Feel-first playables and prototypes.
+Feel comes before feature lists.
 
-### Harborwick (in progress)
+### Professor Vector
 
-A cozy seaside city-builder in Godot — docks, weather, and the kind of loop you leave running. Public build pending.
+Professor Vector's Fantastic Orbital Defense Emporium and Interstellar Projectile Laboratory. https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/
 
-### Ledger Bay (in progress)
+### Space Attack (playable)
 
-Fantasy archipelago trade — chart the harbors, work the markets, chase rank. Port Royale–inspired systems with Ironbyte chrome.
+Orbital defense, keyboard arcade, at `/space-attack/`. Move, fire, and clear the armada before the fuel runs out.
 
 ### Animation & sheet tools
 

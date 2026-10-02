@@ -29,7 +29,7 @@ const PROJECTS = [
     name: 'Games',
     href: '/games',
     page: '/games',
-    tease: 'Harborwick, Ledger Bay, and playables',
+    tease: 'Professor Vector and Space Attack',
   },
   {
     name: 'Utilities',

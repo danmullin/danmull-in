@@ -21,7 +21,7 @@ for (const skill of card.skills) {
 const pages = {
   '/index.md': '# Home\nLobby',
   '/synth.md': '# Synth\nCompiler',
-  '/games.md': '# Games\nHarborwick',
+  '/games.md': '# Games\nProfessor Vector',
 }
 
 const env = {
