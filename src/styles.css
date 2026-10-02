@@ -567,6 +567,28 @@ img {
   }
 }
 
+.lobby-about {
+  margin: 0.85rem auto 0;
+  max-width: 38rem;
+  font-size: 15px;
+  font-weight: 450;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  color: rgba(226, 213, 255, 0.78);
+  text-wrap: balance;
+}
+
+.lobby-about a {
+  color: rgba(0, 212, 255, 0.92);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.lobby-about a:hover,
+.lobby-about a:focus-visible {
+  color: #fff;
+}
+
 .door-shelf {
   display: flex;
   flex-direction: column;

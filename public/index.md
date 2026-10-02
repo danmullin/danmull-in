@@ -1,11 +1,13 @@
 ---
 title: Dan Mullin
-description: Dan Mullin — I craft tools and software, make games, and give data a little light.
+description: Dan Mullin crafts tools and software, makes games, and gives data a little light. Synth, ILLEGAL OPCODE, Harborwick, and Ledger Bay.
 ---
 
 # Dan Mullin
 
 Crafting tools · Making games · Giving data light
+
+Dan Mullin. I craft tools and software, make games, and give data a little light. [Synth](/synth) is a language with a real compiler. [ILLEGAL OPCODE](https://illegalopcode.dev/) is the studio. [Harborwick and Ledger Bay](/games) are the games in progress.
 
 Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on this origin.
 
