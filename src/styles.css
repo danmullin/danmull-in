@@ -1137,6 +1137,7 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
   font-size: 13px;
   letter-spacing: 0;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.75rem 1.5rem;
   justify-content: center;
@@ -1150,6 +1151,12 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
   font-size: 12px;
   gap: 0.75rem 1.25rem;
   opacity: 0.85;
+}
+
+.site-footer-lobby .theme-toggle {
+  min-height: 0;
+  padding: 0;
+  line-height: inherit;
 }
 
 .site-footer a {
