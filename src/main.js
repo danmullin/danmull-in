@@ -32,6 +32,11 @@ const PROJECTS = [
     tease: 'Harborwick, Ledger Bay, and playables',
   },
   {
+    name: 'Utilities',
+    href: '/utilities',
+    tease: 'Browser tools, starting with an image converter',
+  },
+  {
     name: 'GitHub',
     href: 'https://github.com/danmullin',
     tease: 'Repos and work in the open',

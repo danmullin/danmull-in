@@ -67,7 +67,7 @@
           </span>
         </h1>
         <p class="lobby-line">Crafting tools · Making games · Giving data light</p>
-        <p class="lobby-about">Dan Mullin. I craft tools and software, make games, and give data a little light. <a href="/synth">Synth</a> is a language with a real compiler. <a href="https://illegalopcode.dev/">ILLEGAL OPCODE</a> is the studio. <a href="/games">Harborwick and Ledger Bay</a> are in progress. <a href="/space-attack/">Space Attack</a> is playable.</p>
+        <p class="lobby-about">Dan Mullin. I craft tools and software, make games, and give data a little light. <a href="/synth">Synth</a> is a language with a real compiler. <a href="https://illegalopcode.dev/">ILLEGAL OPCODE</a> is the studio. <a href="/games">Harborwick and Ledger Bay</a> are in progress. <a href="/space-attack/">Space Attack</a> is playable. <a href="/utilities">Utilities</a> convert images in the browser.</p>
 
         <div class="door-shelf" role="navigation" aria-label="Destinations">
           <div class="door-grid">
@@ -115,10 +115,16 @@
             </a>
           </div>
 
-          <button type="button" class="door door--text door--contact" data-open-contact style="--door-i: 6">
-            <span class="door-name">Contact</span>
-            <span class="door-tease">Say hello — a short note is enough</span>
-          </button>
+          <div class="door-actions">
+            <a class="door door--text door--contact" href="/utilities" style="--door-i: 6">
+              <span class="door-name">Utilities</span>
+              <span class="door-tease">Convert images in the browser</span>
+            </a>
+            <button type="button" class="door door--text door--contact" data-open-contact style="--door-i: 7">
+              <span class="door-name">Contact</span>
+              <span class="door-tease">Say hello — a short note is enough</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -154,6 +160,7 @@
   <footer class="site-footer site-footer-lobby">
     <span>© <span id="y"></span> Dan Mullin</span>
     <a href="/synth">Synth</a>
+    <a href="/utilities">Utilities</a>
     <button type="button" class="theme-toggle" id="lobby-theme-toggle" aria-pressed="false" title="Switch lobby art theme">
       Album covers
     </button>

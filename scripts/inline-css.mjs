@@ -1,35 +1,40 @@
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs'
+import { readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const dist = 'dist'
-const assets = readdirSync(join(dist, 'assets'))
-const cssName = assets.find((name) => name.endsWith('.css'))
-const jsName = assets.find((name) => name.endsWith('.js'))
-if (!cssName) throw new Error('no hashed CSS in dist/assets')
-if (!jsName) throw new Error('no hashed JS in dist/assets')
+const files = [
+  'index.html',
+  'synth.html',
+  'games.html',
+  'utilities.html',
+  'utilities/image.html',
+]
 
-const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+function canInline(code) {
+  return !/\bimport\s*(?:\(|["'])/.test(code) && !/^\s*import\s+/m.test(code)
+}
 
-const css = readFileSync(join(dist, 'assets', cssName), 'utf8')
-const js = readFileSync(join(dist, 'assets', jsName), 'utf8').replaceAll(
-  '</script',
-  '<\\/script',
-)
-
-const linkPattern = new RegExp(
-  `<link rel="stylesheet"[^>]*href="/assets/${escapeRegExp(cssName)}"[^>]*>`,
-)
-const scriptPattern = new RegExp(
-  `<script type="module"[^>]*src="/assets/${escapeRegExp(jsName)}"[^>]*></script>`,
-)
-
-for (const file of ['index.html', 'synth.html', 'games.html']) {
+for (const file of files) {
   const path = join(dist, file)
   let html = readFileSync(path, 'utf8')
-  if (!linkPattern.test(html)) throw new Error(`stylesheet link not found in ${file}`)
-  if (!scriptPattern.test(html)) throw new Error(`module script not found in ${file}`)
-  html = html.replace(linkPattern, `<style>${css}</style>`)
-  html = html.replace(scriptPattern, `<script type="module">${js}</script>`)
+  const link = html.match(/<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/)
+  if (!link) throw new Error(`stylesheet link not found in ${file}`)
+  const cssFile = link[1].slice('/assets/'.length)
+  const css = readFileSync(join(dist, 'assets', cssFile), 'utf8')
+  html = html.replace(link[0], `<style>${css}</style>`)
+
+  let inlined = 0
+  html = html.replace(
+    /<script type="module"[^>]*src="(\/assets\/[^"]+\.js)"[^>]*><\/script>/g,
+    (tag, src) => {
+      const name = src.slice('/assets/'.length)
+      const code = readFileSync(join(dist, 'assets', name), 'utf8')
+      if (!canInline(code)) return tag
+      inlined += 1
+      return `<script type="module">${code.replaceAll('</script', '<\\/script')}</script>`
+    },
+  )
+  if (!inlined) throw new Error(`no module script inlined in ${file}`)
   writeFileSync(path, html)
-  console.log(`inlined ${cssName} and ${jsName} into ${file}`)
+  console.log(`inlined assets into ${file} (${inlined} script${inlined === 1 ? '' : 's'})`)
 }
