@@ -35,7 +35,7 @@ export const PROJECTS = [
     name: 'Utilities',
     href: '/utilities',
     page: '/utilities',
-    tease: 'Browser tools, starting with an image converter',
+    tease: 'Stopwatch and an image converter',
   },
   {
     name: 'GitHub',

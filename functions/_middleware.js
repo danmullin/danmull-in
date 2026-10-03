@@ -24,6 +24,7 @@ function markdownAssetPath(pathname) {
   if (path === '/games' || path === '/games.html') return '/games.md'
   if (path === '/utilities' || path === '/utilities.html') return '/utilities.md'
   if (path === '/utilities/image' || path === '/utilities/image.html') return '/utilities/image.md'
+  if (path === '/utilities/stopwatch' || path === '/utilities/stopwatch.html') return '/utilities/stopwatch.md'
   return null
 }
 

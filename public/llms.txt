@@ -9,7 +9,7 @@ danmull.in is a lobby for projects: an AI-native programming language, SVG and m
 - [Home](https://danmull.in/): Project lobby
 - [Synth](https://danmull.in/synth): AI-native language with a real compiler
 - [Games](https://danmull.in/games): Professor Vector and Space Attack
-- [Utilities](https://danmull.in/utilities): Browser tools. [Image converter](https://danmull.in/utilities/image) turns PNG, JPEG, WebP, GIF, and HEIC into PNG, JPEG, WebP, or AVIF without uploading the file
+- [Utilities](https://danmull.in/utilities): Browser tools. [Stopwatch](https://danmull.in/utilities/stopwatch) starts, stops, and laps in the tab. [Image converter](https://danmull.in/utilities/image) turns PNG, JPEG, WebP, GIF, and HEIC into PNG, JPEG, WebP, or AVIF without uploading the file
 
 ## Projects
 

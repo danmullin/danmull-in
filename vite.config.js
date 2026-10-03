@@ -12,6 +12,11 @@ function vendorFiles() {
       url: '/image-convert.js',
       dest: resolve(__dirname, 'dist/image-convert.js'),
     },
+    {
+      src: resolve(__dirname, 'src/stopwatch.js'),
+      url: '/stopwatch.js',
+      dest: resolve(__dirname, 'dist/stopwatch.js'),
+    },
   ]
   return {
     name: 'vendor-files',
@@ -47,6 +52,7 @@ export default defineConfig({
         games: resolve(__dirname, 'games.html'),
         utilities: resolve(__dirname, 'utilities.html'),
         image: resolve(__dirname, 'utilities/image.html'),
+        stopwatch: resolve(__dirname, 'utilities/stopwatch.html'),
       },
     },
   },

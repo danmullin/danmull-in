@@ -8,6 +8,7 @@ const files = [
   'games.html',
   'utilities.html',
   'utilities/image.html',
+  'utilities/stopwatch.html',
 ]
 
 function canInline(code) {

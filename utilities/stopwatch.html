@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stopwatch — Dan Mullin</title>
+  <meta name="description" content="A stopwatch in the browser. Start, stop, and lap. Nothing is uploaded.">
+  <link rel="canonical" href="https://danmull.in/utilities/stopwatch">
+  <meta name="theme-color" content="#0d0221">
+  <link rel="alternate" type="text/markdown" href="/utilities/stopwatch.md">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header class="site-header site-header-minimal">
+    <a class="logo" href="/">
+      <span class="logo-mark" aria-hidden="true">⬡</span>
+      <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
+    </a>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <p class="hero-eyebrow"><a href="/utilities">Utilities</a></p>
+      <h1>Stopwatch</h1>
+      <p>Start, stop, and lap. The clock stays in this tab.</p>
+    </header>
+
+    <section class="section watch">
+      <p class="watch-time" id="watch-time">00:00.00</p>
+      <div class="watch-actions">
+        <button type="button" class="btn btn-primary" id="watch-toggle" aria-pressed="false">Start</button>
+        <button type="button" class="btn btn-ghost" id="watch-lap" disabled>Lap</button>
+        <button type="button" class="btn btn-ghost" id="watch-reset" disabled>Reset</button>
+      </div>
+      <p class="watch-hint">Space starts and stops. L laps. R resets.</p>
+      <p id="watch-status" class="watch-status" role="status" aria-live="polite"></p>
+      <ol id="watch-laps" class="watch-laps"></ol>
+      <button type="button" class="btn btn-ghost" id="watch-copy" hidden>Copy laps</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span><a href="/utilities">← Utilities</a></span>
+    <span><a href="/">Dan Mullin</a></span>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+  <script src="/stopwatch.js" defer></script>
+</body>
+</html>
