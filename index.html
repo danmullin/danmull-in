@@ -52,8 +52,15 @@
 </head>
 <body class="lobby-page">
   <div class="peek">
-    <button type="button" class="peek-toggle" aria-expanded="false" aria-controls="peek-menu">Peek</button>
-    <nav id="peek-menu" class="peek-menu" hidden aria-label="Peek">
+    <button type="button" class="peek-toggle" aria-expanded="false" aria-controls="peek-menu" aria-label="Links">
+      <span class="peek-chrome" aria-hidden="true">
+        <span class="peek-dot"></span>
+        <span class="peek-dot"></span>
+        <span class="peek-dot"></span>
+      </span>
+      <span class="peek-screen" aria-hidden="true"><span class="peek-gt">&gt;</span><span class="peek-cursor"></span></span>
+    </button>
+    <nav id="peek-menu" class="peek-menu" hidden aria-label="Links">
       <a href="/synth">
         <span class="peek-name">Synth</span>
         <span class="peek-tease">A language with a real compiler</span>
