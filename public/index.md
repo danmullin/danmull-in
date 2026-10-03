@@ -1,6 +1,6 @@
 ---
 title: Dan Mullin
-description: Dan Mullin crafts tools and software, makes games, and gives data a little light. Synth, ILLEGAL OPCODE, Space Attack, and Space Invaders.
+description: Dan Mullin crafts tools and software, makes games, and gives data a little light. Synth, ILLEGAL OPCODE, Space Attack, Space Invaders, and Asteroids.
 ---
 
 # Dan Mullin
@@ -16,13 +16,14 @@ Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on th
 - [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/) — orbital defense
 - [Space Attack](/space-attack/) — playable
 - [Space Invaders](/space-invaders/) — playable
-- [Browser games](/browser-games) — Space Attack and Space Invaders
+- [Asteroids](/asteroids/) — playable
+- [Browser games](/browser-games) — Space Attack, Space Invaders, and Asteroids
 - [Penultimate](https://danmullin.github.io/penultimate/) — SVG vector editor
 - [Tileforge](https://danmullin.github.io/tileforge/) — Map authoring and tile studio
 - [Onion Lab](https://danmullin.github.io/onion-lab/) — Spritesheet animation studio
 - [Sunwake](https://danmullin.github.io/sunwake/) — Music visualizer
 - [GitHub](https://github.com/danmullin) — Repos and work in the open
-- [Games](/games) — Professor Vector, Space Attack, and Space Invaders
+- [Games](/games) — Professor Vector, Space Attack, Space Invaders, and Asteroids
 - [Utilities](/utilities) — clocks, images, and small tools
 
 Contact is on the homepage (no public inbox API). Prefer a short note.

@@ -1,6 +1,6 @@
 ---
 title: Games — Dan Mullin
-description: Games by Dan Mullin. Professor Vector, Space Attack, and Space Invaders.
+description: Games by Dan Mullin. Professor Vector, Space Attack, Space Invaders, and Asteroids.
 ---
 
 # Games
@@ -14,6 +14,10 @@ Orbital defense, keyboard arcade. Move, fire, and clear the armada before the fu
 ## [Space Invaders](/space-invaders/) (playable)
 
 Hold the line behind four bunkers. Stop the invasion before it reaches Earth.
+
+## [Asteroids](/asteroids/) (playable)
+
+Vector arcade in a debris field. Rotate, thrust, and break the rocks before they break you.
 
 ## [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/)
 

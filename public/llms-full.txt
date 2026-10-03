@@ -19,7 +19,7 @@ Destinations on the lobby:
 - Sunwake — Music visualizer (https://danmullin.github.io/sunwake/)
 - GitHub — https://github.com/danmullin
 - Games — `/games`
-- Browser games — `/browser-games`. Space Attack at `/space-attack/`. Space Invaders at `/space-invaders/`.
+- Browser games — `/browser-games`. Space Attack at `/space-attack/`. Space Invaders at `/space-invaders/`. Asteroids at `/asteroids/`.
 - Utilities — `/utilities`: stopwatch, countdown, world clock, Unix time, image converter, resize, metadata strip, SHA-256, JSON. Browser-side. Files are not uploaded.
 - Contact — homepage modal; no on-origin mail API
 
@@ -49,6 +49,10 @@ Orbital defense, keyboard arcade, at `/space-attack/`. Move, fire, and clear the
 ### Space Invaders (playable)
 
 Hold the line behind four bunkers, at `/space-invaders/`. Stop the invasion before it reaches Earth.
+
+### Asteroids (playable)
+
+Vector arcade in a debris field, at `/asteroids/`. Rotate, thrust, and break the rocks before they break you.
 
 ### Animation & sheet tools
 

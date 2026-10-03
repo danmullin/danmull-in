@@ -8,8 +8,8 @@ danmull.in is a lobby for projects: an AI-native programming language, SVG and m
 
 - [Home](https://danmull.in/): Project lobby
 - [Synth](https://danmull.in/synth): AI-native language with a real compiler
-- [Games](https://danmull.in/games): Professor Vector, Space Attack, and Space Invaders
-- [Browser games](https://danmull.in/browser-games): Playable in the tab. [Space Attack](https://danmull.in/space-attack/) and [Space Invaders](https://danmull.in/space-invaders/).
+- [Games](https://danmull.in/games): Professor Vector, Space Attack, Space Invaders, and Asteroids
+- [Browser games](https://danmull.in/browser-games): Playable in the tab. [Space Attack](https://danmull.in/space-attack/), [Space Invaders](https://danmull.in/space-invaders/), and [Asteroids](https://danmull.in/asteroids/).
 - [Utilities](https://danmull.in/utilities): Browser tools. Stopwatch, countdown, world clock, and Unix time. Image converter, resize, and metadata strip. SHA-256 and JSON. Files stay on the machine.
 
 ## Projects
