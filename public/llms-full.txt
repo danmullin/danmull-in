@@ -19,7 +19,7 @@ Destinations on the lobby:
 - Sunwake — Music visualizer (https://danmullin.github.io/sunwake/)
 - GitHub — https://github.com/danmullin
 - Games — `/games`
-- Browser games — `/browser-games`. Space Attack at `/space-attack/`. Space Invaders at `/space-invaders/`. Asteroids at `/asteroids/`. Galaga at `/galaga/`. Defender at `/defender/`. Pac-Man at `/pac-man/`.
+- Browser games — `/browser-games`. Space Attack at `/space-attack/`. Space Invaders at `/space-invaders/`. Asteroids at `/asteroids/`. Galaga at `/galaga/`. Defender at `/defender/`. Pac-Man at `/pac-man/`. Tempest at `/tempest/`.
 - Utilities — `/utilities`: stopwatch, countdown, world clock, Unix time, image converter, resize, metadata strip, SHA-256, JSON. Browser-side. Files are not uploaded.
 - Contact — homepage modal; no on-origin mail API
 
@@ -65,6 +65,10 @@ Race the horizon, at `/defender/`. Stop the abductions and carry people home.
 ### Pac-Man (playable)
 
 Clear the dots, at `/pac-man/`. Power pellets turn the chase around.
+
+### Tempest (playable)
+
+Patrol the rim, at `/tempest/`. Fire into the abyss before climbers take the edge.
 
 ### Animation & sheet tools
 

@@ -1,6 +1,6 @@
 ---
 title: Browser games
-description: Browser games by Dan Mullin. Arcade classics playable in the tab, including Pac-Man.
+description: Browser games by Dan Mullin. Arcade classics playable in the tab, including Tempest.
 ---
 
 # Browser games
@@ -15,3 +15,4 @@ Small games that run in the tab.
 - [Galaga](/galaga/) — break the diving swarm. Rescue a captured fighter for dual fire.
 - [Defender](/defender/) — race the horizon. Stop the abductions and carry people home.
 - [Pac-Man](/pac-man/) — clear the dots. Power pellets turn the chase around.
+- [Tempest](/tempest/) — patrol the rim. Fire into the abyss before climbers take the edge.

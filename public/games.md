@@ -31,6 +31,10 @@ Race the horizon. Stop the abductions and carry people home.
 
 Clear the dots. Power pellets turn the chase around.
 
+## [Tempest](/tempest/) (playable)
+
+Patrol the rim. Fire into the abyss before climbers take the edge.
+
 ## [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/)
 
 Professor Vector's Fantastic Orbital Defense Emporium and Interstellar Projectile Laboratory.
