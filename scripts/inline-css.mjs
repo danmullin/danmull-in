@@ -6,6 +6,7 @@ const files = [
   'index.html',
   'synth.html',
   'games.html',
+  'browser-games.html',
   'utilities.html',
   'utilities/image.html',
   'utilities/stopwatch.html',

@@ -32,6 +32,12 @@ export const PROJECTS = [
     tease: 'Professor Vector and Space Attack',
   },
   {
+    name: 'Browser games',
+    href: '/browser-games',
+    page: '/browser-games',
+    tease: 'Space Attack, playable in the browser',
+  },
+  {
     name: 'Utilities',
     href: '/utilities',
     page: '/utilities',

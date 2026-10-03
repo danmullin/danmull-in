@@ -778,8 +778,9 @@ img {
 }
 
 .door--contact {
-  width: min(100%, 22rem);
-  flex: 0 0 auto;
+  width: auto;
+  max-width: 20rem;
+  flex: 1 1 16rem;
 }
 
 .door-art {

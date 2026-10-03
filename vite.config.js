@@ -58,6 +58,7 @@ export default defineConfig({
         synth: resolve(__dirname, 'synth.html'),
         games: resolve(__dirname, 'games.html'),
         utilities: resolve(__dirname, 'utilities.html'),
+        browserGames: resolve(__dirname, 'browser-games.html'),
         image: resolve(__dirname, 'utilities/image.html'),
         stopwatch: resolve(__dirname, 'utilities/stopwatch.html'),
         countdown: resolve(__dirname, 'utilities/countdown.html'),

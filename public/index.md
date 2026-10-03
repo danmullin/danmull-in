@@ -15,6 +15,7 @@ Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on th
 - [ILLEGAL OPCODE](https://illegalopcode.dev/) — the studio
 - [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/) — orbital defense
 - [Space Attack](/space-attack/) — playable
+- [Browser games](/browser-games) — Space Attack
 - [Penultimate](https://danmullin.github.io/penultimate/) — SVG vector editor
 - [Tileforge](https://danmullin.github.io/tileforge/) — Map authoring and tile studio
 - [Onion Lab](https://danmullin.github.io/onion-lab/) — Spritesheet animation studio
