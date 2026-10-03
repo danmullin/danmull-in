@@ -9,14 +9,11 @@ const form = document.querySelector('#convert-form')
 const fileInput = document.querySelector('#convert-files')
 const drop = document.querySelector('#convert-drop')
 const formatSelect = document.querySelector('#convert-format')
-const qualityField = document.querySelector('#convert-quality-field')
-const qualityInput = document.querySelector('#convert-quality')
-const qualityValue = document.querySelector('#convert-quality-value')
 const statusEl = document.querySelector('#convert-status')
 const resultsEl = document.querySelector('#convert-results')
 const downloadAll = document.querySelector('#convert-download-all')
 
-if (form && fileInput && drop && formatSelect && qualityField && qualityInput && qualityValue && statusEl && resultsEl && downloadAll) {
+if (form && fileInput && drop && formatSelect && statusEl && resultsEl && downloadAll) {
   const outputs = OUTPUTS.filter((format) => supportsMime(format.mime))
   if (!outputs.length) {
     setStatus('This browser cannot write an image from here.')
@@ -25,7 +22,6 @@ if (form && fileInput && drop && formatSelect && qualityField && qualityInput &&
   let previews = []
   let downloads = []
   let job = 0
-  let qualityTimer = 0
   let heicLoader = null
 
   for (const format of outputs) {
@@ -35,7 +31,6 @@ if (form && fileInput && drop && formatSelect && qualityField && qualityInput &&
     formatSelect.append(option)
   }
   formatSelect.value = outputs.some((format) => format.id === 'webp') ? 'webp' : outputs[0].id
-  syncQuality()
 
   fileInput.addEventListener('change', () => {
     if (fileInput.files?.length) setFiles([...fileInput.files])
@@ -61,14 +56,7 @@ if (form && fileInput && drop && formatSelect && qualityField && qualityInput &&
   })
 
   formatSelect.addEventListener('change', () => {
-    syncQuality()
     convert()
-  })
-
-  qualityInput.addEventListener('input', () => {
-    qualityValue.textContent = qualityInput.value
-    window.clearTimeout(qualityTimer)
-    qualityTimer = window.setTimeout(convert, 180)
   })
 
   downloadAll.addEventListener('click', () => {
@@ -90,7 +78,7 @@ if (form && fileInput && drop && formatSelect && qualityField && qualityInput &&
   async function convert() {
     const current = ++job
     const format = outputs.find((item) => item.id === formatSelect.value) || outputs[0]
-    const quality = Number(qualityInput.value) / 100
+    const quality = 1
     const rows = []
     if (!files.length) return
 
@@ -187,13 +175,6 @@ if (form && fileInput && drop && formatSelect && qualityField && qualityInput &&
       resultsEl.append(item)
     }
     downloadAll.hidden = downloads.length < 2
-  }
-
-  function syncQuality() {
-    const format = outputs.find((item) => item.id === formatSelect.value)
-    const lossy = Boolean(format?.lossy)
-    qualityField.hidden = !lossy
-    qualityValue.textContent = qualityInput.value
   }
 
   function loadHeic() {
