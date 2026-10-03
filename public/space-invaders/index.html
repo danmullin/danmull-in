@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/space-invaders/"><meta name="theme-color" content="#070b18"><title>Space Invaders • Planetary Defense</title><link rel="stylesheet" href="style.css"></head>
+<body><main><header><a class="brand" href="./"><span class="brand-icon">✦</span> SPACE INVADERS</a><span class="tag">PLANETARY DEFENSE / ARCADE CLASSICS</span><button id="pause" aria-label="Pause game" disabled>Ⅱ</button></header>
+<section class="game-shell" aria-label="Space Invaders arcade game"><div class="arena"><canvas id="game" width="900" height="650" tabindex="0" aria-label="Move with arrows or A and D. Hold Space or left mouse button to fire. P pauses."></canvas>
+<div class="hud"><div><span>SCORE</span><strong id="score">000000</strong></div><div class="best"><span>BEST</span><strong id="best">000000</strong></div></div>
+<div id="overlay" class="overlay"><p id="eyebrow" class="eyebrow">THE LAST LINE OF DEFENSE</p><h1 id="title">SPACE<br><span>INVADERS</span></h1><p id="description">Hold the line. Shelter behind your bunkers.<br>Stop the invaders before they reach Earth.</p><button id="start" class="primary">DEFEND EARTH <span>↗</span></button><p class="hint">PRESS ENTER TO LAUNCH</p></div>
+<div id="announcement" class="announcement" aria-live="polite"></div><div class="invader-hud"><span>EARTH DEFENSE <b>✦</b></span><span>LIVES <strong id="health">3</strong></span><span>WAVE <strong id="wave">01</strong></span></div></div>
+<footer><div><kbd>←</kbd><kbd>→</kbd> / <kbd>A</kbd><kbd>D</kbd> <span>MOVE</span></div><div><kbd>SPACE</kbd> / <kbd>LMB</kbd> <span>FIRE</span></div><div><kbd>P</kbd> <span>PAUSE</span></div><span class="status"><i></i><span id="status">SYSTEMS READY</span></span></footer></section>
+<div class="under"><span>02 / HOLD THE LINE</span><p>Three lives. Four bunkers. An invasion that never stops.</p><span>KEYBOARD ARCADE</span></div></main><script src="game.js"></script></body></html>
+

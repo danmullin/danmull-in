@@ -29,13 +29,13 @@ const PROJECTS = [
     name: 'Games',
     href: '/games',
     page: '/games',
-    tease: 'Professor Vector and Space Attack',
+    tease: 'Professor Vector, Space Attack, and Space Invaders',
   },
   {
     name: 'Browser games',
     href: '/browser-games',
     page: '/browser-games',
-    tease: 'Space Attack, playable in the browser',
+    tease: 'Space Attack and Space Invaders',
   },
   {
     name: 'Utilities',
