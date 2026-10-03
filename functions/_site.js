@@ -29,13 +29,13 @@ export const PROJECTS = [
     name: 'Games',
     href: '/games',
     page: '/games',
-    tease: 'Professor Vector, Space Attack, Space Invaders, and Asteroids',
+    tease: 'Professor Vector and browser arcade games',
   },
   {
     name: 'Browser games',
     href: '/browser-games',
     page: '/browser-games',
-    tease: 'Space Attack, Space Invaders, and Asteroids',
+    tease: 'Space Attack, Space Invaders, Asteroids, and Galaga',
   },
   {
     name: 'Utilities',
