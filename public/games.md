@@ -43,6 +43,10 @@ Find the angle. Catch the capsules. Clear the bricks.
 
 Dodge the traffic. Ride the river. Guide five frogs home.
 
+## [Out Run](/outrun/) (playable)
+
+Chase the horizon. Choose your route. Beat the checkpoints.
+
 ## [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/)
 
 Professor Vector's Fantastic Orbital Defense Emporium and Interstellar Projectile Laboratory.

@@ -1,6 +1,6 @@
 ---
 title: Browser games
-description: Browser games by Dan Mullin. Arcade classics playable in the tab, including Frogger.
+description: Browser games by Dan Mullin. Arcade classics playable in the tab, including Out Run.
 ---
 
 # Browser games
@@ -18,3 +18,4 @@ Small games that run in the tab.
 - [Tempest](/tempest/) — patrol the rim. Fire into the abyss before climbers take the edge.
 - [Arkanoid](/arkanoid/) — find the angle. Catch the capsules. Clear the bricks.
 - [Frogger](/frogger/) — dodge the traffic. Ride the river. Guide five frogs home.
+- [Out Run](/outrun/) — chase the horizon. Choose your route. Beat the checkpoints.

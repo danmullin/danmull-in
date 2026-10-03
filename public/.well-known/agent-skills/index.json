@@ -6,7 +6,7 @@
       "type": "skill-md",
       "description": "Navigate danmull.in — Dan Mullin's personal lobby for tools, games, and the Synth language. Use when an agent needs the project map, canonical URLs, or machine-readable discovery files.",
       "url": "/.well-known/agent-skills/browse-danmull-in/SKILL.md",
-      "digest": "sha256:ec57cffa8bd420cc64c5672c66d8dd00241f35cb841385df1284791d42c51548"
+      "digest": "sha256:608523d8c23881cbebb2ec89166d15228d0e1fd6f4613d2f5e4168bc3c7dd35c"
     }
   ]
 }
