@@ -1,6 +1,6 @@
 ---
 title: Browser games
-description: Browser games by Dan Mullin. Space Attack, Space Invaders, Asteroids, Galaga, and Defender are playable here.
+description: Browser games by Dan Mullin. Arcade classics playable in the tab, including Pac-Man.
 ---
 
 # Browser games
@@ -14,3 +14,4 @@ Small games that run in the tab.
 - [Asteroids](/asteroids/) — vector arcade in a debris field. Rotate, thrust, and break the rocks before they break you.
 - [Galaga](/galaga/) — break the diving swarm. Rescue a captured fighter for dual fire.
 - [Defender](/defender/) — race the horizon. Stop the abductions and carry people home.
+- [Pac-Man](/pac-man/) — clear the dots. Power pellets turn the chase around.

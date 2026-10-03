@@ -19,6 +19,7 @@ Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on th
 - [Asteroids](/asteroids/) — playable
 - [Galaga](/galaga/) — playable
 - [Defender](/defender/) — playable
+- [Pac-Man](/pac-man/) — playable
 - [Browser games](/browser-games) — arcade classics in the tab
 - [Penultimate](https://danmullin.github.io/penultimate/) — SVG vector editor
 - [Tileforge](https://danmullin.github.io/tileforge/) — Map authoring and tile studio

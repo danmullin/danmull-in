@@ -27,6 +27,10 @@ Break the diving swarm. Rescue a captured fighter for dual fire.
 
 Race the horizon. Stop the abductions and carry people home.
 
+## [Pac-Man](/pac-man/) (playable)
+
+Clear the dots. Power pellets turn the chase around.
+
 ## [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/)
 
 Professor Vector's Fantastic Orbital Defense Emporium and Interstellar Projectile Laboratory.
