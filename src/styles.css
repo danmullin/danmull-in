@@ -1570,6 +1570,145 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
   color: var(--cyan);
 }
 
+.utility-index {
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+}
+
+.utility-index .work-link {
+  height: 100%;
+  text-align: left;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tool-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+  gap: 1rem;
+  width: min(100%, 40rem);
+}
+
+.tool-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 8rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tool-field[hidden] {
+  display: none;
+}
+
+.tool-field input,
+.tool-field select,
+.tool-area {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border-card);
+  border-radius: 8px;
+  background: rgba(18, 3, 48, 0.85);
+  color: var(--text);
+  font: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.tool-check {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.6rem;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.tool-area {
+  width: min(100%, 40rem);
+  min-height: 10rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.tool-hash,
+.tool-result {
+  max-width: 40rem;
+  margin: 0;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.tool-hash {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--cyan);
+}
+
+.tool-result {
+  font-family: var(--font-mono);
+  color: var(--text);
+}
+
+.clock-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  width: min(100%, 36rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clock-list li {
+  display: grid;
+  grid-template-columns: minmax(8rem, 1fr) auto;
+  gap: 0.35rem 1rem;
+  align-items: center;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border-card);
+  border-radius: 8px;
+  background: rgba(18, 3, 48, 0.55);
+}
+
+.clock-list li.is-here {
+  border-color: rgba(0, 229, 255, 0.45);
+}
+
+.clock-name {
+  font-weight: 600;
+}
+
+.clock-when {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+}
+
+.clock-time {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--cyan);
+}
+
+.clock-date {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
 @media (max-width: 640px) {
   .nav {
     gap: 0.85rem;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unix time — Dan Mullin</title>
+  <meta name="description" content="Convert Unix timestamps and local dates in the browser. Nothing is uploaded.">
+  <link rel="canonical" href="https://danmull.in/utilities/unix">
+  <meta name="theme-color" content="#0d0221">
+  <link rel="alternate" type="text/markdown" href="/utilities/unix.md">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header class="site-header site-header-minimal">
+    <a class="logo" href="/">
+      <span class="logo-mark" aria-hidden="true">⬡</span>
+      <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
+    </a>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <p class="hero-eyebrow"><a href="/utilities">Utilities</a></p>
+      <h1>Unix time</h1>
+      <p>Seconds or milliseconds in, a date out. Or the other way around.</p>
+    </header>
+
+    <section class="section tool">
+      <p class="watch-hint">Now</p>
+      <p class="tool-output" id="unix-sec">0</p>
+      <p class="watch-hint"><span id="unix-ms">0</span> ms</p>
+      <button type="button" class="btn btn-ghost" id="unix-copy-now">Copy seconds</button>
+
+      <form id="unix-form" class="tool-fields">
+        <label class="tool-field">Timestamp
+          <input id="unix-stamp" type="text" inputmode="numeric" autocomplete="off" placeholder="1700000000">
+        </label>
+        <label class="tool-field">Read as
+          <select id="unix-mode">
+            <option value="auto">Auto</option>
+            <option value="s">Seconds</option>
+            <option value="ms">Milliseconds</option>
+          </select>
+        </label>
+      </form>
+      <p id="unix-local" class="tool-result"></p>
+      <p id="unix-utc" class="tool-result"></p>
+
+      <form id="unix-date-form" class="tool-fields">
+        <label class="tool-field">Date and time
+          <input id="unix-when" type="datetime-local">
+        </label>
+      </form>
+      <p id="unix-from-date" class="tool-result"></p>
+      <p id="unix-status" class="watch-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span><a href="/utilities">← Utilities</a></span>
+    <span><a href="/">Dan Mullin</a></span>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+  <script src="/unix.js" defer></script>
+</body>
+</html>

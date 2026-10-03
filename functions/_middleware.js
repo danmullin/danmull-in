@@ -25,6 +25,13 @@ function markdownAssetPath(pathname) {
   if (path === '/utilities' || path === '/utilities.html') return '/utilities.md'
   if (path === '/utilities/image' || path === '/utilities/image.html') return '/utilities/image.md'
   if (path === '/utilities/stopwatch' || path === '/utilities/stopwatch.html') return '/utilities/stopwatch.md'
+  if (path === '/utilities/countdown' || path === '/utilities/countdown.html') return '/utilities/countdown.md'
+  if (path === '/utilities/clock' || path === '/utilities/clock.html') return '/utilities/clock.md'
+  if (path === '/utilities/resize' || path === '/utilities/resize.html') return '/utilities/resize.md'
+  if (path === '/utilities/strip' || path === '/utilities/strip.html') return '/utilities/strip.md'
+  if (path === '/utilities/hash' || path === '/utilities/hash.html') return '/utilities/hash.md'
+  if (path === '/utilities/json' || path === '/utilities/json.html') return '/utilities/json.md'
+  if (path === '/utilities/unix' || path === '/utilities/unix.html') return '/utilities/unix.md'
   return null
 }
 

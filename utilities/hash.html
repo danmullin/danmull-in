@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SHA-256 — Dan Mullin</title>
+  <meta name="description" content="SHA-256 a bit of text or a file in the browser. Nothing is uploaded.">
+  <link rel="canonical" href="https://danmull.in/utilities/hash">
+  <meta name="theme-color" content="#0d0221">
+  <link rel="alternate" type="text/markdown" href="/utilities/hash.md">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header class="site-header site-header-minimal">
+    <a class="logo" href="/">
+      <span class="logo-mark" aria-hidden="true">⬡</span>
+      <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
+    </a>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <p class="hero-eyebrow"><a href="/utilities">Utilities</a></p>
+      <h1>SHA-256</h1>
+      <p>Hash text or a file here. Nothing is uploaded.</p>
+    </header>
+
+    <section class="section tool">
+      <textarea id="hash-text" class="tool-area" rows="6" placeholder="Text to hash"></textarea>
+      <div class="watch-actions">
+        <button type="button" class="btn btn-primary" id="hash-text-btn">Hash text</button>
+      </div>
+      <label class="convert-drop" id="hash-drop">
+        <input id="hash-file" type="file">
+        <span class="convert-drop-title">Or drop a file</span>
+        <span class="convert-drop-hint">Hashed on this machine.</span>
+      </label>
+      <p id="hash-label" class="watch-hint"></p>
+      <p id="hash-out" class="tool-hash"></p>
+      <button type="button" class="btn btn-ghost" id="hash-copy" hidden>Copy</button>
+      <p id="hash-status" class="watch-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span><a href="/utilities">← Utilities</a></span>
+    <span><a href="/">Dan Mullin</a></span>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+  <script src="/hash.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World clock — Dan Mullin</title>
+  <meta name="description" content="A world clock in the browser. Local time plus a few cities. Nothing is uploaded.">
+  <link rel="canonical" href="https://danmull.in/utilities/clock">
+  <meta name="theme-color" content="#0d0221">
+  <link rel="alternate" type="text/markdown" href="/utilities/clock.md">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header class="site-header site-header-minimal">
+    <a class="logo" href="/">
+      <span class="logo-mark" aria-hidden="true">⬡</span>
+      <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
+    </a>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <p class="hero-eyebrow"><a href="/utilities">Utilities</a></p>
+      <h1>World clock</h1>
+      <p>Here, and a few cities. The times come from this browser.</p>
+    </header>
+
+    <section class="section tool">
+      <ol id="clock-list" class="clock-list"></ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span><a href="/utilities">← Utilities</a></span>
+    <span><a href="/">Dan Mullin</a></span>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+  <script src="/clock.js" defer></script>
+</body>
+</html>

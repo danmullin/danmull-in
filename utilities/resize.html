@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resize image — Dan Mullin</title>
+  <meta name="description" content="Resize and compress an image in the browser. The file is never uploaded.">
+  <link rel="canonical" href="https://danmull.in/utilities/resize">
+  <meta name="theme-color" content="#0d0221">
+  <link rel="alternate" type="text/markdown" href="/utilities/resize.md">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header class="site-header site-header-minimal">
+    <a class="logo" href="/">
+      <span class="logo-mark" aria-hidden="true">⬡</span>
+      <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
+    </a>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <p class="hero-eyebrow"><a href="/utilities">Utilities</a></p>
+      <h1>Resize image</h1>
+      <p>Set a size, pick a format, take the file back. Nothing is uploaded.</p>
+    </header>
+
+    <section class="section convert">
+      <form id="resize-form">
+        <label class="convert-drop" id="resize-drop">
+          <input id="resize-file" type="file" accept="image/*,.heic,.heif">
+          <span class="convert-drop-title">Drop an image here</span>
+          <span class="convert-drop-hint">or choose a file. Paste works too.</span>
+        </label>
+        <div class="convert-controls">
+          <label class="tool-field">Width
+            <input id="resize-width" type="number" inputmode="numeric" min="1" max="8192" step="1">
+          </label>
+          <label class="tool-field">Height
+            <input id="resize-height" type="number" inputmode="numeric" min="1" max="8192" step="1">
+          </label>
+          <label class="tool-check"><input id="resize-lock" type="checkbox" checked> Lock aspect</label>
+          <label class="tool-field">Format
+            <select id="resize-format"></select>
+          </label>
+          <label class="tool-field" id="resize-quality-field">Quality
+            <output id="resize-quality-value" for="resize-quality">86</output>
+            <input id="resize-quality" type="range" min="40" max="100" value="86">
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary" id="resize-go" disabled>Resize</button>
+      </form>
+      <p class="convert-note">The long side stops at 8192 px. An animated GIF becomes its first frame. JPEG gets a white background where the original was transparent.</p>
+      <p id="resize-status" class="convert-status" role="status" aria-live="polite"></p>
+      <ul id="resize-results" class="convert-results"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span><a href="/utilities">← Utilities</a></span>
+    <span><a href="/">Dan Mullin</a></span>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+  <script src="/resize.js" defer></script>
+</body>
+</html>

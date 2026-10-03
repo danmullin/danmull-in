@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON — Dan Mullin</title>
+  <meta name="description" content="Format or minify JSON in the browser. Nothing is uploaded.">
+  <link rel="canonical" href="https://danmull.in/utilities/json">
+  <meta name="theme-color" content="#0d0221">
+  <link rel="alternate" type="text/markdown" href="/utilities/json.md">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header class="site-header site-header-minimal">
+    <a class="logo" href="/">
+      <span class="logo-mark" aria-hidden="true">⬡</span>
+      <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
+    </a>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <p class="hero-eyebrow"><a href="/utilities">Utilities</a></p>
+      <h1>JSON</h1>
+      <p>Pretty-print or minify. The text stays in this tab.</p>
+    </header>
+
+    <section class="section tool">
+      <textarea id="json-text" class="tool-area" rows="12" spellcheck="false" placeholder='{"ok":true}'></textarea>
+      <div class="watch-actions">
+        <button type="button" class="btn btn-primary" id="json-format">Format</button>
+        <button type="button" class="btn btn-ghost" id="json-minify">Minify</button>
+        <button type="button" class="btn btn-ghost" id="json-copy" disabled>Copy</button>
+      </div>
+      <p id="json-status" class="watch-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span><a href="/utilities">← Utilities</a></span>
+    <span><a href="/">Dan Mullin</a></span>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+  <script src="/json-format.js" defer></script>
+</body>
+</html>

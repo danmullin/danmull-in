@@ -9,6 +9,13 @@ const files = [
   'utilities.html',
   'utilities/image.html',
   'utilities/stopwatch.html',
+  'utilities/countdown.html',
+  'utilities/clock.html',
+  'utilities/resize.html',
+  'utilities/strip.html',
+  'utilities/hash.html',
+  'utilities/json.html',
+  'utilities/unix.html',
 ]
 
 function canInline(code) {

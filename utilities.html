@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Utilities — Dan Mullin</title>
-  <meta name="description" content="Small browser tools by Dan Mullin. A stopwatch, and an image converter that never uploads the file.">
+  <meta name="description" content="Small browser tools by Dan Mullin. Clocks, image tools, a hash, and JSON. Files stay on this machine.">
   <link rel="canonical" href="https://danmull.in/utilities">
   <meta name="theme-color" content="#0d0221">
   <link rel="alternate" type="text/markdown" href="/utilities.md">
@@ -28,16 +28,51 @@
     </header>
 
     <section class="section">
-      <div class="work-list">
+      <div class="work-list utility-index">
         <a class="work-link" href="/utilities/stopwatch">
           <span class="eyebrow cyan">Time</span>
           <h3>Stopwatch</h3>
           <p>Start, stop, and lap. Space, L, and R. The clock stays in this tab.</p>
         </a>
+        <a class="work-link" href="/utilities/countdown">
+          <span class="eyebrow cyan">Time</span>
+          <h3>Countdown</h3>
+          <p>Set hours, minutes, and seconds. It chimes at zero.</p>
+        </a>
+        <a class="work-link" href="/utilities/clock">
+          <span class="eyebrow cyan">Time</span>
+          <h3>World clock</h3>
+          <p>Here, UTC, and a few cities.</p>
+        </a>
+        <a class="work-link" href="/utilities/unix">
+          <span class="eyebrow cyan">Time</span>
+          <h3>Unix time</h3>
+          <p>Seconds or milliseconds in, a date out.</p>
+        </a>
         <a class="work-link" href="/utilities/image">
-          <span class="eyebrow">Convert</span>
+          <span class="eyebrow">Image</span>
           <h3>Image converter</h3>
           <p>PNG, JPEG, WebP, and AVIF out. HEIC and other photos in. Nothing is uploaded.</p>
+        </a>
+        <a class="work-link" href="/utilities/resize">
+          <span class="eyebrow">Image</span>
+          <h3>Resize image</h3>
+          <p>Set a size and compress. The file never leaves this machine.</p>
+        </a>
+        <a class="work-link" href="/utilities/strip">
+          <span class="eyebrow">Image</span>
+          <h3>Strip metadata</h3>
+          <p>Redraws the picture so camera data and location stay behind.</p>
+        </a>
+        <a class="work-link" href="/utilities/hash">
+          <span class="eyebrow amber">Data</span>
+          <h3>SHA-256</h3>
+          <p>Hash text or a file here. Nothing is uploaded.</p>
+        </a>
+        <a class="work-link" href="/utilities/json">
+          <span class="eyebrow amber">Data</span>
+          <h3>JSON</h3>
+          <p>Format or minify. Broken JSON tells you why.</p>
         </a>
       </div>
     </section>
@@ -45,8 +80,6 @@
 
   <footer class="site-footer">
     <span><a href="/">← Dan Mullin</a></span>
-    <span><a href="/utilities/stopwatch">Stopwatch</a></span>
-    <span><a href="/utilities/image">Image converter</a></span>
   </footer>
   <script type="module" src="/src/main.js"></script>
 </body>

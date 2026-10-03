@@ -34,7 +34,7 @@ const PROJECTS = [
   {
     name: 'Utilities',
     href: '/utilities',
-    tease: 'Stopwatch and an image converter',
+    tease: 'Clocks, images, and small tools',
   },
   {
     name: 'GitHub',

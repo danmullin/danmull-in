@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strip metadata — Dan Mullin</title>
+  <meta name="description" content="Redraw an image in the browser so camera data and location are left behind. Nothing is uploaded.">
+  <link rel="canonical" href="https://danmull.in/utilities/strip">
+  <meta name="theme-color" content="#0d0221">
+  <link rel="alternate" type="text/markdown" href="/utilities/strip.md">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header class="site-header site-header-minimal">
+    <a class="logo" href="/">
+      <span class="logo-mark" aria-hidden="true">⬡</span>
+      <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
+    </a>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <p class="hero-eyebrow"><a href="/utilities">Utilities</a></p>
+      <h1>Strip metadata</h1>
+      <p>Redraws the picture. Camera data, location, and the rest of the metadata stay behind.</p>
+    </header>
+
+    <section class="section convert">
+      <form id="strip-form">
+        <label class="convert-drop" id="strip-drop">
+          <input id="strip-files" type="file" accept="image/*,.heic,.heif" multiple>
+          <span class="convert-drop-title">Drop images here</span>
+          <span class="convert-drop-hint">or choose files. Paste works too.</span>
+        </label>
+        <div class="convert-controls">
+          <label class="tool-field">Save as
+            <select id="strip-format"></select>
+          </label>
+          <label class="tool-field" id="strip-quality-field">Quality
+            <output id="strip-quality-value" for="strip-quality">92</output>
+            <input id="strip-quality" type="range" min="40" max="100" value="92">
+          </label>
+        </div>
+      </form>
+      <p class="convert-note">The new file is only the pixels. An animated GIF becomes its first frame. JPEG gets a white background where the original was transparent.</p>
+      <p id="strip-status" class="convert-status" role="status" aria-live="polite"></p>
+      <ul id="strip-results" class="convert-results"></ul>
+      <button type="button" class="btn btn-primary" id="strip-download-all" hidden>Download all</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span><a href="/utilities">← Utilities</a></span>
+    <span><a href="/">Dan Mullin</a></span>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+  <script src="/strip.js" defer></script>
+</body>
+</html>

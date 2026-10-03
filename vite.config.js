@@ -4,19 +4,26 @@ import { defineConfig } from 'vite'
 
 const heicSrc = resolve(__dirname, 'node_modules/heic2any/dist/heic2any.js')
 
+const pageScripts = [
+  'image-convert.js',
+  'stopwatch.js',
+  'countdown.js',
+  'clock.js',
+  'resize.js',
+  'strip.js',
+  'hash.js',
+  'json-format.js',
+  'unix.js',
+].map((name) => ({
+  src: resolve(__dirname, 'src', name),
+  url: `/${name}`,
+  dest: resolve(__dirname, 'dist', name),
+}))
+
 function vendorFiles() {
   const files = [
     { src: heicSrc, url: '/vendor/heic2any.js', dest: resolve(__dirname, 'dist/vendor/heic2any.js') },
-    {
-      src: resolve(__dirname, 'src/image-convert.js'),
-      url: '/image-convert.js',
-      dest: resolve(__dirname, 'dist/image-convert.js'),
-    },
-    {
-      src: resolve(__dirname, 'src/stopwatch.js'),
-      url: '/stopwatch.js',
-      dest: resolve(__dirname, 'dist/stopwatch.js'),
-    },
+    ...pageScripts,
   ]
   return {
     name: 'vendor-files',
@@ -53,6 +60,13 @@ export default defineConfig({
         utilities: resolve(__dirname, 'utilities.html'),
         image: resolve(__dirname, 'utilities/image.html'),
         stopwatch: resolve(__dirname, 'utilities/stopwatch.html'),
+        countdown: resolve(__dirname, 'utilities/countdown.html'),
+        clock: resolve(__dirname, 'utilities/clock.html'),
+        resize: resolve(__dirname, 'utilities/resize.html'),
+        strip: resolve(__dirname, 'utilities/strip.html'),
+        hash: resolve(__dirname, 'utilities/hash.html'),
+        json: resolve(__dirname, 'utilities/json.html'),
+        unix: resolve(__dirname, 'utilities/unix.html'),
       },
     },
   },
