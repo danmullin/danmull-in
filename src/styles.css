@@ -1067,34 +1067,6 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
   color: inherit;
 }
 
-.work-link:has(.work-preview) {
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
-  overflow: hidden;
-}
-
-.work-preview {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: center 42%;
-  background: #070b18;
-}
-
-.work-link:has(.work-preview) .eyebrow,
-.work-link:has(.work-preview) h3,
-.work-link:has(.work-preview) p {
-  padding-left: 1.35rem;
-  padding-right: 1.35rem;
-}
-
-.work-link:has(.work-preview) .eyebrow {
-  margin-top: 1.1rem;
-}
-
 .work-link .eyebrow {
   display: inline-block;
   margin-bottom: 0.45rem;
