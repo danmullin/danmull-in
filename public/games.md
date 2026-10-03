@@ -1,6 +1,6 @@
 ---
 title: Games — Dan Mullin
-description: Games by Dan Mullin. Professor Vector, Space Attack, Space Invaders, Asteroids, and Galaga.
+description: Games by Dan Mullin. Professor Vector and browser arcade games.
 ---
 
 # Games
@@ -22,6 +22,10 @@ Vector arcade in a debris field. Rotate, thrust, and break the rocks before they
 ## [Galaga](/galaga/) (playable)
 
 Break the diving swarm. Rescue a captured fighter for dual fire.
+
+## [Defender](/defender/) (playable)
+
+Race the horizon. Stop the abductions and carry people home.
 
 ## [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/)
 

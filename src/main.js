@@ -35,7 +35,7 @@ const PROJECTS = [
     name: 'Browser games',
     href: '/browser-games',
     page: '/browser-games',
-    tease: 'Space Attack, Space Invaders, Asteroids, and Galaga',
+    tease: 'Arcade classics in the tab',
   },
   {
     name: 'Utilities',

@@ -18,7 +18,8 @@ Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on th
 - [Space Invaders](/space-invaders/) — playable
 - [Asteroids](/asteroids/) — playable
 - [Galaga](/galaga/) — playable
-- [Browser games](/browser-games) — Space Attack, Space Invaders, Asteroids, and Galaga
+- [Defender](/defender/) — playable
+- [Browser games](/browser-games) — arcade classics in the tab
 - [Penultimate](https://danmullin.github.io/penultimate/) — SVG vector editor
 - [Tileforge](https://danmullin.github.io/tileforge/) — Map authoring and tile studio
 - [Onion Lab](https://danmullin.github.io/onion-lab/) — Spritesheet animation studio

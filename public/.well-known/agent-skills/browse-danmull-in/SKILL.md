@@ -14,7 +14,7 @@ danmull.in is a static personal site on Cloudflare Pages plus a **public read-on
 | `/` | Project lobby |
 | `/synth` | Synth language overview (links out to the compiler site) |
 | `/games` | Professor Vector, browser arcade games, and tooling notes |
-| `/browser-games` | Playable browser games. Space Attack, Space Invaders, Asteroids, and Galaga. |
+| `/browser-games` | Playable browser games. Space Attack, Space Invaders, Asteroids, Galaga, and Defender. |
 | `/utilities` | Browser tools. Files stay on the machine. |
 
 ## Projects (most live off-origin)
