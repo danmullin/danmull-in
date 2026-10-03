@@ -35,6 +35,10 @@ Clear the dots. Power pellets turn the chase around.
 
 Patrol the rim. Fire into the abyss before climbers take the edge.
 
+## [Arkanoid](/arkanoid/) (playable)
+
+Find the angle. Catch the capsules. Clear the bricks.
+
 ## [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/)
 
 Professor Vector's Fantastic Orbital Defense Emporium and Interstellar Projectile Laboratory.

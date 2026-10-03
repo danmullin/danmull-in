@@ -1,6 +1,6 @@
 ---
 title: Browser games
-description: Browser games by Dan Mullin. Arcade classics playable in the tab, including Tempest.
+description: Browser games by Dan Mullin. Arcade classics playable in the tab, including Arkanoid.
 ---
 
 # Browser games
@@ -16,3 +16,4 @@ Small games that run in the tab.
 - [Defender](/defender/) — race the horizon. Stop the abductions and carry people home.
 - [Pac-Man](/pac-man/) — clear the dots. Power pellets turn the chase around.
 - [Tempest](/tempest/) — patrol the rim. Fire into the abyss before climbers take the edge.
+- [Arkanoid](/arkanoid/) — find the angle. Catch the capsules. Clear the bricks.
