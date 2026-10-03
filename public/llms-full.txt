@@ -19,7 +19,7 @@ Destinations on the lobby:
 - Sunwake — Music visualizer (https://danmullin.github.io/sunwake/)
 - GitHub — https://github.com/danmullin
 - Games — `/games`
-- Browser games — `/browser-games`. Space Attack at `/space-attack/`. Space Invaders at `/space-invaders/`. Asteroids at `/asteroids/`. Galaga at `/galaga/`. Defender at `/defender/`. Pac-Man at `/pac-man/`. Tempest at `/tempest/`. Arkanoid at `/arkanoid/`.
+- Browser games — `/browser-games`. Space Attack at `/space-attack/`. Space Invaders at `/space-invaders/`. Asteroids at `/asteroids/`. Galaga at `/galaga/`. Defender at `/defender/`. Pac-Man at `/pac-man/`. Tempest at `/tempest/`. Arkanoid at `/arkanoid/`. Frogger at `/frogger/`.
 - Utilities — `/utilities`: stopwatch, countdown, world clock, Unix time, image converter, resize, metadata strip, SHA-256, JSON. Browser-side. Files are not uploaded.
 - Contact — homepage modal; no on-origin mail API
 
@@ -73,6 +73,10 @@ Patrol the rim, at `/tempest/`. Fire into the abyss before climbers take the edg
 ### Arkanoid (playable)
 
 Find the angle, at `/arkanoid/`. Catch the capsules. Clear the bricks.
+
+### Frogger (playable)
+
+Dodge the traffic, at `/frogger/`. Ride the river. Guide five frogs home.
 
 ### Animation & sheet tools
 

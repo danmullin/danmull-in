@@ -1,6 +1,6 @@
 ---
 title: Browser games
-description: Browser games by Dan Mullin. Arcade classics playable in the tab, including Arkanoid.
+description: Browser games by Dan Mullin. Arcade classics playable in the tab, including Frogger.
 ---
 
 # Browser games
@@ -17,3 +17,4 @@ Small games that run in the tab.
 - [Pac-Man](/pac-man/) — clear the dots. Power pellets turn the chase around.
 - [Tempest](/tempest/) — patrol the rim. Fire into the abyss before climbers take the edge.
 - [Arkanoid](/arkanoid/) — find the angle. Catch the capsules. Clear the bricks.
+- [Frogger](/frogger/) — dodge the traffic. Ride the river. Guide five frogs home.

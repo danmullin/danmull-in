@@ -39,6 +39,10 @@ Patrol the rim. Fire into the abyss before climbers take the edge.
 
 Find the angle. Catch the capsules. Clear the bricks.
 
+## [Frogger](/frogger/) (playable)
+
+Dodge the traffic. Ride the river. Guide five frogs home.
+
 ## [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/)
 
 Professor Vector's Fantastic Orbital Defense Emporium and Interstellar Projectile Laboratory.
