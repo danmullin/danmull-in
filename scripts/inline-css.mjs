@@ -17,6 +17,7 @@ const files = [
   'utilities/hash.html',
   'utilities/json.html',
   'utilities/unix.html',
+  'utilities/video.html',
 ]
 
 function canInline(code) {
@@ -43,7 +44,9 @@ for (const file of files) {
       return `<script type="module">${code.replaceAll('</script', '<\\/script')}</script>`
     },
   )
-  if (!inlined) throw new Error(`no module script inlined in ${file}`)
+  if (!inlined && !/<script type="module"[^>]*src="\/assets\/[^"]+\.js"/.test(html)) {
+    throw new Error(`no module script inlined in ${file}`)
+  }
   writeFileSync(path, html)
   console.log(`inlined assets into ${file} (${inlined} script${inlined === 1 ? '' : 's'})`)
 }

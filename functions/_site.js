@@ -41,7 +41,7 @@ export const PROJECTS = [
     name: 'Utilities',
     href: '/utilities',
     page: '/utilities',
-    tease: 'Clocks, images, and small tools',
+    tease: 'Clocks, images, video, and small tools',
   },
   {
     name: 'GitHub',

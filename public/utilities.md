@@ -18,3 +18,4 @@ Small tools that run in the browser. Files stay on this machine.
 - [Strip metadata](/utilities/strip) — redraws the picture so camera data and location stay behind.
 - [SHA-256](/utilities/hash) — hash text or a file here.
 - [JSON](/utilities/json) — format or minify.
+- [Video split](/utilities/video) — picture without sound, or sound without the picture. Nothing is uploaded.

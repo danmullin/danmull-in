@@ -68,6 +68,7 @@ export default defineConfig({
         hash: resolve(__dirname, 'utilities/hash.html'),
         json: resolve(__dirname, 'utilities/json.html'),
         unix: resolve(__dirname, 'utilities/unix.html'),
+        video: resolve(__dirname, 'utilities/video.html'),
       },
     },
   },

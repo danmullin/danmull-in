@@ -1505,6 +1505,30 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
   text-shadow: 0 0 24px rgba(0, 229, 255, 0.35);
 }
 
+.split-groups {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: min(100%, 40rem);
+}
+
+.split-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.split-group h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
 .watch-actions {
   display: flex;
   flex-wrap: wrap;

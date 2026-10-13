@@ -33,6 +33,7 @@ function markdownAssetPath(pathname) {
   if (path === '/utilities/hash' || path === '/utilities/hash.html') return '/utilities/hash.md'
   if (path === '/utilities/json' || path === '/utilities/json.html') return '/utilities/json.md'
   if (path === '/utilities/unix' || path === '/utilities/unix.html') return '/utilities/unix.md'
+  if (path === '/utilities/video' || path === '/utilities/video.html') return '/utilities/video.md'
   return null
 }
 

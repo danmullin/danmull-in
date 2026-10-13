@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video split — Dan Mullin</title>
+  <meta name="description" content="Split a video into audio or picture in the browser. The file never leaves this machine.">
+  <link rel="canonical" href="https://danmull.in/utilities/video">
+  <meta name="theme-color" content="#0d0221">
+  <link rel="alternate" type="text/markdown" href="/utilities/video.md">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header class="site-header site-header-minimal">
+    <a class="logo" href="/">
+      <span class="logo-mark" aria-hidden="true">⬡</span>
+      <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
+    </a>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <p class="hero-eyebrow"><a href="/utilities">Utilities</a></p>
+      <h1>Video split</h1>
+      <p>Pick a video. Download the picture without sound, or the sound without the picture. Nothing is uploaded.</p>
+    </header>
+
+    <section class="section tool">
+      <form id="split-form">
+        <label class="convert-drop" id="split-drop">
+          <input id="split-file" type="file" accept="video/*,.mkv,.mov,.webm,.mp4,.m4v">
+          <span class="convert-drop-title">Drop a video here</span>
+          <span class="convert-drop-hint">or choose a file.</span>
+        </label>
+      </form>
+      <p id="split-summary" class="watch-hint"></p>
+      <div id="split-groups" class="split-groups" hidden>
+        <div id="split-video" class="split-group">
+          <h2>Video</h2>
+          <div id="split-video-buttons" class="watch-actions"></div>
+        </div>
+        <div id="split-audio" class="split-group">
+          <h2>Audio</h2>
+          <div id="split-audio-buttons" class="watch-actions"></div>
+        </div>
+      </div>
+      <p class="convert-note">A format shows up only when this browser can write it. Video files have no soundtrack. Audio files have no picture.</p>
+      <p id="split-status" class="watch-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span><a href="/utilities">← Utilities</a></span>
+    <span><a href="/">Dan Mullin</a></span>
+  </footer>
+  <script type="module" src="/src/video-split.js"></script>
+</body>
+</html>
