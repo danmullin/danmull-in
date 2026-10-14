@@ -33,7 +33,7 @@ Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on th
 - [Sunwake](https://danmullin.github.io/sunwake/) — Music visualizer
 - [GitHub](https://github.com/danmullin) — Repos and work in the open
 - [Games](/games) — Professor Vector and browser arcade games
-- [Utilities](/utilities) — clocks, images, video, and small tools
+- [Utilities](/utilities) — clocks, images, video, and tools
 
 Contact is on the homepage (no public inbox API). Prefer a short note.
 
