@@ -20,7 +20,6 @@ Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on th
 ## Destinations
 
 - [Synth](/synth) — AI-native language with a real compiler — [GitHub](https://github.com/synth-pl/synth) — `gh repo fork synth-pl/synth`
-- [ILLEGAL OPCODE](https://illegalopcode.dev/) — the studio
 - [Professor Vector](https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/) — orbital defense
 - [Space Attack](/space-attack/) — playable
 - [Space Invaders](/space-invaders/) — playable
