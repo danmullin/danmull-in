@@ -12,14 +12,13 @@ danmull.in is a static personal site on Cloudflare Pages plus a **public read-on
 | Path | What it is |
 | --- | --- |
 | `/` | Project lobby |
-| `/synth` | Synth language overview (links out to the compiler site) |
 | `/games` | Professor Vector, browser arcade games, and tooling notes |
 | `/browser-games` | Playable browser arcade games, including Out Run. |
 | `/utilities` | Browser tools. Files stay on the machine. |
 
 ## Projects (most live off-origin)
 
-- Synth language home: https://synth-pl.github.io/synth/
+- Synth language home: https://synth-pl.github.io/synth/landing.html
 - Synth source: https://github.com/synth-pl/synth
 - Penultimate (SVG editor): https://danmullin.github.io/penultimate/
 - Tileforge: https://danmullin.github.io/tileforge/
@@ -42,7 +41,7 @@ danmull.in is a static personal site on Cloudflare Pages plus a **public read-on
 
 ## Content negotiation
 
-Request any HTML page with `Accept: text/markdown` to receive the matching `.md` body (`/index.md`, `/synth.md`, `/games.md`).
+Request any HTML page with `Accept: text/markdown` to receive the matching `.md` body (`/index.md`, `/games.md`).
 
 ## Contact
 

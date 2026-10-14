@@ -4,7 +4,6 @@ import { join } from 'node:path'
 const dist = 'dist'
 const files = [
   'index.html',
-  'synth.html',
   'games.html',
   'browser-games.html',
   'utilities.html',

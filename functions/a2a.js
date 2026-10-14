@@ -5,11 +5,11 @@ const HELP = `danmull.in is a public read-only agent. No login, no tasks, no che
 
 Ask for:
 - projects — list Dan Mullin's projects
-- home, synth, or games — read that page as markdown
+- home or games — read that page as markdown
 
 Or send a data part:
 {"skill":"list-projects"}
-{"skill":"read-page","page":"home"|"synth"|"games"}`
+{"skill":"read-page","page":"home"|"games"}`
 
 function corsHeaders() {
   return {
@@ -89,12 +89,10 @@ function pageFromText(text) {
   const normalized = text.trim().toLowerCase()
   if (!normalized) return null
   if (/^(home|homepage|lobby|index)$/.test(normalized)) return 'home'
-  if (/^synth$/.test(normalized)) return 'synth'
   if (/^games?$/.test(normalized)) return 'games'
   const asksToRead = /\b(page|read|show|get|markdown)\b/.test(normalized)
   if (!asksToRead) return null
   if (/\b(home|homepage|lobby)\b/.test(normalized)) return 'home'
-  if (/\bsynth\b/.test(normalized)) return 'synth'
   if (/\bgames?\b/.test(normalized)) return 'games'
   return null
 }
@@ -135,7 +133,7 @@ async function replyFor(message, env, origin) {
 async function readPage(id, contextId, page, env, origin) {
   const asset = PAGE_ASSETS[page]
   if (!asset) {
-    return rpcError(id, -32602, 'Unknown page. Use home, synth, or games.', 'InvalidParams')
+    return rpcError(id, -32602, 'Unknown page. Use home or games.', 'InvalidParams')
   }
   const body = await readAsset(env, origin, asset)
   if (body == null) {

@@ -1,8 +1,7 @@
 export const PROJECTS = [
   {
     name: 'Synth',
-    href: 'https://synth-pl.github.io/synth/',
-    page: '/synth',
+    href: 'https://synth-pl.github.io/synth/landing.html',
     tease: 'AI-native language with a real compiler',
   },
   {
@@ -52,7 +51,6 @@ export const PROJECTS = [
 
 export const PAGE_ASSETS = {
   home: '/index.md',
-  synth: '/synth.md',
   games: '/games.md',
 }
 

@@ -7,14 +7,13 @@ danmull.in is a lobby for projects: an AI-native programming language, SVG and m
 ## Pages
 
 - [Home](https://danmull.in/): Project lobby
-- [Synth](https://danmull.in/synth): AI-native language with a real compiler
 - [Games](https://danmull.in/games): Professor Vector and browser arcade games
 - [Browser games](https://danmull.in/browser-games): Playable in the tab. [Space Attack](https://danmull.in/space-attack/), [Space Invaders](https://danmull.in/space-invaders/), [Asteroids](https://danmull.in/asteroids/), [Galaga](https://danmull.in/galaga/), [Defender](https://danmull.in/defender/), [Pac-Man](https://danmull.in/pac-man/), [Tempest](https://danmull.in/tempest/), [Arkanoid](https://danmull.in/arkanoid/), [Frogger](https://danmull.in/frogger/), and [Out Run](https://danmull.in/outrun/).
 - [Utilities](https://danmull.in/utilities): Browser tools. Stopwatch, countdown, world clock, and Unix time. Image converter, resize, and metadata strip. SHA-256 and JSON. [Video split](https://danmull.in/utilities/video). Files stay on the machine.
 
 ## Projects
 
-- [Synth](https://synth-pl.github.io/synth/): Language home — demos, docs, playground
+- [Synth](https://synth-pl.github.io/synth/landing.html): Language home — demos, docs, playground
 - [Synth source](https://github.com/synth-pl/synth): Compiler, demos, VS Code extension path
 - [Penultimate](https://danmullin.github.io/penultimate/): SVG vector editor
 - [Tileforge](https://danmullin.github.io/tileforge/): Map authoring and tile studio

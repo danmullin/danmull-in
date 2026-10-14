@@ -1,8 +1,7 @@
 const PROJECTS = [
   {
     name: 'Synth',
-    href: 'https://synth-pl.github.io/synth/',
-    page: '/synth',
+    href: 'https://synth-pl.github.io/synth/landing.html',
     tease: 'AI-native language with a real compiler',
   },
   {
@@ -68,13 +67,13 @@ function registerWebMcpTools() {
     {
       name: 'open_page',
       description:
-        'Navigate this tab to a danmull.in page. Allowed names: home, synth, games.',
+        'Navigate this tab to a danmull.in page. Allowed names: home, games.',
       inputSchema: {
         type: 'object',
         properties: {
           page: {
             type: 'string',
-            enum: ['home', 'synth', 'games'],
+            enum: ['home', 'games'],
             description: 'Which on-origin page to open',
           },
         },
@@ -82,7 +81,7 @@ function registerWebMcpTools() {
         additionalProperties: false,
       },
       execute: async ({ page }) => {
-        const href = page === 'synth' ? '/synth' : page === 'games' ? '/games' : '/'
+        const href = page === 'games' ? '/games' : '/'
         window.location.assign(href)
         return { ok: true, href }
       },
@@ -142,9 +141,7 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
 const CATALOG_NAV = [
   ['/', 'Catalog'],
   ['/games', 'Games'],
-  ['/browser-games', 'Browser games'],
   ['/utilities', 'Utilities'],
-  ['/synth', 'Synth'],
 ]
 
 function mountCatalogNav() {

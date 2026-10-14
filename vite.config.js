@@ -55,7 +55,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        synth: resolve(__dirname, 'synth.html'),
         games: resolve(__dirname, 'games.html'),
         utilities: resolve(__dirname, 'utilities.html'),
         browserGames: resolve(__dirname, 'browser-games.html'),

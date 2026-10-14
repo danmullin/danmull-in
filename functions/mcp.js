@@ -13,13 +13,13 @@ const TOOLS = [
   {
     name: 'get_page',
     description:
-      'Return the markdown version of an on-origin page (home, synth, or games).',
+      'Return the markdown version of an on-origin page (home or games).',
     inputSchema: {
       type: 'object',
       properties: {
         page: {
           type: 'string',
-          enum: ['home', 'synth', 'games'],
+          enum: ['home', 'games'],
           description: 'Which page to read',
         },
       },
@@ -127,7 +127,7 @@ async function handleRequest(message, env, origin) {
     if (name === 'get_page') {
       const asset = PAGE_ASSETS[args.page]
       if (!asset) {
-        return rpcResult(id, textResult('Unknown page. Use home, synth, or games.', true))
+        return rpcResult(id, textResult('Unknown page. Use home or games.', true))
       }
       const body = await readAsset(env, origin, asset)
       if (body == null) {
@@ -143,7 +143,7 @@ async function handleRequest(message, env, origin) {
   if (method === 'resources/read') {
     const uri = params?.uri
     const path = typeof uri === 'string' ? new URL(uri, origin).pathname : ''
-    const allowed = new Set(['/llms.txt', '/llms-full.txt', '/index.md', '/synth.md', '/games.md'])
+    const allowed = new Set(['/llms.txt', '/llms-full.txt', '/index.md', '/games.md'])
     if (!allowed.has(path)) {
       return rpcError(id, -32602, 'Unknown resource')
     }

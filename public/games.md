@@ -55,4 +55,4 @@ Professor Vector's Fantastic Orbital Defense Emporium and Interstellar Projectil
 
 Pipelines that turn sprites into something a game engine can digest — timelines, exports, Godot-minded packs.
 
-[← Dan Mullin](/) · [Synth](/synth)
+[← Dan Mullin](/)

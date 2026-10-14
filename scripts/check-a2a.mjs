@@ -20,7 +20,6 @@ for (const skill of card.skills) {
 
 const pages = {
   '/index.md': '# Home\nLobby',
-  '/synth.md': '# Synth\nCompiler',
   '/games.md': '# Games\nProfessor Vector',
 }
 
@@ -54,17 +53,17 @@ assert.match(textOf(projects), /Penultimate/)
 assert.equal(projects.result.message.role, 'ROLE_AGENT')
 assert.equal(typeof projects.result.message.contextId, 'string')
 
-const synth = await call('message/send', {
+const games = await call('message/send', {
   message: {
     messageId: 'm2',
     role: 'ROLE_USER',
     contextId: 'ctx-keep',
-    parts: [{ data: { skill: 'read-page', page: 'synth' } }],
+    parts: [{ data: { skill: 'read-page', page: 'games' } }],
   },
 })
-assert.equal(textOf(synth), '# Synth\nCompiler')
-assert.equal(synth.result.message.contextId, 'ctx-keep')
-assert.equal(synth.result.message.parts[0].mediaType, 'text/markdown')
+assert.equal(textOf(games), '# Games\nProfessor Vector')
+assert.equal(games.result.message.contextId, 'ctx-keep')
+assert.equal(games.result.message.parts[0].mediaType, 'text/markdown')
 
 const help = await call('SendMessage', {
   message: { messageId: 'm3', role: 'ROLE_USER', parts: [{ text: 'hello' }] },

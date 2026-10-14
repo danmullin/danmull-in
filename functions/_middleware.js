@@ -20,7 +20,6 @@ function prefersMarkdown(accept) {
 function markdownAssetPath(pathname) {
   const path = pathname.replace(/\/+$/, '') || '/'
   if (path === '/' || path === '/index' || path === '/index.html') return '/index.md'
-  if (path === '/synth' || path === '/synth.html') return '/synth.md'
   if (path === '/games' || path === '/games.html') return '/games.md'
   if (path === '/browser-games' || path === '/browser-games.html') return '/browser-games.md'
   if (path === '/utilities' || path === '/utilities.html') return '/utilities.md'
