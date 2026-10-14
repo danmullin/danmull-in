@@ -11,6 +11,7 @@ All software listed below:
 
 - Runs in the browser
 - Uploads no files
+- Makes no API calls and stays entirely self-contained
 - Is completely free to use
 - Can be forked on [GitHub](https://github.com/danmullin)
 
