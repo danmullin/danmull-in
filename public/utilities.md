@@ -1,11 +1,11 @@
 ---
 title: Utilities
-description: Small browser tools by Dan Mullin. Clocks, image tools, a hash, and JSON. Files stay on this machine.
+description: Browser tools by Dan Mullin. Clocks, image tools, a hash, and JSON. Files stay on this machine.
 ---
 
 # Utilities
 
-Small tools that run in the browser. Files stay on this machine.
+Tools that run in the browser. Files stay on this machine.
 
 ## Tools
 
