@@ -39,11 +39,7 @@ body {
   line-height: 1.6;
   letter-spacing: 0;
   font-weight: 400;
-  background:
-    radial-gradient(ellipse 70% 55% at 18% -5%, rgba(255, 45, 120, 0.14), transparent 55%),
-    radial-gradient(ellipse 55% 45% at 92% 8%, rgba(176, 96, 255, 0.14), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 70% 90%, rgba(0, 212, 255, 0.06), transparent 55%),
-    var(--bg);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -70,20 +66,26 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  height: 56px;
-  padding: 0 clamp(1rem, 4vw, 2rem);
+  gap: 0.75rem 1.25rem;
+  flex-wrap: wrap;
+  min-height: 52px;
+  height: auto;
+  padding: 0.45rem clamp(1rem, 4vw, 2rem);
   border-bottom: 1px solid var(--border);
   background: var(--bg-nav);
   backdrop-filter: blur(12px);
 }
 
 .site-header-minimal {
-  justify-content: flex-start;
-  height: 48px;
-  border-bottom-color: transparent;
-  background: transparent;
-  backdrop-filter: none;
+  justify-content: space-between;
+  height: auto;
+  min-height: 52px;
+  flex-wrap: wrap;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+  border-bottom-color: var(--border);
+  background: var(--bg-nav);
+  backdrop-filter: blur(12px);
 }
 
 .logo {
@@ -1007,10 +1009,84 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
 }
 
 .section {
-  padding: clamp(3.5rem, 8vh, 5rem) clamp(1rem, 4vw, 2rem);
-  max-width: 1040px;
+  padding: 0 clamp(1rem, 4vw, 2rem) 2rem;
+  max-width: 920px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+}
+
+.catalog-section h2 {
+  margin: 0 0 0.55rem;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.work-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #110828;
+  text-align: left;
+}
+
+.work-link {
+  display: grid;
+  grid-template-columns: 7.25rem minmax(0, 1fr) auto;
+  grid-template-areas: "kind name go" "kind blurb go";
+  gap: 0.15rem 1rem;
+  align-items: center;
+  padding: 0.85rem 1.05rem;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  background: transparent;
+  text-decoration: none;
+  color: inherit;
+  text-align: left;
+  transition: background 0.12s ease;
+}
+
+.work-link:last-child {
+  border-bottom: 0;
+}
+
+.work-link:hover {
+  border-color: var(--border);
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: none;
+  transform: none;
+  color: inherit;
+}
+
+a.work-link::after {
+  content: "Open";
+  grid-area: go;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.work-link .eyebrow {
+  grid-area: kind;
+  display: inline-block;
+  justify-self: start;
+  margin: 0;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 45, 120, 0.35);
+  background: rgba(255, 45, 120, 0.1);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pink);
 }
 
 .section-head {
@@ -1042,45 +1118,6 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
   font-size: 16px;
 }
 
-.work-list {
-  display: grid;
-  gap: 1rem;
-  text-align: center;
-}
-
-.work-link {
-  display: block;
-  padding: 1.25rem 1.35rem;
-  border: 1px solid var(--border-card);
-  border-radius: var(--radius);
-  background: var(--bg-card);
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
-}
-
-.work-link:hover {
-  border-color: rgba(176, 96, 255, 0.45);
-  box-shadow: var(--glow-purple);
-  transform: translateY(-2px);
-  color: inherit;
-}
-
-.work-link .eyebrow {
-  display: inline-block;
-  margin-bottom: 0.45rem;
-  padding: 0.2rem 0.55rem;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 45, 120, 0.35);
-  background: rgba(255, 45, 120, 0.1);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--pink);
-}
-
 .work-link .eyebrow.cyan {
   border-color: rgba(0, 212, 255, 0.35);
   background: rgba(0, 212, 255, 0.1);
@@ -1100,19 +1137,21 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
 }
 
 .work-link h3 {
+  grid-area: name;
   margin: 0;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
   color: var(--text);
 }
 
 .work-link p {
-  margin: 0.5rem auto 0;
+  grid-area: blurb;
+  margin: 0;
   color: var(--text-muted);
-  max-width: 40rem;
-  font-size: 15px;
-  line-height: 1.75;
+  max-width: none;
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .work-link[id] {
@@ -1120,22 +1159,22 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
 }
 
 .page-hero {
-  padding: clamp(3.5rem, 10vh, 5.5rem) clamp(1rem, 4vw, 2rem) 1.25rem;
-  max-width: 1040px;
+  padding: 2.25rem clamp(1rem, 4vw, 2rem) 1.5rem;
+  max-width: 920px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .page-hero h1 {
   margin: 0;
-  font-size: clamp(32px, 8vw, 56px);
+  font-size: clamp(32px, 5vw, 44px);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
 .page-hero p {
-  margin: 1rem auto 0;
+  margin: 0.7rem 0 0;
   max-width: 36rem;
   color: var(--text-muted);
   font-size: 16px;
@@ -1143,9 +1182,9 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
 
 .prose {
   max-width: 42rem;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .prose p {
@@ -1223,6 +1262,20 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
 }
 
 .site-footer a:hover {
+  color: var(--pink);
+}
+
+.footer-contact {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.footer-contact:hover {
   color: var(--pink);
 }
 
@@ -1597,6 +1650,21 @@ html[data-lobby-theme="albums"] .door--art .door-tease {
 
 .utility-index {
   grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+}
+
+@media (max-width: 640px) {
+  .work-link {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "kind go"
+      "name go"
+      "blurb blurb";
+    align-items: start;
+  }
+
+  .work-link .eyebrow {
+    margin-bottom: 0.35rem;
+  }
 }
 
 .utility-index .work-link {

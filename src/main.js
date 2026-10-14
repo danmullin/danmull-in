@@ -139,6 +139,37 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
   })
 })
 
+const CATALOG_NAV = [
+  ['/', 'Catalog'],
+  ['/games', 'Games'],
+  ['/browser-games', 'Browser games'],
+  ['/utilities', 'Utilities'],
+  ['/synth', 'Synth'],
+]
+
+function mountCatalogNav() {
+  const header = document.querySelector('.site-header')
+  if (!header || header.querySelector('.nav')) return
+  const nav = document.createElement('nav')
+  nav.className = 'nav'
+  nav.setAttribute('aria-label', 'Catalog')
+  const path = location.pathname.replace(/\/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, '') || '/'
+  for (const [href, label] of CATALOG_NAV) {
+    const link = document.createElement('a')
+    link.href = href
+    link.textContent = label
+    const current = href === '/'
+      ? path === '/'
+      : path === href || path.startsWith(`${href}/`)
+    if (current) link.setAttribute('aria-current', 'page')
+    nav.append(link)
+  }
+  header.append(nav)
+  header.classList.remove('site-header-minimal')
+}
+
+mountCatalogNav()
+
 const THEME_KEY = 'danmull.in-lobby-theme'
 
 function currentLobbyTheme() {

@@ -25,8 +25,6 @@
   }
   </script>
   <meta name="theme-color" content="#0d0221">
-  <link rel="preload" as="image" type="image/webp" href="/doors/stickers/synth-360.webp" imagesrcset="/doors/stickers/synth-360.webp 360w, /doors/stickers/synth.webp 640w" imagesizes="(min-width: 720px) 300px, 185px" media="(max-width: 719px)" fetchpriority="high">
-  <link rel="preload" as="image" type="image/webp" href="/doors/stickers/tileforge.webp" imagesrcset="/doors/stickers/tileforge-360.webp 360w, /doors/stickers/tileforge.webp 640w" imagesizes="(min-width: 720px) 300px, 185px" media="(min-width: 720px)" fetchpriority="high">
   <link rel="api-catalog" href="/.well-known/api-catalog">
   <link rel="describedby" href="/llms.txt" type="text/plain">
   <link rel="ai-catalog" href="/.well-known/ai-catalog.json">
@@ -35,132 +33,98 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/src/styles.css">
-  <script>
-    (function () {
-      try {
-        var key = 'danmull.in-lobby-theme';
-        var q = new URLSearchParams(location.search).get('theme');
-        var theme = (q === 'albums' || q === 'stickers')
-          ? q
-          : (localStorage.getItem(key) === 'albums' ? 'albums' : 'stickers');
-        document.documentElement.setAttribute('data-lobby-theme', theme);
-      } catch (e) {
-        document.documentElement.setAttribute('data-lobby-theme', 'stickers');
-      }
-    })();
-  </script>
 </head>
-<body class="lobby-page">
-  <div class="peek">
-    <button type="button" class="peek-toggle" aria-expanded="false" aria-controls="peek-menu" aria-label="Links">
-      <span class="peek-chrome" aria-hidden="true">
-        <span class="peek-dot"></span>
-        <span class="peek-dot"></span>
-        <span class="peek-dot"></span>
-      </span>
-      <span class="peek-screen" aria-hidden="true"><span class="peek-gt">&gt;</span><span class="peek-cursor"></span></span>
-    </button>
-    <nav id="peek-menu" class="peek-menu" hidden aria-label="Links">
-      <a href="/synth">
-        <span class="peek-name">Synth</span>
-        <span class="peek-tease">A language with a real compiler</span>
-      </a>
-      <a href="https://illegalopcode.dev/" rel="noopener noreferrer">
-        <span class="peek-name">ILLEGAL OPCODE</span>
-        <span class="peek-tease">The studio</span>
-      </a>
-      <a href="https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/" rel="noopener noreferrer">
-        <span class="peek-name">Professor Vector</span>
-        <span class="peek-tease">Orbital defense</span>
-      </a>
-      <a href="/browser-games">
-        <span class="peek-name">Browser games</span>
-        <span class="peek-tease">Arcade classics in the tab</span>
-      </a>
-      <a href="/utilities">
-        <span class="peek-name">Utilities</span>
-        <span class="peek-tease">Clocks, images, video, small tools</span>
-      </a>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/">
+      <span class="logo-mark" aria-hidden="true">⬡</span>
+      <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
+    </a>
+    <nav class="nav" aria-label="Catalog">
+      <a href="/" aria-current="page">Catalog</a>
+      <a href="/games">Games</a>
+      <a href="/browser-games">Browser games</a>
+      <a href="/utilities">Utilities</a>
+      <a href="/synth">Synth</a>
     </nav>
-  </div>
+  </header>
   <main>
-    <section class="lobby" aria-label="Lobby">
-      <div class="lobby-atmosphere" aria-hidden="true">
-        <div class="lobby-bg"></div>
-        <div class="lobby-glow"></div>
+    <header class="page-hero">
+      <p class="hero-eyebrow">danmull.in</p>
+      <h1>Software catalog</h1>
+      <p>Tools, games, and small utilities. Pick one and open it.</p>
+    </header>
+
+    <section class="section catalog-section" aria-labelledby="catalog-software">
+      <h2 id="catalog-software">Software</h2>
+      <div class="work-list">
+        <a class="work-link" href="/synth">
+          <span class="eyebrow cyan">Language</span>
+          <h3>Synth</h3>
+          <p>AI-native language with a real compiler.</p>
+        </a>
+        <a class="work-link" href="https://danmullin.github.io/penultimate/" rel="noopener noreferrer">
+          <span class="eyebrow">Editor</span>
+          <h3>Penultimate</h3>
+          <p>SVG vector editor. Handles worth dragging.</p>
+        </a>
+        <a class="work-link" href="https://danmullin.github.io/tileforge/" rel="noopener noreferrer">
+          <span class="eyebrow">Studio</span>
+          <h3>Tileforge</h3>
+          <p>Map authoring and tile studio.</p>
+        </a>
+        <a class="work-link" href="https://danmullin.github.io/onion-lab/" rel="noopener noreferrer">
+          <span class="eyebrow">Studio</span>
+          <h3>Onion Lab</h3>
+          <p>Spritesheet animation studio.</p>
+        </a>
+        <a class="work-link" href="https://danmullin.github.io/sunwake/" rel="noopener noreferrer">
+          <span class="eyebrow amber">Visualizer</span>
+          <h3>Sunwake</h3>
+          <p>Music visualizer. Listen and watch.</p>
+        </a>
+        <a class="work-link" href="https://illegalopcode.dev/" rel="noopener noreferrer">
+          <span class="eyebrow">Studio</span>
+          <h3>ILLEGAL OPCODE</h3>
+          <p>The studio site.</p>
+        </a>
+        <a class="work-link" href="https://github.com/danmullin" rel="noopener noreferrer">
+          <span class="eyebrow">Source</span>
+          <h3>GitHub</h3>
+          <p>Repos and work in the open.</p>
+        </a>
       </div>
-      <div class="lobby-inner">
-        <h1 class="lobby-brand is-morphed" aria-label="Dan Mullin">
-          <span class="lobby-brand-swap">
-            <span class="lobby-from-left" aria-hidden="true">danmull</span>
-            <span class="lobby-period" aria-hidden="true"></span>
-            <span class="lobby-from-right" aria-hidden="true">in</span>
-            <span class="lobby-to">Dan Mullin</span>
-          </span>
-        </h1>
-        <p class="lobby-line">Crafting tools · Making games · Giving data light</p>
+    </section>
 
-        <div class="door-shelf" role="navigation" aria-label="Destinations">
-          <div class="door-grid">
-            <a class="door door--art" href="/synth" style="--door-i: 0">
-              <img class="door-art" src="/doors/stickers/synth-360.webp" srcset="/doors/stickers/synth-360.webp 360w, /doors/stickers/synth.webp 640w" sizes="(min-width: 720px) 300px, 185px" data-art-sticker="/doors/stickers/synth-360.webp" data-art-sticker-srcset="/doors/stickers/synth-360.webp 360w, /doors/stickers/synth.webp 640w" data-art-album="/doors/albums/synth-360.webp" data-art-album-srcset="/doors/albums/synth-360.webp 360w, /doors/albums/synth.webp 640w" width="640" height="640" alt="" fetchpriority="high">
-              <span class="door-meta">
-                <span class="door-name">Synth</span>
-                <span class="door-tease">AI-native language with a real compiler</span>
-              </span>
-            </a>
-            <a class="door door--art" href="https://danmullin.github.io/penultimate/" rel="noopener noreferrer" style="--door-i: 1">
-              <img class="door-art" src="/doors/stickers/penultimate-360.webp" srcset="/doors/stickers/penultimate-360.webp 360w, /doors/stickers/penultimate.webp 640w" sizes="(min-width: 720px) 300px, 185px" data-art-sticker="/doors/stickers/penultimate-360.webp" data-art-sticker-srcset="/doors/stickers/penultimate-360.webp 360w, /doors/stickers/penultimate.webp 640w" data-art-album="/doors/albums/penultimate-360.webp" data-art-album-srcset="/doors/albums/penultimate-360.webp 360w, /doors/albums/penultimate.webp 640w" width="640" height="640" alt="" fetchpriority="high">
-              <span class="door-meta">
-                <span class="door-name">Penultimate</span>
-                <span class="door-tease">SVG vector editor — handles worth dragging</span>
-              </span>
-            </a>
-            <a class="door door--art" href="https://danmullin.github.io/tileforge/" rel="noopener noreferrer" style="--door-i: 2">
-              <img class="door-art" src="/doors/stickers/tileforge-360.webp" srcset="/doors/stickers/tileforge-360.webp 360w, /doors/stickers/tileforge.webp 640w" sizes="(min-width: 720px) 300px, 185px" data-art-sticker="/doors/stickers/tileforge-360.webp" data-art-sticker-srcset="/doors/stickers/tileforge-360.webp 360w, /doors/stickers/tileforge.webp 640w" data-art-album="/doors/albums/tileforge-360.webp" data-art-album-srcset="/doors/albums/tileforge-360.webp 360w, /doors/albums/tileforge.webp 640w" width="640" height="640" alt="" fetchpriority="high">
-              <span class="door-meta">
-                <span class="door-name">Tileforge</span>
-                <span class="door-tease">Map authoring and tile studio</span>
-              </span>
-            </a>
-            <a class="door door--art" href="https://danmullin.github.io/onion-lab/" rel="noopener noreferrer" style="--door-i: 3">
-              <img class="door-art" src="/doors/stickers/onion-lab-360.webp" srcset="/doors/stickers/onion-lab-360.webp 360w, /doors/stickers/onion-lab.webp 640w" sizes="(min-width: 720px) 300px, 185px" data-art-sticker="/doors/stickers/onion-lab-360.webp" data-art-sticker-srcset="/doors/stickers/onion-lab-360.webp 360w, /doors/stickers/onion-lab.webp 640w" data-art-album="/doors/albums/onion-lab-360.webp" data-art-album-srcset="/doors/albums/onion-lab-360.webp 360w, /doors/albums/onion-lab.webp 640w" width="640" height="640" alt="" loading="lazy" decoding="async">
-              <span class="door-meta">
-                <span class="door-name">Onion Lab</span>
-                <span class="door-tease">Spritesheet animation studio</span>
-              </span>
-            </a>
-            <a class="door door--art" href="https://danmullin.github.io/sunwake/" rel="noopener noreferrer" style="--door-i: 4">
-              <img class="door-art" src="/doors/stickers/sunwake-360.webp" srcset="/doors/stickers/sunwake-360.webp 360w, /doors/stickers/sunwake.webp 640w" sizes="(min-width: 720px) 300px, 185px" data-art-sticker="/doors/stickers/sunwake-360.webp" data-art-sticker-srcset="/doors/stickers/sunwake-360.webp 360w, /doors/stickers/sunwake.webp 640w" data-art-album="/doors/albums/sunwake-360.webp" data-art-album-srcset="/doors/albums/sunwake-360.webp 360w, /doors/albums/sunwake.webp 640w" width="640" height="640" alt="" loading="lazy" decoding="async">
-              <span class="door-meta">
-                <span class="door-name">Sunwake</span>
-                <span class="door-tease">Music visualizer — listen and watch</span>
-              </span>
-            </a>
-            <a class="door door--art" href="https://github.com/danmullin" rel="noopener noreferrer" style="--door-i: 5">
-              <img class="door-art" src="/doors/stickers/github-360.webp" srcset="/doors/stickers/github-360.webp 360w, /doors/stickers/github.webp 640w" sizes="(min-width: 720px) 300px, 185px" data-art-sticker="/doors/stickers/github-360.webp" data-art-sticker-srcset="/doors/stickers/github-360.webp 360w, /doors/stickers/github.webp 640w" data-art-album="/doors/albums/github-360.webp" data-art-album-srcset="/doors/albums/github-360.webp 360w, /doors/albums/github.webp 640w" width="640" height="640" alt="" loading="lazy" decoding="async">
-              <span class="door-meta">
-                <span class="door-name">GitHub</span>
-                <span class="door-tease">Repos, forks, and work in the open</span>
-              </span>
-            </a>
-          </div>
+    <section class="section catalog-section" aria-labelledby="catalog-games">
+      <h2 id="catalog-games">Games</h2>
+      <div class="work-list">
+        <a class="work-link" href="https://professor.vectors.fantastic.orbital.defense.emporium.and.interstellar.projectile.laboratory.illegalopcode.dev/" rel="noopener noreferrer">
+          <span class="eyebrow cyan">Game</span>
+          <h3>Professor Vector</h3>
+          <p>Orbital defense. Play it on the long hostname.</p>
+        </a>
+        <a class="work-link" href="/games">
+          <span class="eyebrow">Index</span>
+          <h3>Games</h3>
+          <p>Professor Vector and the browser arcade, listed together.</p>
+        </a>
+        <a class="work-link" href="/browser-games">
+          <span class="eyebrow green">Play</span>
+          <h3>Browser games</h3>
+          <p>Arcade classics that run in the tab.</p>
+        </a>
+      </div>
+    </section>
 
-          <div class="door-actions">
-            <a class="door door--text door--contact" href="/browser-games" style="--door-i: 6">
-              <span class="door-name">Browser games</span>
-              <span class="door-tease">Arcade classics in the tab</span>
-            </a>
-            <a class="door door--text door--contact" href="/utilities" style="--door-i: 7">
-              <span class="door-name">Utilities</span>
-              <span class="door-tease">Clocks, images, video, and small tools</span>
-            </a>
-            <button type="button" class="door door--text door--contact" data-open-contact style="--door-i: 8">
-              <span class="door-name">Contact</span>
-              <span class="door-tease">Say hello — a short note is enough</span>
-            </button>
-          </div>
-        </div>
+    <section class="section catalog-section" aria-labelledby="catalog-utilities">
+      <h2 id="catalog-utilities">Utilities</h2>
+      <div class="work-list">
+        <a class="work-link" href="/utilities">
+          <span class="eyebrow amber">Tools</span>
+          <h3>Utilities</h3>
+          <p>Clocks, images, video split, and other small tools. Files stay on this machine.</p>
+        </a>
       </div>
     </section>
   </main>
@@ -192,49 +156,10 @@
     </form>
   </dialog>
 
-  <footer class="site-footer site-footer-lobby">
+  <footer class="site-footer">
     <span>© <span id="y"></span> Dan Mullin</span>
-    <a href="/synth">Synth</a>
-    <a href="/utilities">Utilities</a>
-    <button type="button" class="theme-toggle" id="lobby-theme-toggle" aria-pressed="false" title="Switch lobby art theme">
-      Album covers
-    </button>
+    <button type="button" class="footer-contact" data-open-contact>Contact</button>
   </footer>
-  <script>
-    (function () {
-      var theme = document.documentElement.getAttribute('data-lobby-theme') === 'albums'
-        ? 'albums'
-        : 'stickers'
-      if (theme !== 'albums') return
-      document.querySelectorAll('.door-art').forEach(function (img) {
-        var src = img.getAttribute('data-art-album')
-        var srcset = img.getAttribute('data-art-album-srcset')
-        if (src) img.setAttribute('src', src)
-        if (srcset) img.setAttribute('srcset', srcset)
-      })
-    })()
-  </script>
-  <script>
-    (function () {
-      var root = document.querySelector('.peek')
-      var button = document.querySelector('.peek-toggle')
-      var menu = document.getElementById('peek-menu')
-      if (!root || !button || !menu) return
-      function setOpen(open) {
-        button.setAttribute('aria-expanded', open ? 'true' : 'false')
-        menu.hidden = !open
-      }
-      button.addEventListener('click', function () {
-        setOpen(menu.hidden)
-      })
-      document.addEventListener('click', function (event) {
-        if (!root.contains(event.target)) setOpen(false)
-      })
-      document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') setOpen(false)
-      })
-    })()
-  </script>
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>
