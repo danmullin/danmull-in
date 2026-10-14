@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     name: 'Synth',
     href: 'https://synth-pl.github.io/synth/landing.html',
-    tease: 'AI-native language with a real compiler',
+    tease: 'Self-hosted AI-native language. You compile and run it yourself',
   },
   {
     name: 'Penultimate',

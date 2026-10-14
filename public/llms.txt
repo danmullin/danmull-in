@@ -13,7 +13,7 @@ danmull.in is a lobby for projects: an AI-native programming language, SVG and m
 
 ## Projects
 
-- [Synth](https://synth-pl.github.io/synth/landing.html): Language home — demos, docs, playground
+- [Synth](https://synth-pl.github.io/synth/landing.html): Self-hosted language home. You compile and run it yourself
 - [Synth source](https://github.com/synth-pl/synth): Compiler, demos, VS Code extension path
 - [Penultimate](https://danmullin.github.io/penultimate/): SVG vector editor
 - [Tileforge](https://danmullin.github.io/tileforge/): Map authoring and tile studio

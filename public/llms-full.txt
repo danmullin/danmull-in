@@ -12,7 +12,7 @@ Crafting tools · Making games · Giving data light.
 
 Destinations on the lobby:
 
-- Synth — AI-native language with a real compiler (https://synth-pl.github.io/synth/landing.html)
+- Synth — self-hosted AI-native language. You compile and run it yourself (https://synth-pl.github.io/synth/landing.html)
 - Penultimate — SVG vector editor (https://danmullin.github.io/penultimate/)
 - Tileforge — Map authoring and tile studio (https://danmullin.github.io/tileforge/)
 - Onion Lab — Spritesheet animation studio (https://danmullin.github.io/onion-lab/)
