@@ -31,14 +31,14 @@ Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on th
 - [Arkanoid](/arkanoid/) — playable
 - [Frogger](/frogger/) — playable
 - [Out Run](/outrun/) — playable
-- [Browser games](/browser-games) — arcade classics in the tab — [GitHub](https://github.com/danmullin/danmull-in) — `gh repo fork danmullin/danmull-in`
+- [Browser games](/browser-games) — arcade classics in the tab
 - [Penultimate](https://danmullin.github.io/penultimate/) — SVG vector editor — [GitHub](https://github.com/danmullin/penultimate) — `gh repo fork danmullin/penultimate`
 - [Tileforge](https://danmullin.github.io/tileforge/) — Map authoring and tile studio — [GitHub](https://github.com/danmullin/tileforge) — `gh repo fork danmullin/tileforge`
 - [Onion Lab](https://danmullin.github.io/onion-lab/) — Spritesheet animation studio — [GitHub](https://github.com/danmullin/onion-lab) — `gh repo fork danmullin/onion-lab`
 - [Sunwake](https://danmullin.github.io/sunwake/) — Music visualizer — [GitHub](https://github.com/danmullin/sunwake) — `gh repo fork danmullin/sunwake`
 - [GitHub](https://github.com/danmullin) — Repos and work in the open
-- [Games](/games) — Professor Vector and browser arcade games — [GitHub](https://github.com/danmullin/danmull-in) — `gh repo fork danmullin/danmull-in`
-- [Utilities](/utilities) — clocks, images, video, and tools — [GitHub](https://github.com/danmullin/danmull-in) — `gh repo fork danmullin/danmull-in`
+- [Games](/games) — Professor Vector and browser arcade games
+- [Utilities](/utilities) — clocks, images, video, and tools
 
 Contact is on the homepage (no public inbox API). Prefer a short note.
 
