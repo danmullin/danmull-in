@@ -17,6 +17,7 @@ const files = [
   'utilities/json.html',
   'utilities/unix.html',
   'utilities/video.html',
+  'handoff/index.html',
 ]
 
 function canInline(code) {

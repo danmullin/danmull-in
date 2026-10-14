@@ -14,6 +14,8 @@
     "/llms-full.txt",
     "/auth.md",
     "/index.md",
-    "/games.md"
+    "/games.md",
+    "/handoff/avatar.png",
+    "/handoff/banner.jpg"
   ]
 }
