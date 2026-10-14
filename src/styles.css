@@ -1499,6 +1499,51 @@ a.work-link::after {
   text-align: center;
 }
 
+.crop-stage {
+  position: relative;
+  width: min(100%, 40rem);
+  overflow: hidden;
+  border-radius: 12px;
+  background: #070214;
+  touch-action: none;
+}
+
+.crop-stage[hidden] {
+  display: none;
+}
+
+.crop-stage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.crop-box {
+  position: absolute;
+  border: 2px solid var(--cyan);
+  box-shadow: 0 0 0 9999px rgba(7, 2, 20, 0.62);
+  cursor: move;
+  touch-action: none;
+}
+
+.crop-box span {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--cyan);
+  border-radius: 2px;
+}
+
+.crop-box span[data-handle="nw"] { top: -7px; left: -7px; cursor: nwse-resize; }
+.crop-box span[data-handle="ne"] { top: -7px; right: -7px; cursor: nesw-resize; }
+.crop-box span[data-handle="sw"] { bottom: -7px; left: -7px; cursor: nesw-resize; }
+.crop-box span[data-handle="se"] { bottom: -7px; right: -7px; cursor: nwse-resize; }
+.crop-box span[data-handle="n"] { top: -7px; left: 50%; margin-left: -7px; cursor: ns-resize; }
+.crop-box span[data-handle="s"] { bottom: -7px; left: 50%; margin-left: -7px; cursor: ns-resize; }
+.crop-box span[data-handle="w"] { left: -7px; top: 50%; margin-top: -7px; cursor: ew-resize; }
+.crop-box span[data-handle="e"] { right: -7px; top: 50%; margin-top: -7px; cursor: ew-resize; }
+
 .convert-controls {
   display: flex;
   flex-wrap: wrap;

@@ -12,6 +12,7 @@ const files = [
   'utilities/countdown.html',
   'utilities/clock.html',
   'utilities/resize.html',
+  'utilities/crop.html',
   'utilities/strip.html',
   'utilities/hash.html',
   'utilities/json.html',

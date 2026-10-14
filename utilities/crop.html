@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crop image — Dan Mullin</title>
+  <meta name="description" content="Crop an image in the browser. The file is never uploaded.">
+  <link rel="canonical" href="https://danmull.in/utilities/crop">
+  <meta name="theme-color" content="#0d0221">
+  <link rel="alternate" type="text/markdown" href="/utilities/crop.md">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header class="site-header site-header-minimal">
+    <a class="logo" href="/">
+      <span class="logo-mark" aria-hidden="true">⬡</span>
+      <span class="logo-word"><span class="logo-name">danmull</span><span class="logo-tld">.in</span></span>
+    </a>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <p class="hero-eyebrow"><a href="/utilities">Utilities</a></p>
+      <h1>Crop image</h1>
+      <p>Drag the box, pick a format, take the file back. Nothing is uploaded.</p>
+    </header>
+
+    <section class="section convert">
+      <form id="crop-form">
+        <label class="convert-drop" id="crop-drop">
+          <input id="crop-file" type="file" accept="image/*,.heic,.heif">
+          <span class="convert-drop-title">Drop an image here</span>
+          <span class="convert-drop-hint">or choose a file. Paste works too.</span>
+        </label>
+        <div class="crop-stage" id="crop-stage" hidden>
+          <img id="crop-image" alt="">
+          <div id="crop-box" class="crop-box">
+            <span data-handle="nw"></span>
+            <span data-handle="n"></span>
+            <span data-handle="ne"></span>
+            <span data-handle="e"></span>
+            <span data-handle="se"></span>
+            <span data-handle="s"></span>
+            <span data-handle="sw"></span>
+            <span data-handle="w"></span>
+          </div>
+        </div>
+        <div class="convert-controls">
+          <label class="tool-field">X
+            <input id="crop-x" type="number" inputmode="numeric" min="0" step="1">
+          </label>
+          <label class="tool-field">Y
+            <input id="crop-y" type="number" inputmode="numeric" min="0" step="1">
+          </label>
+          <label class="tool-field">Width
+            <input id="crop-width" type="number" inputmode="numeric" min="1" max="8192" step="1">
+          </label>
+          <label class="tool-field">Height
+            <input id="crop-height" type="number" inputmode="numeric" min="1" max="8192" step="1">
+          </label>
+          <label class="tool-field">Shape
+            <select id="crop-aspect">
+              <option value="free">Free</option>
+              <option value="1">Square</option>
+              <option value="1.333333">4:3</option>
+              <option value="1.5">3:2</option>
+              <option value="1.777778">16:9</option>
+            </select>
+          </label>
+          <label class="tool-field">Format
+            <select id="crop-format"></select>
+          </label>
+          <label class="tool-field" id="crop-quality-field">Quality
+            <output id="crop-quality-value" for="crop-quality">100</output>
+            <input id="crop-quality" type="range" min="40" max="100" value="100">
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary" id="crop-go" disabled>Crop</button>
+      </form>
+      <p class="convert-note">The crop stays inside the picture. An animated GIF becomes its first frame. JPEG gets a white background where the original was transparent.</p>
+      <p id="crop-status" class="convert-status" role="status" aria-live="polite"></p>
+      <ul id="crop-results" class="convert-results"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span><a href="/utilities">← Utilities</a></span>
+    <span><a href="/">Dan Mullin</a></span>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+  <script src="/crop.js" defer></script>
+</body>
+</html>

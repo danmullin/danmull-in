@@ -20,7 +20,7 @@ Destinations on the lobby:
 - GitHub — https://github.com/danmullin
 - Games — `/games`
 - Browser games — `/browser-games`. Space Attack at `/space-attack/`. Space Invaders at `/space-invaders/`. Asteroids at `/asteroids/`. Galaga at `/galaga/`. Defender at `/defender/`. Pac-Man at `/pac-man/`. Tempest at `/tempest/`. Arkanoid at `/arkanoid/`. Frogger at `/frogger/`. Out Run at `/outrun/`.
-- Utilities — `/utilities`: stopwatch, countdown, world clock, Unix time, image converter, resize, metadata strip, SHA-256, JSON, video split at `/utilities/video`. Browser-side. Files are not uploaded.
+- Utilities — `/utilities`: stopwatch, countdown, world clock, Unix time, image converter, resize, crop, metadata strip, SHA-256, JSON, video split at `/utilities/video`. Browser-side. Files are not uploaded.
 - Contact — homepage modal; no on-origin mail API
 
 ## Synth

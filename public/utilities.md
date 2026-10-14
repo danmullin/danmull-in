@@ -15,6 +15,7 @@ Tools that run in the browser. Files stay on this machine.
 - [Unix time](/utilities/unix) — timestamps and dates, both directions.
 - [Image converter](/utilities/image) — PNG, JPEG, WebP, and AVIF out. HEIC and other photos in. Nothing is uploaded.
 - [Resize image](/utilities/resize) — set a size and compress. Nothing is uploaded.
+- [Crop image](/utilities/crop) — drag a box and download the piece. Nothing is uploaded.
 - [Strip metadata](/utilities/strip) — redraws the picture so camera data and location stay behind.
 - [SHA-256](/utilities/hash) — hash text or a file here.
 - [JSON](/utilities/json) — format or minify.
