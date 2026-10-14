@@ -7,6 +7,8 @@ description: Dan Mullin crafts tools and software, makes games, and gives data a
 
 Crafting tools · Making games · Giving data light
 
+Everything listed runs in the browser, uploads no files, is completely free to use, and can be forked on [my GitHub](https://github.com/danmullin).
+
 Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on this origin.
 
 ## Destinations
