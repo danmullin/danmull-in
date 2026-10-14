@@ -13,7 +13,7 @@ All software listed below:
 - Uploads no files
 - Makes no API calls and stays entirely self-contained
 - Is completely free to use
-- Can be forked on [GitHub](https://github.com/danmullin)
+- Applications can be forked on [GitHub](https://github.com/danmullin)
 
 Personal lobby for projects. Public MCP is at `/mcp`. No OAuth or checkout on this origin.
 
