@@ -1500,12 +1500,16 @@ a.work-link::after {
 }
 
 .crop-stage {
-  position: relative;
   width: min(100%, 40rem);
+  padding: 2.5rem;
   overflow: hidden;
   border-radius: 12px;
   background: #070214;
   touch-action: none;
+}
+
+.crop-frame {
+  position: relative;
 }
 
 .crop-stage[hidden] {
@@ -1523,6 +1527,7 @@ a.work-link::after {
   position: absolute;
   border: 2px solid var(--cyan);
   box-shadow: 0 0 0 9999px rgba(7, 2, 20, 0.62);
+  transform-origin: center center;
   cursor: move;
   touch-action: none;
 }
@@ -1543,6 +1548,27 @@ a.work-link::after {
 .crop-box span[data-handle="s"] { bottom: -7px; left: 50%; margin-left: -7px; cursor: ns-resize; }
 .crop-box span[data-handle="w"] { left: -7px; top: 50%; margin-top: -7px; cursor: ew-resize; }
 .crop-box span[data-handle="e"] { right: -7px; top: 50%; margin-top: -7px; cursor: ew-resize; }
+.crop-box span[data-handle="rotate"] {
+  top: -34px;
+  left: 50%;
+  margin-left: -7px;
+  border-radius: 50%;
+  cursor: grab;
+}
+.crop-box span[data-handle="rotate"]::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 14px;
+  width: 2px;
+  height: 14px;
+  background: var(--cyan);
+}
+.crop-box span[data-handle="rotate"].is-stuck {
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: not-allowed;
+}
 
 .convert-controls {
   display: flex;

@@ -24,7 +24,7 @@
     <header class="page-hero">
       <p class="hero-eyebrow"><a href="/utilities">Utilities</a></p>
       <h1>Crop image</h1>
-      <p>Drag the box, pick a format, take the file back. Nothing is uploaded.</p>
+      <p>Drag the box, rotate it when it fits, pick a format, take the file back. Nothing is uploaded.</p>
     </header>
 
     <section class="section convert">
@@ -35,16 +35,19 @@
           <span class="convert-drop-hint">or choose a file. Paste works too.</span>
         </label>
         <div class="crop-stage" id="crop-stage" hidden>
-          <img id="crop-image" alt="">
-          <div id="crop-box" class="crop-box">
-            <span data-handle="nw"></span>
-            <span data-handle="n"></span>
-            <span data-handle="ne"></span>
-            <span data-handle="e"></span>
-            <span data-handle="se"></span>
-            <span data-handle="s"></span>
-            <span data-handle="sw"></span>
-            <span data-handle="w"></span>
+          <div class="crop-frame">
+            <img id="crop-image" alt="">
+            <div id="crop-box" class="crop-box">
+              <span data-handle="rotate" title="Rotate"></span>
+              <span data-handle="nw"></span>
+              <span data-handle="n"></span>
+              <span data-handle="ne"></span>
+              <span data-handle="e"></span>
+              <span data-handle="se"></span>
+              <span data-handle="s"></span>
+              <span data-handle="sw"></span>
+              <span data-handle="w"></span>
+            </div>
           </div>
         </div>
         <div class="convert-controls">
@@ -59,6 +62,9 @@
           </label>
           <label class="tool-field">Height
             <input id="crop-height" type="number" inputmode="numeric" min="1" max="8192" step="1">
+          </label>
+          <label class="tool-field">Angle
+            <input id="crop-angle" type="number" inputmode="numeric" step="1" value="0">
           </label>
           <label class="tool-field">Shape
             <select id="crop-aspect">
@@ -79,7 +85,7 @@
         </div>
         <button type="submit" class="btn btn-primary" id="crop-go" disabled>Crop</button>
       </form>
-      <p class="convert-note">The crop stays inside the picture. An animated GIF becomes its first frame. JPEG gets a white background where the original was transparent.</p>
+      <p class="convert-note">The crop stays inside the picture, and it rotates only while the whole box still fits. An animated GIF becomes its first frame. JPEG gets a white background where the original was transparent.</p>
       <p id="crop-status" class="convert-status" role="status" aria-live="polite"></p>
       <ul id="crop-results" class="convert-results"></ul>
     </section>
